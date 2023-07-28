@@ -36,7 +36,7 @@ export default function Home() {
               
               <p className='my-4 text-base font-medium'>
                 As a recent computer science graduate with a specialization in video game
-                development and a flair for creative code, I'm on a mission to bring captivating
+                development and a flair for creative code, I&apos;m on a mission to bring captivating
                 gaming experiences to life. Explore my projects that fuse art, technology, and
                 problem-solving, unleashing the power of imagination in the gaming world.
               </p>
