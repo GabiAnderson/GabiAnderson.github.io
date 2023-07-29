@@ -33,13 +33,13 @@ const NavBar = () => {
                 <CustomLink href="/articles" title="Articles" className='ml-4'></CustomLink>
             </nav>
             <nav className='flex items-center justify-center flex-wrap'>
-                <motion.a href="https://twitter.com" target={'_blank'}
+                {/* <motion.a href="https://twitter.com" target={'_blank'}
                 whileHover={{y:-2}}
                 whileTap={{scale:0.9}}
                 className='w-6 mr-3'
                 >
                     <TwitterIcon />
-                </motion.a>
+                </motion.a> */}
                 <motion.a href="https://github.com" target={'_blank'}
                 whileHover={{y:-2}}
                 whileTap={{scale:0.9}}
@@ -54,7 +54,7 @@ const NavBar = () => {
                 >
                     <LinkedInIcon />
                 </motion.a>
-                <motion.a href="https://pinterest.com" target={'_blank'}
+                {/* <motion.a href="https://pinterest.com" target={'_blank'}
                 whileHover={{y:-2}}
                 whileTap={{scale:0.9}}
                 className='w-6 mx-3'
@@ -67,7 +67,7 @@ const NavBar = () => {
                 className='w-6 ml-3'
                 >
                     <DribbbleIcon />
-                </motion.a>
+                </motion.a> */}
             </nav>
 
             <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
