@@ -7,7 +7,7 @@ import AnimatedText from '@/components/AnimatedText'
 import profilePic from "../../public/images/profile/ProfileIcon2.png";
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'
-import HireMe from '@/components/HireMe'
+import ConnectWithMe from '@/components/ConnectWithMe'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
+        <ConnectWithMe />
       </main>
     </>
   )
