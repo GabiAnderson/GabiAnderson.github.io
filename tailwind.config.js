@@ -14,8 +14,17 @@ module.exports = {
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        
+        primary: "#1AC5B0",
+        primaryDark:"#149D8C",
+        accentblue: "#37ebf3",
+        accentpurple: "#9370db",
+        accentpink: "#e455ae",
+        accentneonpurple: "#cb1dcd",
+        accentyellow:"#fdf500",
+        accentmaroon:"#710000",
+        accentlightgrey: "#d1c5c0",
+        accentdarkgrey: "#272932"
       },
       animation: {
         'spin-slow': 'spin 10s linear infinite'

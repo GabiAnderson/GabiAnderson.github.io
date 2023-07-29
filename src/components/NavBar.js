@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import {TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon, DiscordIcon } from './Icons'
 import { motion } from "framer-motion";
 
-const CustomLink = ({href, title, className=""}) => {
+const CustomLink = ({href, title, className='', underlineColor = 'black'}) => {
     const router = useRouter();
     
     return (
@@ -14,7 +14,7 @@ const CustomLink = ({href, title, className=""}) => {
 
             <span className={`h-[1px] inline-block bg-dark 
             absolute left-0 -bottom-0.5 
-            group-hover:w-full transition-[width] ease duration-300
+            group-hover:w-full transition-[width] ${underlineColor} ease duration-300
             ${router.asPath === href ? 'w-full' : 'w-0'}`}
             >&nbsp;</span>
         </Link>
@@ -27,10 +27,10 @@ const NavBar = () => {
         className='w-fulle px-32 py-8 font-medium flex items-center justify-between'
         >
             <nav>
-                <CustomLink href="/" title="Home" className='mr-4'></CustomLink>
-                <CustomLink href="/about" title="About" className='mx-4'></CustomLink>
-                <CustomLink href="/projects" title="Projects" className='mx-4'></CustomLink>
-                <CustomLink href="/articles" title="Articles" className='ml-4'></CustomLink>
+                <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-accentpink'></CustomLink>
+                <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-accentblue'></CustomLink>
+                <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-accentpurple'></CustomLink>
+                <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-accentyellow'></CustomLink>
             </nav>
             <nav className='flex items-center justify-center flex-wrap'>
                 {/* <motion.a href="https://twitter.com" target={'_blank'}
