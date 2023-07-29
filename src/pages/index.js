@@ -8,6 +8,7 @@ import profilePic from "../../public/images/profile/ProfileIcon2.png";
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'
 import ConnectWithMe from '@/components/ConnectWithMe'
+import controller from "../../public/images/svgs/controller.png";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,6 +59,9 @@ export default function Home() {
         </Layout>
 
         <ConnectWithMe />
+        <div className='absolute right-16 bottom-16 inline-block w-24'>
+          <Image src={controller} alt="GabiAnderson" className='w-full h-auto' style={{ transform: 'scale(2)' }} />
+        </div>
       </main>
     </>
   )
