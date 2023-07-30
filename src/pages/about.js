@@ -60,9 +60,12 @@ const about =() => {
             <Layout className='pt-16'>
                 <AnimatedText text="Player to Creator!" className='mb-16 text-primary' />
                 <div className='grid w-full grid-cols-8 gap-16'>
-                    <div className='col-span-3 flex flex-col items-start justify-start'>
-                        <h2 className='mb-4 text-lg font-bold uppercase text-accentmaroon/75'>Biography</h2>
-                        <p className='font-medium'>
+                    <div className='col-span-4 flex flex-col items-start justify-start'>
+                        <span className='mb-4 text-lg font-bold uppercase text-accentmaroon/75'>
+                                <AnimatedList text="Biography" delay={100} />
+                        </span>
+
+                        <p className='text-sm font-medium'>
                             Hello there! I recently graduated in 2023 from the University of Utah with an Honors Bachelor of 
                             Science degree in Computer Science, with an emphasis in Entertainment Arts and Engineering, 
                             and a minor in Mathematics. Throughout my academic journey, I acquired a solid foundation in various 
@@ -70,7 +73,7 @@ const about =() => {
                             user interfaces but also had the opportunity to take classes focused on video game development such as 
                             asset pipeline, traditional game development, and Game Design.
                         </p>
-                        <p className='my-4 font-medium'>
+                        <p className='my-4 text-sm font-medium'>
                             My love for video games traces back to my early years, when my dad and uncle let me watch them play 
                             Halo. My first gaming adventures were on the Original Xbox, playing titles like Halo, Ty the Tasmanian 
                             Tiger, and Mad Dash. As I progressed through college, my academic journey seamlessly intertwined with 
@@ -79,9 +82,8 @@ const about =() => {
                             game developer allowed me to explore various genres and styles, enriching my understanding of the 
                             intricate art and technology behind the gaming industry.
                         </p>
-                        <p className='font-medium'>
-                            Now, as an Associate Firmware Test Engineer at Cricut, I bring the enthusiasm and creativity cultivated through 
-                            my love for video games to my work. At Cricut I am tasked with automating firmware qualification processes, 
+                        <p className='text-sm font-medium'>
+                            Now, as an Associate Firmware Test Engineer at Cricut, I am tasked with automating firmware qualification processes, 
                             developing test cases for new and released products, and act as the lead firmware tester for upcoming machines, 
                             running them through test cases and writing bugs for the firmware team. Furthermore, I've embarked on 
                             exciting personal projects, including website development and a collaborative effort with fellow developers on 
@@ -90,35 +92,29 @@ const about =() => {
                         </p>
                     </div>
 
-                    <div className='grid place-items-center col-span-3 relative h-screen rounded-2xl border-2 border-solid border-primary bg-light p-8'>
+                    <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 my-24'>
                         <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-primary' />
                         <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl' />
                     </div>
 
-                    <div className='col-span-2 flex flex-col items-end justify-between'>
+                    <div className='col-span-1 flex flex-col items-end justify-center'>
                         <div className='flex flex-col items-end justify-center'>
                             <span className='inline-block text-7xl text-accentgreen font-bold'>
                                 <AnimatedNumbers value={30}/>+
                             </span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>Coursework and Certifications</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75'>Courses</h2>
                         </div>
-                        <div className='flex flex-col items-end justify-center'>
+                        <div className='flex flex-col items-end justify-center py-8'>
                             <span className='inline-block text-7xl text-accentpink font-bold'>
                                 <AnimatedNumbers value={7}/>+
                             </span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>Game Projects</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75 max-h-16'>Game Projects</h2>
                         </div>
                         <div className='flex flex-col items-end justify-center'>
-                            <span className='inline-block text-5xl text-accentblue font-bold'>
-                                <AnimatedList text="Unity, Unreal," delay={100} />
+                            <span className='inline-block text-7xl text-accentblue font-bold'>
+                                <AnimatedNumbers value={10}/>+
                             </span>
-                            <span className='inline-block text-5xl text-accentblue font-bold'>
-                                <AnimatedList text="C#, C++" delay={200} />
-                            </span>
-                            <span className='inline-block text-5xl text-accentblue font-bold'>
-                                <AnimatedList text="& more" delay={300} />
-                            </span>
-                            <h2 className='text-xl font-medium capitalize text-dark/75'>Tools and Technologies</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75'>Certifications</h2>
                         </div>
                     </div>
                 </div>
