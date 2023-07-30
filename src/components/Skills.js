@@ -25,8 +25,8 @@ import {motion} from 'framer-motion'
     return (
         <motion.div className='flex items-end justify-center rounded-full 
             font-semibold text-light 
-            py-3 px-6 shadow-dark cursor-pointer absolute'
-            style={{ background: randomColor }}
+            py-3 px-6 shadow-dark cursor-pointer absolute bg-dark'
+            //style={{ background: randomColor }}
             whileHover={{scale:1.05}}
             initial={{x:0, y:0}}
             animate={{x:x, y:y}}
@@ -39,25 +39,26 @@ import {motion} from 'framer-motion'
 const Skills = () => {
     return (
         <>
-        <h2 className='font-bold text-8xl mt-64 w-full text-center'>Skills</h2>
+        <h2 className='font-bold text-8xl mt-64 w-full text-center text-primary'>Skills</h2>
         <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight'>
 
             <motion.div className='flex items-end justify-center rounded-full 
-            font-semibold bg-dark text-light 
+            font-semibold bg-primary text-light 
             p-8 shadow-dark cursor-pointer'
             whileHover={{scale:1.05}}>
                 Video Game Development
             </motion.div>
 
-            <Skill name="Unreal Engine" x="-20vw" y="2vw" />
+            <Skill name="Perforce" x="-20vw" y="2vw" />
             <Skill name="Unity" x="-5vw" y="-10vw" />
-            <Skill name="C++" x="20vw" y="6vw" />
+            <Skill name="Unreal Engine" x="20vw" y="6vw" />
             <Skill name="C#" x="0vw" y="12vw" />
             <Skill name="Agile Development" x="-20vw" y="-15vw" />
             <Skill name="HacknPlan" x="15vw" y="-12vw" />
-            <Skill name="Perforce" x="32vw" y="-5vw" />
+            <Skill name="C++" x="32vw" y="-5vw" />
             <Skill name="Git" x="0vw" y="-20vw" />
             <Skill name="UI/UX" x="-25vw" y="18vw" />
+            <Skill name="Python" x="20vw" y="20vw" />
 
         </div>
         </>

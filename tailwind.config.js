@@ -29,7 +29,7 @@ module.exports = {
         'spin-slow': 'spin 10s linear infinite'
       },
       backgroundImage:{
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 3px, #f5f5f5 5px, #f5f5f5 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #f5f5f5 5px, #f5f5f5 100px);'
       }
     },
   },
