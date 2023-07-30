@@ -27,10 +27,10 @@ const NavBar = () => {
         className='w-fulle px-32 py-8 font-medium flex items-center justify-between'
         >
             <nav>
-                <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-accentpink'></CustomLink>
-                <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-accentblue'></CustomLink>
-                <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-accentpurple'></CustomLink>
-                <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-accentyellow'></CustomLink>
+                <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primary'></CustomLink>
+                <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primary'></CustomLink>
+                <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primary'></CustomLink>
+                <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='"bg-primary'></CustomLink>
             </nav>
             <nav className='flex items-center justify-center flex-wrap'>
                 {/* <motion.a href="https://twitter.com" target={'_blank'}
