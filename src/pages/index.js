@@ -8,7 +8,7 @@ import profilePic from "../../public/images/profile/ProfileIcon2.png";
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Icons'
 import ConnectWithMe from '@/components/ConnectWithMe'
-import controller from "../../public/images/svgs/controller.png";
+import controller from "../../public/images/other/controller.png";
 
 const inter = Inter({ subsets: ['latin'] })
 
