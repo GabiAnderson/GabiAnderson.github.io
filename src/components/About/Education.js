@@ -36,30 +36,6 @@ const Details = ({ type, time, place, info, placeColor }) => {
         </li>
     );
 };
-
-const CertificationDetails = ({ course, dateTaken, placeTaken, info, placeColor }) => {
-    const ref = useRef(null);
-  
-    return (
-      <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto'>
-        <LineIcon reference={ref} />
-  
-        <motion.div
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 0.5, type: 'spring' }}
-        >
-            <h3 style={{ fontSize: '1.25rem' }} className='capitalize font-bold'>
-                {course}
-            </h3>
-            <span className='capitalize font-medium text-dark/75'>
-                {dateTaken} | <span style={{ color: placeColor }}>{placeTaken}</span>
-            </span>
-            <p className='font-medium w-full mb-4'>{info}</p>
-        </motion.div>
-      </li>
-    );
-};
   
 const Education = () => {
     const ref = useRef(null);
@@ -90,49 +66,6 @@ const Education = () => {
                                 "**Mathematics:** Linear Algebra, Calculus 1-3, Applied Statistics, Foundations of Analysis, Introduction to Number Theory, Engineering Probability & Statistics,  "]}
                         placeColor="#CC0000"
                     />
-                    <CertificationDetails
-                        course='Certification Prep: Unity Certified Associate Game Developer Audio and Effects'
-                        dateTaken='April 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-                    <CertificationDetails
-                        course='C++ Programming: Essential Techniques and Best Practices'
-                        dateTaken='April 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-                    <CertificationDetails
-                        course='UX Design for Developers'
-                        dateTaken='April 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-                    <CertificationDetails
-                        course='User Experience for Design'
-                        dateTaken='April 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-                    <CertificationDetails
-                        course='Test Automation Foundations'
-                        dateTaken='February 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-                    <CertificationDetails
-                        course='Learning Python'
-                        dateTaken='February 2023'
-                        placeTaken='LinkedIn Learning'
-                        info='This is some information about the certification course.'
-                        placeColor='#0072b1' // Replace with your desired color value
-                    />
-
                 </ul>
             </div>
         </div>
