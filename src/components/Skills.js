@@ -29,7 +29,7 @@ import {motion} from 'framer-motion'
             //style={{ background: randomColor }}
             whileHover={{scale:1.05}}
             initial={{x:0, y:0}}
-            animate={{x:x, y:y}}
+            whileInView={{x:x, y:y}}
             transition={{duration:1.5}}>
                 {name}
         </motion.div>
@@ -49,7 +49,7 @@ const Skills = () => {
                 Video Game Development
             </motion.div>
 
-            <Skill name="Perforce" x="-20vw" y="2vw" />
+            <Skill name="Perforce" x="-22vw" y="2vw" />
             <Skill name="Unity" x="-5vw" y="-10vw" />
             <Skill name="Unreal Engine" x="20vw" y="6vw" />
             <Skill name="C#" x="0vw" y="12vw" />
@@ -58,7 +58,7 @@ const Skills = () => {
             <Skill name="C++" x="32vw" y="-5vw" />
             <Skill name="Git" x="0vw" y="-20vw" />
             <Skill name="UI/UX" x="-25vw" y="18vw" />
-            <Skill name="Python" x="20vw" y="20vw" />
+            <Skill name="Python" x="18vw" y="18vw" />
 
         </div>
         </>
