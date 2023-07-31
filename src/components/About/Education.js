@@ -2,39 +2,66 @@ import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LineIcon from '@/components/About/LineIcon'
 
-const Details = ({position, company, companyLink, time, address, work, brandColor}) => {
+const Details = ({ type, time, place, info, placeColor }) => {
     const ref = useRef(null);
+
+    const formatParagraph = (paragraph) => {
+        // Use a regular expression to detect portions of the text wrapped with double asterisks.
+        // Replace the double asterisks with <strong> tags to make the text bold.
+        return paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      };
+  
     return (
         <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
-            
-            <LineIcon reference={ref}/>
-
-            <motion.div
-            initial={{y:50}}
-            whileInView={{y:0}}
-            transition={{duration:0.5, type:"spring"}}
-            >
-                <h3 className='captilize font-bold text-2xl'>
-                    {position}&nbsp;
-                    <a href={companyLink}
-                    target='_blank'
-                    style={{ color: brandColor }}
-                    className='capitalize'>
-                        @{company}
-                    </a>
-                </h3>
-                <span className='capitlize font-medium text-dark/75'>
-                    {time} | {address}
-                </span>
-                <p className='font-medium w-full'>
-                    {work}
-                </p>
-            </motion.div>
+          <LineIcon reference={ref} />
+    
+          <motion.div
+            initial={{ y: 50 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+          >
+            <h3 className='capitalize font-bold text-2xl'>{type}</h3>
+            <span className='capitalize font-medium text-dark/75'>
+              {time} |{" "}
+              <span style={{ color: placeColor }}>{place}</span>
+            </span>
+            {info.map((paragraph, index) => (
+                <p
+                key={index}
+                className='font-medium w-full mb-4'
+                dangerouslySetInnerHTML={{ __html: formatParagraph(paragraph) }}
+                />
+            ))}
+          </motion.div>
         </li>
-    )
-}
+    );
+};
 
-const Experience = () => {
+const CertificationDetails = ({ course, dateTaken, placeTaken, info, placeColor }) => {
+    const ref = useRef(null);
+  
+    return (
+      <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto'>
+        <LineIcon reference={ref} />
+  
+        <motion.div
+          initial={{ y: 50 }}
+          whileInView={{ y: 0 }}
+          transition={{ duration: 0.5, type: 'spring' }}
+        >
+            <h3 style={{ fontSize: '1.25rem' }} className='capitalize font-bold'>
+                {course}
+            </h3>
+            <span className='capitalize font-medium text-dark/75'>
+                {dateTaken} | <span style={{ color: placeColor }}>{placeTaken}</span>
+            </span>
+            <p className='font-medium w-full mb-4'>{info}</p>
+        </motion.div>
+      </li>
+    );
+};
+  
+const Education = () => {
     const ref = useRef(null);
     const {scrollYProgress} = useScroll(
         {
@@ -45,7 +72,7 @@ const Experience = () => {
     return (
         <div className='my-64'>
             <h2 className='font-bold text-8xl mb-32 w-full text-center text-primary'>
-                Experience
+                Education
             </h2>
 
             <div ref={ref} className='w-[75%] mx-auto relative'>
@@ -54,49 +81,62 @@ const Experience = () => {
                 style={{scaleY: scrollYProgress}}/>
 
                 <ul className='w-full flex flex-col items-start justify-between ml-4'>
-                    <Details 
-                        position="Associate Firmware Test Engineer"
-                        company="Cricut"
-                        companyLink="https://cricut.com/en-us/"
-                        time="Aug 2022 - Present"
-                        address="South Jordan, UT"
-                        work="Streamline firmware testing processes by creating automation software, resulting in a 75% reduction in 
-                        testing time. Design and implement Bluetooth and USB event loggers for Windows and Mac platforms, leading to 
-                        a 30% improvement in system monitoring and troubleshooting capabilities. Create test plans for a wide range 
-                        of machines, ensuring thorough and efficient testing methodologies, while collaborating cross-functionally 
-                        to troubleshoot and resolve firmware issues, enhancing product quality and customer satisfaction."
-                        brandColor="#00c08b"
+                    <Details
+                        type="Honors BS in Computer Science with an Entertainment Arts & Engineering Emphasis & Mathematical Minor"
+                        time="Sep 2018 - May 2023"
+                        place="University of Utah"
+                        info={["**Computer Science:** Foundations of CS, Introduction Scientific Computation, Object-Oriented Programming, Discrete Structures, Algorithims & Data Structures, Computer Graphics, Algorithms, Advanced Algorithms, Computer Systems, Artifical Intelligence, Computer Organization, Mobile App Programming, Human-Computer Interaction",
+                                "**Entertainment Arts and Engineering:** Introduction to Design Thinking, Digital Content Creation, Asset Pipeline, Introduction to Game Design, Alternative Game Development, Traditional Game Development, Capstone 1 & 2",
+                                "**Mathematics:** Linear Algebra, Calculus 1-3, Applied Statistics, Foundations of Analysis, Introduction to Number Theory, Engineering Probability & Statistics,  "]}
+                        placeColor="#CC0000"
+                    />
+                    <CertificationDetails
+                        course='Certification Prep: Unity Certified Associate Game Developer Audio and Effects'
+                        dateTaken='April 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
+                    />
+                    <CertificationDetails
+                        course='C++ Programming: Essential Techniques and Best Practices'
+                        dateTaken='April 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
+                    />
+                    <CertificationDetails
+                        course='UX Design for Developers'
+                        dateTaken='April 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
+                    />
+                    <CertificationDetails
+                        course='User Experience for Design'
+                        dateTaken='April 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
+                    />
+                    <CertificationDetails
+                        course='Test Automation Foundations'
+                        dateTaken='February 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
+                    />
+                    <CertificationDetails
+                        course='Learning Python'
+                        dateTaken='February 2023'
+                        placeTaken='LinkedIn Learning'
+                        info='This is some information about the certification course.'
+                        placeColor='#0072b1' // Replace with your desired color value
                     />
 
-                    <Details 
-                        position="Volunteer Video Game Venture Scout"
-                        company="Anthos Capital"
-                        companyLink="https://anthoscapital.com/"
-                        time="Dec 2021 - Present"
-                        address="Remote"
-                        work="Provide detailed bug reports and feedback on game design during pre-release stages while also 
-                        evaluating game quality and determining the viability of development for potential investment. 
-                        Engage in trend and concept discussions, share projects, and share learning opportunities 
-                        with like-minded video game enthusiasts."
-                        brandColor="#710000"
-                    />
-
-                    <Details 
-                        position="Web Content Specialist"
-                        company="UtahSkis"
-                        companyLink="https://utahskis.com/"
-                        time="Dec 2018 - July 2022"
-                        address="West Valley City, UT"
-                        work="Utilized 3rd party brand software to extract matching images and product descriptions for items sold by 
-                        UtahSkis. Imported the gathered images and descriptions onto the website while ensuring they align with the 
-                        standard by resizing or rewording details if necessary. Managed product visibility by publishing new items 
-                        and unpublishing old or sold-out products as needed to maintain an up-to-date and appealing product catalog."
-                        brandColor="#3cdfff"
-                    />  
                 </ul>
             </div>
         </div>
     )
 }
 
-export default Experience
+export default Education
