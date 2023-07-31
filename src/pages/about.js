@@ -87,9 +87,9 @@ const about =() => {
                         <p className='text-sm font-medium'>
                             Now, as an Associate Firmware Test Engineer at Cricut, I am tasked with automating firmware qualification processes, 
                             developing test cases for new and released products, and act as the lead firmware tester for upcoming machines, 
-                            running them through test cases and writing bugs for the firmware team. Furthermore, I've embarked on 
+                            running them through test cases and writing bugs for the firmware team. Furthermore, I&apos;ve embarked on 
                             exciting personal projects, including website development and a collaborative effort with fellow developers on 
-                            the game 'Winged Remnants,' where I contribute as the UI/UX programmer. With a profound appreciation for the art 
+                            the game &apos;Winged Remnants&apos;, where I contribute as the UI/UX programmer. With a profound appreciation for the art 
                             and technology behind gaming, I eagerly look forward to the adventures that lie ahead in this dynamic industry.
                         </p>
                     </div>
