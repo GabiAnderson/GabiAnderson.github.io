@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
-import LineIcon from '@/components/LineIcon'
+import LineIcon from '@/components/About/LineIcon'
 
 const Details = ({position, company, companyLink, time, address, work, brandColor}) => {
     const ref = useRef(null);

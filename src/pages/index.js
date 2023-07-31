@@ -2,13 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Layout from '@/components/Layout'
-import AnimatedText from '@/components/AnimatedText'
+import Layout from '@/components/Common/Layout'
+import AnimatedText from '@/components/Common/AnimatedText'
 import profilePic from "../../public/images/profile/ProfileIcon2.png";
 import Link from 'next/link'
-import { LinkArrow } from '@/components/Icons'
-import ConnectWithMe from '@/components/ConnectWithMe'
-import controller from "../../public/images/other/controller.png";
+import { LinkArrow } from '@/components/Common/Icons'
+import ConnectWithMe from '@/components/Home/ConnectWithMe'
+import controller from "../../public/images/home/controller.png";
 
 const inter = Inter({ subsets: ['latin'] })
 

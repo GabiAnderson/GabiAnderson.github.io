@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
-import AnimatedText from '@/components/AnimatedText'
-import Layout from '@/components/Layout'
+import AnimatedText from '@/components/Common/AnimatedText'
+import Layout from '@/components/Common/Layout'
 import profilePic from "../../public/images/profile/ProfileIcon.jpg";
 import Image from 'next/image'
 import { useSpring, useMotionValue, useInView, motionValue } from 'framer-motion';
-import Skills from '@/components/Skills'
-import Experience from '@/components/Experience'
+import Skills from '@/components/About/Skills'
+import Experience from '@/components/About/Experience'
 
 const AnimatedNumbers = ({value}) => {
     const ref = useRef(null);

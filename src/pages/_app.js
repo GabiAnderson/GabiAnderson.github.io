@@ -1,5 +1,5 @@
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
+import NavBar from '@/components/Common/NavBar'
+import Footer from '@/components/Common/Footer'
 import '@/styles/globals.css'
 // can choose any font from google
 import {Montserrat} from "next/font/google"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CircularText } from './Icons'
+import { CircularText } from '../Common/Icons'
 import Link from 'next/link'
 
 const ConnectWithMe = () => {
