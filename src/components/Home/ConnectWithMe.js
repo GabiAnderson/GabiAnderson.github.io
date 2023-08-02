@@ -10,7 +10,7 @@ const ConnectWithMe = () => {
             <div className='w-48 h-auto flex items-center justify-center relative'>
                 <CircularText className={"fill-dark animate-spin-slow"}/>
 
-                <Link href="https://discord.com/users/488372834016690186" target={'_blank'} className='flex items-center justify-center 
+                <Link href="https://linkedin.com/in/gabriela-anderson" target={'_blank'} className='flex items-center justify-center 
                 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark 
                 text-light shadow-md border border-solid border-dark
                 w-32 h-32 rounded-full font-semibold hover:bg-light hover:text-primary hover:border-primary hover:border-b-5 text-center'

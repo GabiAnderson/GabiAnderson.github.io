@@ -14,7 +14,7 @@ const Footer = ({children, className=""}) => {
                     underline-offset-2'
                     >Gabi Anderson</Link>
                 </div>
-                <Link href="mailto:gabi84095@gmail.com" target={"_blank"} className='underline
+                <Link href="https://discord.com/users/488372834016690186" target={"_blank"} className='underline
                     underline-offset-2'>Say Hello</Link>
             </Layout>
         </footer>
