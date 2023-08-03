@@ -9,19 +9,30 @@ import NDHeader from "../../public/images/projects/naturalDisaster/ND_header.png
 import AKHeader from "../../public/images/projects/acidKnockout/AK_header.png";
 import FFTHeader from "../../public/images/projects/foodForThought/FFT_header.png";
 
-const FeaturedProject = ({type, title, summary, img, link, githubLink, publicLink}) => {
+const FeaturedProject = ({type, title, summary, img, link, githubLink, documentationLink, publicLink}) => {
+    // Split the "type" prop into three parts based on spaces
+    const typeParts = type.split('**');
+    const firstPart = typeParts[0];
+    const secondPart = typeParts[1];
+    const thirdPart = typeParts.slice(2).join('**');
+
     return (
-        <article className='w-full flex items-center justify-between first-letter 
-        rounded-3xl border border-solid border-primary bg-light shadow-2xl p-12 
-        '>
-            <Link href={link} target="_blank"
-            className='w-1/2 cursor-pointer overflow-hidden rounded-lg'
-            >
+        <article className='w-full flex items-center justify-between first-letter rounded-3xl border border-solid 
+        border-primary bg-light shadow-2xl p-12 relative rounded-br-2xl'>
+
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primary rounded-br-3xl'/>
+
+            <Link href={link} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
                 <Image src={img} alt={title} className="w-full h-auto" />
             </Link>
 
             <div className='w-1/2 flex flex-col items-start justify-between pl-6 '>
-                <span className='text-primary font-medium text-2xl'>{type}</span>
+                {/* Apply the custom CSS classes to each part of the "type" prop */}
+                <span className='font-medium text-xl'>
+                    <span className='text-primary'>{firstPart}</span>{' '}
+                    <span className='text-dark'>{secondPart}</span>{' '}
+                    <span className='text-accentpink'>{thirdPart}</span>
+                </span>
 
                 <Link href={link} className='hover:underline underline-offset-2'>
                     <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
@@ -32,7 +43,17 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, publicLin
                 <div className='mt-2 flex items-center'>
                     <Link href={link} className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
 
-                    <Link href={githubLink} target="_blank" className='ml-4 w-10'> <GithubIcon /> </Link>
+                    {githubLink && (
+                        <Link href={githubLink} target="_blank" className='ml-4 w-10'>
+                        <GithubIcon />
+                        </Link>
+                    )}
+
+                    {documentationLink && (
+                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>
+                        Documentation
+                        </Link>
+                    )}
 
                     <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
                 </div>
@@ -41,35 +62,59 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, publicLin
     )
 }
 
-const Project = ({type, title, summary, img, link, githubLink, publicLink}) => {
+const Project = ({ type, title, summary, img, link, githubLink, documentationLink, publicLink }) => {
+    // Split the "type" prop into three parts based on spaces
+    const typeParts = type.split('**');
+    const firstPart = typeParts[0];
+    const secondPart = typeParts[1];
+    const thirdPart = typeParts.slice(2).join('**');
+  
     return (
-        <article className='w-full flex flex-col items-center justify-center rounded-2xl 
-        border border-solid border-primary bg-light p-6 relative'>
-            <Link href={link} target="_blank"
-            className='w-full cursor-pointer overflow-hidden rounded-lg'>
-                <Image src={img} alt={title} className="w-full h-auto" />
-            </Link>
+      <article className='w-full flex flex-col items-center justify-center rounded-2xl 
+      border border-solid border-primary bg-light p-6 relative rounded-br-2xl'>
 
-            <div className='w-full flex flex-col items-start justify-between mt-4'>
-                <span className='text-primary font-medium text-xl'>{type}</span>
+        <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primary rounded-br-3xl'/>
 
-                <Link href={link} className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+        <Link href={link} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
+          <Image src={img} alt={title} className="w-full h-auto" />
+        </Link>
+  
+        <div className='w-full flex flex-col items-start justify-between mt-4'>
+          {/* Apply the custom CSS classes to each part of the "type" prop */}
+          <span className='font-medium text-xl'>
+            <span className='text-primary'>{firstPart}</span>{' '}
+            <span className='text-dark'>{secondPart}</span>{' '}
+            <span className='text-accentpink'>{thirdPart}</span>
+          </span>
+  
+          <Link href={link} className='hover:underline underline-offset-2'>
+            <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+          </Link>
+  
+          <p className='my-2 font-normal text-dark'>{summary}</p>
+  
+          <div className='w-full mt-2 flex items-center justify-between'>
+            <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
+  
+            {githubLink && (
+                <Link href={githubLink} target="_blank" className='ml-4 w-10'>
+                <GithubIcon />
                 </Link>
+            )}
 
-                <p className='my-2 font-normal text-dark'>{summary}</p>
-
-                <div className='w-full mt-2 flex items-center justify-between'>
-                    <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
-
-                    <Link href={githubLink} target="_blank" className='ml-4 w-10'> <GithubIcon /> </Link>
-
-                    <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
-                </div>
-            </div>
-        </article>
+            {documentationLink && (
+                <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>
+                Documentation
+                </Link>
+            )}
+  
+            <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
+          </div>
+        </div>
+      </article>
     )
 }
+  
 
 const projects =() => {
     return (
@@ -101,10 +146,9 @@ const projects =() => {
                         <FeaturedProject 
                             title="Natural Disaster: A Butterfly's Guide to Mass Destruction"
                             summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
-                            link="/"
-                            type="Steam PC Game | Lead Engineer & Machinima Producer"
+                            link="/projects/naturalDisaster"
+                            type="Steam PC Game**|**Lead Engineer & Machinima Producer"
                             img={NDHeader}
-                            githubLink="/"
                             publicLink="/"
                         />
                     </div>
@@ -113,22 +157,21 @@ const projects =() => {
                         <Project 
                             title="Acid Knockout"
                             summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
-                            link="/"
-                            type="Itch.io PC Game | Engineer"
+                            link="/projects/acidKnockout"
+                            type="Itch.io PC Game**|**Engineer"
                             img={AKHeader}
-                            githubLink="/"
-                            publicLink="/"
+                            documentationLink="https://drive.google.com/drive/folders/10ZkyKRft48uq245jMRkt3JNGfs66vCVE"
+                            publicLink="https://gabi-ander.itch.io/acid-knockout"
                         />
                     </div>
                     <div className='col-span-6'>
                         <Project 
                             title="Food For Thought"
                             summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
-                            link="/"
-                            type="Tabletop Simulator Game | Lead Engineer & Artist"
+                            link="/projects/foodForThought"
+                            type="Tabletop Simulator Game**|**Lead Engineer & Artist"
                             img={FFTHeader}
-                            githubLink="/"
-                            publicLink="/"
+                            publicLink="https://steamcommunity.com/sharedfiles/filedetails/?id=2567944407"
                         />
                     </div>
                 </div>
