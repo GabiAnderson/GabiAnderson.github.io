@@ -8,6 +8,7 @@ import { GithubIcon } from '@/components/Common/Icons'
 import NDHeader from "../../public/images/projects/naturalDisaster/ND_header.png";
 import AKHeader from "../../public/images/projects/acidKnockout/AK_header.png";
 import FFTHeader from "../../public/images/projects/foodForThought/FFT_header.png";
+import CRRHeader from "../../public/images/projects/classRegistrationRedesign/CRR_header.png";
 
 const FeaturedProject = ({type, title, summary, img, link, githubLink, documentationLink, publicLink}) => {
     // Split the "type" prop into three parts based on spaces
@@ -153,10 +154,10 @@ const projects =() => {
                         />
                     </div>
 
-                    <div className='col-span-6'>
+                    <div className='col-span-6 my-8'>
                         <Project 
                             title="Acid Knockout"
-                            summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
+                            summary="A cute-horror King of the Hill style game with retro-inspired art, blending elements from Super Smash Bros. Ultimate and Brawlhalla, featuring static levels with fast-paced enemy waves and pickups."
                             link="/projects/acidKnockout"
                             type="Itch.io PC Game**|**Engineer"
                             img={AKHeader}
@@ -167,10 +168,20 @@ const projects =() => {
                     <div className='col-span-6'>
                         <Project 
                             title="Food For Thought"
-                            summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
+                            summary="An educational game for college students to learn cooking, budgeting, and healthy eating by making choices throughout the day and receiving updates on calorie intake, meal enjoyment, and expenses, encouraging meal planning in an enjoyable way."
                             link="/projects/foodForThought"
                             type="Tabletop Simulator Game**|**Lead Engineer & Artist"
                             img={FFTHeader}
+                            publicLink="https://steamcommunity.com/sharedfiles/filedetails/?id=2567944407"
+                        />
+                    </div>
+                    <div className='col-span-12'>
+                        <FeaturedProject 
+                            title="Class Planning, Registration and Payment Redesign"
+                            summary="We redesigned the University of Utah's course planning, registration, and payment process, which previously involved using 3+ separate websites, by integrating all functionalities into one cohesive platform based on feedback from current students and usability testing with new students to ensure a more streamlined and user-friendly experience."
+                            link="/projects/classRegistrationRedesign"
+                            type="UI/UX Redesign**|**Lead Designer & Developer"
+                            img={CRRHeader}
                             publicLink="https://steamcommunity.com/sharedfiles/filedetails/?id=2567944407"
                         />
                     </div>
