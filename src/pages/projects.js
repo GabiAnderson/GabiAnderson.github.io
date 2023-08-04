@@ -9,6 +9,9 @@ import NDHeader from "../../public/images/projects/naturalDisaster/ND_header.png
 import AKHeader from "../../public/images/projects/acidKnockout/AK_header.png";
 import FFTHeader from "../../public/images/projects/foodForThought/FFT_header.png";
 import CRRHeader from "../../public/images/projects/classRegistrationRedesign/CRR_header.png";
+import LSHeader from "../../public/images/projects/lifeStyleApp/LS_header.png";
+import RGHeader from "../../public/images/projects/relocationGame/RG_header.png";
+import TTMHeader from "../../public/images/projects/toppleTheMonarchy/TTM_header.png";
 
 const FeaturedProject = ({type, title, summary, img, link, githubLink, documentationLink, publicLink}) => {
     // Split the "type" prop into three parts based on spaces
@@ -56,7 +59,9 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                         </Link>
                     )}
 
-                    <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
+                    {publicLink && (
+                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
+                    )}
                 </div>
             </div>
         </article>
@@ -77,7 +82,9 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
         <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primary rounded-br-3xl'/>
 
         <Link href={link} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
-          <Image src={img} alt={title} className="w-full h-auto" />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Image src={img} alt={title} className="w-full h-auto" />
+            </div>
         </Link>
   
         <div className='w-full flex flex-col items-start justify-between mt-4'>
@@ -109,7 +116,9 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
                 </Link>
             )}
   
-            <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
+            {publicLink && (
+                <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
+            )}
           </div>
         </div>
       </article>
@@ -175,16 +184,49 @@ const projects =() => {
                             publicLink="https://steamcommunity.com/sharedfiles/filedetails/?id=2567944407"
                         />
                     </div>
-                    <div className='col-span-12'>
-                        <FeaturedProject 
+
+                    <div className='col-span-6'>
+                        <Project 
+                            title="Topple the Monarchy"
+                            summary="A cute-horror King of the Hill style game with retro-inspired art, blending elements from Super Smash Bros. Ultimate and Brawlhalla, featuring static levels with fast-paced enemy waves and pickups."
+                            link="/projects/toppleTheMonarchy"
+                            type="Board Game**|**Designer & Developer"
+                            img={TTMHeader}
+                            publicLink="https://docs.google.com/document/d/1IY0Id8ovoLf4SJwEQcItqtVXUfln9af1LqTiZzHyV4U/edit?usp=sharing"
+                        />
+                    </div>
+                    <div className='col-span-6'>
+                        <Project 
+                            title="Relocation"
+                            summary="An educational game for college students to learn cooking, budgeting, and healthy eating by making choices throughout the day and receiving updates on calorie intake, meal enjoyment, and expenses, encouraging meal planning in an enjoyable way."
+                            link="/projects/relocationGame"
+                            type="Game Pitch**|**Concept Creator"
+                            img={RGHeader}
+                        />
+                    </div>
+
+                    <div className='col-span-6'>
+                        <Project 
                             title="Class Planning, Registration and Payment Redesign"
-                            summary="We redesigned the University of Utah's course planning, registration, and payment process, which previously involved using 3+ separate websites, by integrating all functionalities into one cohesive platform based on feedback from current students and usability testing with new students to ensure a more streamlined and user-friendly experience."
+                            summary="Redesigned of the University of Utah's course planning, registration, and payment process, which previously involved using 3+ separate websites, by integrating all functionalities into one cohesive platform based on feedback from current students and usability testing with new students to ensure a more streamlined and user-friendly experience."
                             link="/projects/classRegistrationRedesign"
                             type="UI/UX Redesign**|**Lead Designer & Developer"
                             img={CRRHeader}
-                            publicLink="https://steamcommunity.com/sharedfiles/filedetails/?id=2567944407"
+                            publicLink="https://xd.adobe.com/view/07355284-4ae7-4ef7-8050-77f1925779d9-5266/screen/ac3fbf1c-dfd2-41a1-8541-c081f95f47ed?fullscreen"
                         />
                     </div>
+                    <div className='col-span-6 my-8'>
+                        <Project 
+                            title="LifeStyle"
+                            summary="An Android mobile application, featuring user login with data storage, local weather information, nearby hike suggestions, and calculations for BMR, BMI, calorie count, and weight loss goals, designed in Figma or Adobe XD and developed for Android devices."
+                            link="/projects/lifeStyleApp"
+                            type="Mobile Application**|**Lead Designer & Developer"
+                            img={LSHeader}
+                            publicLink="https://xd.adobe.com/view/652b2627-9a8b-4ecb-ae86-87b1dfe92eed-3078/?fullscreen"
+                            githubLink="https://github.com/GabiAnderson/CS4530---Mobile-Applications"
+                        />
+                    </div>
+                    
                 </div>
             </Layout>
         </main>
