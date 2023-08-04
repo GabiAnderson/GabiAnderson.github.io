@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import ProjectPage from '@/components/Projects/ProjectPage'
 
 const naturalDisaster =() => {
     return (
@@ -21,6 +22,8 @@ const naturalDisaster =() => {
                 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                 border-2 border-solid border-transparent hover:border-primary'
             >View my old website</Link>
+
+            <ProjectPage />
         </main>
     </>
     )
