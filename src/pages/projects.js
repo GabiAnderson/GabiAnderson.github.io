@@ -12,6 +12,7 @@ import CRRHeader from "../../public/images/projects/classRegistrationRedesign/CR
 import LSHeader from "../../public/images/projects/lifeStyleApp/LS_header.png";
 import RGHeader from "../../public/images/projects/relocationGame/RG_header.png";
 import TTMHeader from "../../public/images/projects/toppleTheMonarchy/TTM_header.png";
+import WRHeader from "../../public/images/projects/wingedRemnants/WR_header.png";
 
 const FeaturedProject = ({type, title, summary, img, link, githubLink, documentationLink, publicLink}) => {
     // Split the "type" prop into three parts based on spaces
@@ -45,7 +46,7 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                 <p className='my-2 font-medium text-dark'>{summary}</p>
 
                 <div className='mt-2 flex items-center'>
-                    <Link href={link} className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
+                    <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
 
                     {githubLink && (
                         <Link href={githubLink} target="_blank" className='ml-4 w-10'>
@@ -152,14 +153,23 @@ const projects =() => {
                 <AnimatedText text="Player to Creator!" className='mb-16 text-primary'/>
 
                 <div className='grid grid-cols-12 gap-24'>
-                    <div className='col-span-12'>
+                    <div className='col-span-4 my-8'>
+                        <FeaturedProject 
+                            title="Winged Remnants"
+                            summary="Coming Soon"
+                            link="/"
+                            type="Steam PC Game**|**UI/UX Engineer"
+                            img={WRHeader}
+                        />
+                    </div>
+                    <div className='col-span-8'>
                         <FeaturedProject 
                             title="Natural Disaster: A Butterfly's Guide to Mass Destruction"
                             summary="Point-and-click-inspired adventure game set in a View-Master. Explore a world in scenes and sow the seeds of disaster by virtue of the butterfly effect!"
                             link="/projects/naturalDisaster"
                             type="Steam PC Game**|**Lead Engineer & Machinima Producer"
                             img={NDHeader}
-                            publicLink="/"
+                            publicLink="https://store.steampowered.com/app/2311140/Natural_Disaster_A_Butterflys_Guide_to_Mass_Destruction/"
                         />
                     </div>
 
