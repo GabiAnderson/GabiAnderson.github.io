@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
+import {motion} from 'framer-motion';
 import Layout from '@/components/Common/Layout'
 import AnimatedText from '@/components/Common/AnimatedText'
 import { GithubIcon } from '@/components/Common/Icons'
@@ -13,6 +14,8 @@ import LSHeader from "../../public/images/projects/lifeStyleApp/LS_header.png";
 import RGHeader from "../../public/images/projects/relocationGame/RG_header.png";
 import TTMHeader from "../../public/images/projects/toppleTheMonarchy/TTM_header.png";
 import WRHeader from "../../public/images/projects/wingedRemnants/WR_header.png";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({type, title, summary, img, link, githubLink, documentationLink, publicLink}) => {
     // Split the "type" prop into three parts based on spaces
@@ -28,7 +31,10 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primary rounded-br-3xl'/>
 
             <Link href={link} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
-                <Image src={img} alt={title} className="w-full h-auto" />
+                <FramerImage src={img} alt={title} className="w-full h-auto"
+                    whileHover={{scale:1.05}}
+                    transition={{duration:0.2}} 
+                />
             </Link>
 
             <div className='w-1/2 flex flex-col items-start justify-between pl-6 '>
@@ -84,7 +90,10 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
 
         <Link href={link} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Image src={img} alt={title} className="w-full h-auto" />
+                <FramerImage src={img} alt={title} className="w-full h-auto"
+                    whileHover={{scale:1.05}}
+                    transition={{duration:0.2}} 
+                />
             </div>
         </Link>
   

@@ -36,7 +36,7 @@ export default function Home() {
             <h1 className="text-6xl text-left">
               <span className="text-primary">Gabi</span> Anderson
             </h1>
-              <AnimatedText text="From Pixels to Play: Creating Games with Code." className='!text-3xl !text-left mt-4 text-dark/50' />
+              <AnimatedText text="From Play to Pixels: Creating Games with Code." className='!text-3xl !text-left mt-4 text-dark/50' />
               
               <p className='my-4 text-base font-medium'>
                 As a recent computer science graduate with a specialization in video game
