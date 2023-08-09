@@ -28,7 +28,9 @@ export default function Home() {
           <div className='flex items-center justify-between w-full'>
             <div className='w-1/2'>
 
-              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto' />
+              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto'
+              priority
+              sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 50vw" />
             
             </div>
             
@@ -36,7 +38,7 @@ export default function Home() {
             <h1 className="text-6xl text-left">
               <span className="text-primary">Gabi</span> Anderson
             </h1>
-              <AnimatedText text="From Play to Pixels: Creating Games with Code." className='!text-3xl !text-left mt-4 text-dark/50 dark:text-light/50' />
+              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left mt-4 text-dark/50 dark:text-light/50' />
               
               <p className='my-4 text-base font-medium'>
                 As a recent computer science graduate with a specialization in video game

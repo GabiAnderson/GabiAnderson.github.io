@@ -34,6 +34,8 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                 <FramerImage src={img} alt={title} className="w-full h-auto"
                     whileHover={{scale:1.05}}
                     transition={{duration:0.2}} 
+                    priority
+                    sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 50vw"
                 />
             </Link>
 

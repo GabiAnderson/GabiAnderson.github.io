@@ -98,7 +98,9 @@ const about =() => {
 
                     <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 my-24 dark:bg-dark'>
                         <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-primary' />
-                        <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl' />
+                        <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl' 
+                        priority
+                        sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 33vw" />
                     </div>
 
                     <div className='col-span-1 flex flex-col items-end justify-center'>
