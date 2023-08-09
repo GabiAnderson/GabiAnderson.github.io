@@ -60,12 +60,12 @@ const about =() => {
             <title>Gabi Anderson | About</title>
             <meta name="description" content="any thing here" />
         </Head>
-        <main className='flex w-full flex-col items-center justify-center'>
+        <main className='flex w-full flex-col items-center justify-center dark:text-light'>
             <Layout className='pt-16'>
                 <AnimatedText text="Player to Creator!" className='mb-16 text-primary' />
                 <div className='grid w-full grid-cols-8 gap-16'>
-                    <div className='col-span-4 flex flex-col items-start justify-start'>
-                        <span className='mb-4 text-lg font-bold uppercase text-accentmaroon/75'>
+                    <div className='col-span-4 flex flex-col items-start justify-center'>
+                        <span className='mb-4 text-lg font-bold uppercase text-accentgreen/75'>
                                 <AnimatedList text="Biography" delay={100} />
                         </span>
 
@@ -106,19 +106,19 @@ const about =() => {
                             <span className='inline-block text-7xl text-accentgreen font-bold'>
                                 <AnimatedNumbers value={30}/>+
                             </span>
-                            <h2 className='text-xl font-medium capitalize text-center text-dark/75'>Courses</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75 dark:text-light/75'>Courses</h2>
                         </div>
                         <div className='flex flex-col items-end justify-center py-8'>
                             <span className='inline-block text-7xl text-accentpink font-bold'>
                                 <AnimatedNumbers value={7}/>+
                             </span>
-                            <h2 className='text-xl font-medium capitalize text-center text-dark/75 max-h-16'>Game Projects</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75 max-h-16 dark:text-light/75'>Game Projects</h2>
                         </div>
                         <div className='flex flex-col items-end justify-center'>
                             <span className='inline-block text-7xl text-accentblue font-bold'>
                                 <AnimatedNumbers value={10}/>+
                             </span>
-                            <h2 className='text-xl font-medium capitalize text-center text-dark/75'>Certifications</h2>
+                            <h2 className='text-xl font-medium capitalize text-center text-dark/75 dark:text-light/75'>Certifications</h2>
                         </div>
                     </div>
                 </div>

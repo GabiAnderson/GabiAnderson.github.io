@@ -4,7 +4,7 @@ import Logo from './Logo'
 import { useRouter } from 'next/router'
 import {TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon, DiscordIcon, SunIcon, MoonIcon } from './Icons'
 import { motion } from "framer-motion";
-import useThemeSwitcher from '../hooks/useThemeSwitcher'
+import useThemeSwitcher from '../Hooks/useThemeSwitcher'
 
 
 const CustomLink = ({href, title, className='', underlineColor = 'black'}) => {
@@ -29,7 +29,7 @@ const NavBar = () => {
 
     return (
         <header
-        className='w-fulle px-32 py-8 font-medium flex items-center justify-between'
+        className='w-fulle px-32 py-8 font-medium flex items-center justify-between dark:text-light'
         >
             <nav>
                 <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primary'></CustomLink>
@@ -50,21 +50,21 @@ const NavBar = () => {
                 whileTap={{scale:0.9}}
                 className='w-6 mx-3'
                 >
-                    <DiscordIcon />
+                    <DiscordIcon className='dark:fill-light'/>
                 </motion.a>
                 <motion.a href="https://github.com/GabiAnderson" target={'_blank'}
                 whileHover={{y:-2}}
                 whileTap={{scale:0.9}}
                 className='w-6 mx-3'
                 >
-                    <GithubIcon />
+                    <GithubIcon className='dark:fill-light' />
                 </motion.a>
                 <motion.a href="https://linkedin.com/in/gabriela-anderson" target={'_blank'}
                 whileHover={{y:-2}}
                 whileTap={{scale:0.9}}
                 className='w-6 mx-3'
                 >
-                    <LinkedInIcon />
+                    <LinkedInIcon className='dark:fill-light' />
                 </motion.a>
                 {/* <motion.a href="https://pinterest.com" target={'_blank'}
                 whileHover={{y:-2}}
@@ -82,7 +82,11 @@ const NavBar = () => {
                 </motion.a> */}
 
                 <button
-                onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+                onClick={ () => setMode(mode === "light" ? "dark" : "light") }
+                    className={`ml-3 flex items-center justify-center rounded-full p-1 
+                    ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+                    `}
+                >
                     {
                         mode === "dark" ? <SunIcon className={"fill-dark"} /> : <MoonIcon className={"fill-dark"} />
                     }
