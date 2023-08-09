@@ -26,7 +26,7 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
 
     return (
         <article className='w-full flex items-center justify-between first-letter rounded-3xl border border-solid 
-        border-primary bg-light shadow-2xl p-12 relative rounded-br-2xl'>
+        border-primary bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark'>
 
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primary rounded-br-3xl'/>
 
@@ -41,22 +41,22 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                 {/* Apply the custom CSS classes to each part of the "type" prop */}
                 <span className='font-medium text-xl'>
                     <span className='text-primary'>{firstPart}</span>{' '}
-                    <span className='text-dark'>{secondPart}</span>{' '}
+                    <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
                     <span className='text-accentpink'>{thirdPart}</span>
                 </span>
 
-                <Link href={link} className='hover:underline underline-offset-2'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
+                <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
                 </Link>
 
-                <p className='my-2 font-medium text-dark'>{summary}</p>
+                <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
 
                 <div className='mt-2 flex items-center'>
                     <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
 
                     {githubLink && (
                         <Link href={githubLink} target="_blank" className='ml-4 w-10'>
-                        <GithubIcon />
+                        <GithubIcon className='dark:fill-light' />
                         </Link>
                     )}
 
@@ -84,7 +84,7 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
   
     return (
       <article className='w-full flex flex-col items-center justify-center rounded-2xl 
-      border border-solid border-primary bg-light p-6 relative rounded-br-2xl'>
+      border border-solid border-primary bg-light p-6 relative rounded-br-2xl dark:bg-dark'>
 
         <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primary rounded-br-3xl'/>
 
@@ -101,22 +101,22 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
           {/* Apply the custom CSS classes to each part of the "type" prop */}
           <span className='font-medium text-xl'>
             <span className='text-primary'>{firstPart}</span>{' '}
-            <span className='text-dark'>{secondPart}</span>{' '}
+            <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
             <span className='text-accentpink'>{thirdPart}</span>
           </span>
   
-          <Link href={link} className='hover:underline underline-offset-2'>
-            <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+          <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
+            <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>{title}</h2>
           </Link>
   
-          <p className='my-2 font-normal text-dark'>{summary}</p>
+          <p className='my-2 font-normal text-dark dark:text-light'>{summary}</p>
   
           <div className='w-full mt-2 flex items-center justify-between'>
             <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
   
             {githubLink && (
                 <Link href={githubLink} target="_blank" className='ml-4 w-10'>
-                <GithubIcon />
+                <GithubIcon className='dark:fill-light' />
                 </Link>
             )}
 
@@ -150,7 +150,7 @@ const projects =() => {
                 <div className='w-full mb-16 flex flex-col items-center justify-center'>
                     {/* Apply the custom CSS classes to each part of the "type" prop */}
                     <span className='font-bold text-3xl'>
-                        <span className='text-dark'>Coming Soon:</span>{' '}
+                        <span className='text-dark dark:text-light'>Coming Soon:</span>{' '}
                         <span className='text-accentblue'>Winged Remnants!</span>
                     </span>
                 </div>

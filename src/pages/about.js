@@ -96,7 +96,7 @@ const about =() => {
                         </p>
                     </div>
 
-                    <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 my-24'>
+                    <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 my-24 dark:bg-dark'>
                         <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-primary' />
                         <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl' />
                     </div>

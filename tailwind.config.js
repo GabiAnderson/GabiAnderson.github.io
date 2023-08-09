@@ -30,7 +30,8 @@ module.exports = {
         'spin-slow': 'spin 10s linear infinite'
       },
       backgroundImage:{
-        circularLight: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #f5f5f5 5px, #f5f5f5 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #f5f5f5 7px, #f5f5f5 100px);',
+        circularDark: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #1b1b1b 7px, #1b1b1b 100px);'
       }
     },
   },
