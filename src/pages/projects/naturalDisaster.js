@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
-import ProjectPage from '@/components/Projects/ProjectPage'
+import Header from '@/components/Projects/Header'
+import NDHeader from "../../../public/images/projects/naturalDisaster/ND_header.png";
 
 const naturalDisaster =() => {
     return (
@@ -23,7 +24,12 @@ const naturalDisaster =() => {
                 border-2 border-solid border-transparent hover:border-primary'
             >View my old website</Link>
 
-            <ProjectPage />
+            <Header
+                projectName="Natural Disaster" 
+                role="Lead Engineer"
+                shortDesc="TODO - small desc"
+                link="/"
+                img={NDHeader} />
         </main>
     </>
     )
