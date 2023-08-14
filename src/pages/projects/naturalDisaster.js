@@ -2,7 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Header from '@/components/Projects/Header'
-import NDHeader from "../../../public/images/projects/naturalDisaster/ND_header.png";
+import TripleColumn from '../../components/Projects/TripleColumn';
+import AnimatedText from '@/components/Common/AnimatedText'
+
+import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
+import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline_3_22.png";
+import ScannerCode from "../../../public/images/projects/naturalDisaster/ND_ScannerConcept_Code_1_14.png";
+import ArcadeLight from "../../../public/images/projects/naturalDisaster/ND_ArcadeLighting_4_4.png";
+
 
 const naturalDisaster =() => {
     return (
@@ -11,25 +18,27 @@ const naturalDisaster =() => {
             <title>Gabi Anderson | Natural Disaster</title>
             <meta name="description" content="any thing here" />
         </Head>
-        <main className='flex w-full flex-col items-center justify-center my-16'>
-            <h1 className='capitalize font-bold text-2xl'>This website is a personal project in progress (Expected finish 8/20/2023)</h1>
-            <p1 className='mx-80 my-8'>
-                To view my video game development work click the button below. My old website does not showcase all of my work but it 
-                does showcase my most recent and most proud of projects. The remainder of my work will be published on this site shortly.
-                Thank you for your patience.
-            </p1>
-            <Link href="https://gabi84095.wixsite.com/portfolio/portfolio" target={"_blank"}
-                className='flex items-center bg-dark text-light p-2.5 px-6 my-8
-                rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
-                border-2 border-solid border-transparent hover:border-primary'
-            >View my old website</Link>
-
+        <main className='flex w-full flex-col items-center justify-center'>
             <Header
                 projectName="Natural Disaster" 
                 role="Lead Engineer"
                 shortDesc="TODO - small desc"
                 link="/"
-                img={NDHeader} />
+                img={HeaderImg} />
+
+            <AnimatedText text="Role Breakdown" className='text-primary'/>
+
+            <TripleColumn 
+                img1={ArcadeLight}
+                img2={MachinimaPipeline}
+                img3={ScannerCode}
+                title1="Lighting Engineer"
+                title2="Machinima Producer"
+                title3="Engineer"
+                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+                desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
+            />
         </main>
     </>
     )
