@@ -149,14 +149,6 @@ const projects =() => {
             <Layout className='pt-16'>
                 <AnimatedText text="Player to Creator!" className='mb-16 text-primary'/>
 
-                <div className='w-full mb-16 flex flex-col items-center justify-center'>
-                    {/* Apply the custom CSS classes to each part of the "type" prop */}
-                    <span className='font-bold text-3xl'>
-                        <span className='text-dark dark:text-light'>Coming Soon:</span>{' '}
-                        <span className='text-accentblue'>Winged Remnants!</span>
-                    </span>
-                </div>
-
                 <div className='grid grid-cols-12 gap-24'>
                     <div className='col-span-12'>
                         <FeaturedProject 
