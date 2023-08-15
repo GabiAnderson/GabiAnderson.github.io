@@ -7,7 +7,7 @@ import HoverTripleColumn from '../../components/Projects/HoverTripleColumn';
 import AnimatedText from '@/components/Common/AnimatedText'
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
-import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline_3_22.png";
+import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
 import ScannerCode from "../../../public/images/projects/naturalDisaster/ND_ScannerConcept_Code_1_14.png";
 import ArcadeLight from "../../../public/images/projects/naturalDisaster/ND_ArcadeLighting_4_4.png";
 
