@@ -36,7 +36,7 @@ export default function Home() {
             
             <div className='w-1/2 flex flex-col item-center self-center'>
             <h1 className="text-6xl text-left">
-              <span className="text-primary">Gabi</span> Anderson
+              <span className="text-primary">Gabriela </span> Anderson
             </h1>
               <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left mt-4 text-dark/50 dark:text-light/50' />
               
@@ -48,7 +48,7 @@ export default function Home() {
               </p>
               
               <div className='flex items-center self-start mt-2'>
-                <Link href="/GabiAnderson_Resume.pdf" target={"_blank"}
+                <Link href="/GabrielaAnderson_Resume.pdf" target={"_blank"}
                   className='flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                   border-2 border-solid border-transparent hover:border-primary

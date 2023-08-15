@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Header from '@/components/Projects/Header'
 import TripleColumn from '../../components/Projects/TripleColumn';
+import HoverTripleColumn from '../../components/Projects/HoverTripleColumn';
 import AnimatedText from '@/components/Common/AnimatedText'
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
@@ -26,7 +27,18 @@ const naturalDisaster =() => {
                 link="/"
                 img={HeaderImg} />
 
-            <AnimatedText text="Role Breakdown" className='text-primary'/>
+            <HoverTripleColumn 
+                sectionTitle="Role Breakdown"
+                img1={ArcadeLight}
+                img2={MachinimaPipeline}
+                img3={ScannerCode}
+                title1="Lighting Engineer"
+                title2="Machinima Producer"
+                title3="Engineer"
+                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+                desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
+            />
 
             <TripleColumn 
                 img1={ArcadeLight}
