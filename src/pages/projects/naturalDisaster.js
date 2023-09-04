@@ -11,12 +11,13 @@ import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
 import ScannerCode from "../../../public/images/projects/naturalDisaster/ND_ScannerConcept_Code_1_14.png";
 import ArcadeLight from "../../../public/images/projects/naturalDisaster/ND_ArcadeLighting_4_4.png";
+import testGif from "../../../public/images/projects/naturalDisaster/ND_LoadingIconFinal.gif"
 
 const naturalDisaster =() => {
     const content = [
         {
           title: 'Title 1',
-          image: HeaderImg,
+          image: testGif,
           description: 'Description 1',
         },
         {
