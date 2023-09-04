@@ -47,7 +47,7 @@ const naturalDisaster =() => {
                 link="/"
                 img={HeaderImg} />
 
-            <ScrollableColumn content={content} />
+            <ScrollableColumn content={content} sectionTitle={"Role Breakdown"}/>
 
             <HoverTripleColumn 
                 sectionTitle="Role Breakdown"
