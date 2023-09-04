@@ -1,10 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
-import Layout from '../Common/Layout';
 import Image from 'next/image';
+import AnimatedText from '../Common/AnimatedText';
 
-const TripleColumn = ({img1, img2, img3, title1, title2, title3, desc1, desc2, desc3}) => {
+const TripleColumn = ({img1, img2, img3, title1, title2, title3, desc1, desc2, desc3, sectionTitle}) => {
   return (
+    <div className='col-span-9 text-center pb-4'>
+      <AnimatedText text={sectionTitle} className='text-primary'/>
+      <p className='text-accentpink font-bold text-lg'>Learn more below</p>
       <div className='grid w-full grid-cols-9 gap-8 px-8 my-16'>
 
         <div className='col-span-3 flex flex-col items-start justify-center'>
@@ -24,6 +26,7 @@ const TripleColumn = ({img1, img2, img3, title1, title2, title3, desc1, desc2, d
             <h2 className='text-primary font-bold mx-auto py-8'>{title3}</h2>
             <p className='dark:text-light mx-auto'>{desc3}</p>
         </div>
+      </div>
       </div>
   );
 };

@@ -6,6 +6,8 @@ import TripleColumn from '../../components/Projects/TripleColumn';
 import HoverTripleColumn from '../../components/Projects/HoverTripleColumn';
 import AnimatedText from '@/components/Common/AnimatedText'
 import ScrollableColumn from '@/components/Projects/ScrollableColumn';
+import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
+import RightHandImageBox from '@/components/Projects/RightHandImageBox';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -32,6 +34,20 @@ const naturalDisaster =() => {
           },
         // Add more content items as needed
       ];
+    
+      const sectionsData = [
+        {
+          image: ScannerCode,
+          title: 'Section 1 Title',
+          description: 'Description for section 1...',
+        },
+        {
+          image: ArcadeLight,
+          title: 'Section 2 Title',
+          description: 'Description for section 2...',
+        },
+        // Add more sections as needed
+      ];
 
     return (
     <>
@@ -46,6 +62,11 @@ const naturalDisaster =() => {
                 shortDesc="TODO - small desc"
                 link="/"
                 img={HeaderImg} />
+
+            <RightHandImageBox
+              sectionTitle="Section Title"
+              sections={sectionsData}
+            />
 
             <ScrollableColumn content={content} sectionTitle={"Role Breakdown"}/>
 
@@ -63,6 +84,7 @@ const naturalDisaster =() => {
             />
 
             <TripleColumn 
+                sectionTitle="Role"
                 img1={ArcadeLight}
                 img2={MachinimaPipeline}
                 img3={ScannerCode}
