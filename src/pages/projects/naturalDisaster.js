@@ -66,12 +66,13 @@ const naturalDisaster =() => {
                 img={HeaderImg} />
 
             <LeftImage
+              sectionTitle="blah blah"
               image={ArcadeLight}
               title="Your Title"
               description="Your Description goes here."
             />
 
-            <RightHandImageBox
+            <LeftHandImageBox
               sectionTitle="Section Title"
               sections={sectionsData}
             />

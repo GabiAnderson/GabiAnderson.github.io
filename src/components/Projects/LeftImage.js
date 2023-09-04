@@ -1,8 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import AnimatedText from '../Common/AnimatedText';
 
-const LeftImage = ({ image, title, description }) => {
+const LeftImage = ({ sectionTitle, image, title, description }) => {
   return (
+    <div className='col-span-9 text-center pb-4'>
+      <AnimatedText text={sectionTitle} className='text-primary'/>
+      <p className='text-accentpink font-bold text-lg'>Learn more below</p>
     <div className="left-image-container">
       <div className="left-image">
         <Image src={image} alt={title} />
@@ -64,6 +68,7 @@ const LeftImage = ({ image, title, description }) => {
           color: #666; /* Change text color on hover */
         }
       `}</style>
+    </div>
     </div>
   );
 };
