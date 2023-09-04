@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { RightArrowButton, LeftArrowButton } from '../Common/Icons';
+import AnimatedTextType from '../Common/AnimatedTextType';
 
 const ScrollableColumn = ({ content }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +24,9 @@ const ScrollableColumn = ({ content }) => {
         </div>
       </div>
       <div className="column content">
-        <h1>{currentItem.title}</h1>
+        <span className='text-lg font-bold uppercase text-accentgreen/75'>
+            <AnimatedTextType text={currentItem.title} delay={100} />
+        </span>
         <div className="image-container">
           <Image
             src={currentItem.image}
@@ -43,6 +46,8 @@ const ScrollableColumn = ({ content }) => {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          padding-top: 58px;
+          margin-bottom: 100px;
           height: 400px; /* Set a fixed height for the container */
         }
         .column {
