@@ -8,6 +8,8 @@ import AnimatedText from '@/components/Common/AnimatedText'
 import ScrollableColumn from '@/components/Projects/ScrollableColumn';
 import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
 import RightHandImageBox from '@/components/Projects/RightHandImageBox';
+import LeftImage from '@/components/Projects/LeftImage';
+import VideoHeader from '@/components/Projects/VideoHeader';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -56,12 +58,18 @@ const naturalDisaster =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
-            <Header
+            <VideoHeader
                 projectName="Natural Disaster" 
                 role="Lead Engineer"
                 shortDesc="TODO - small desc"
                 link="/"
                 img={HeaderImg} />
+
+            <LeftImage
+              image={ArcadeLight}
+              title="Your Title"
+              description="Your Description goes here."
+            />
 
             <RightHandImageBox
               sectionTitle="Section Title"
