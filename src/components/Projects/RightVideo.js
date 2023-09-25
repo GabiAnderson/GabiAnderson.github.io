@@ -1,32 +1,27 @@
 import React from 'react';
-import Image from 'next/image';
 import AnimatedText from '../Common/AnimatedText';
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const styles = {
-  leftImageContainer: {
+  rightVideoContainer: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '20px',
   },
-  leftImage: {
+  rightVideo: {
     flex: '1',
+    display: 'flex',
+    justifyContent: 'flex-end', // Adjust this property to control the video's horizontal alignment
   },
-  leftImageImg: {
-    maxWidth: '180%',
-    height: 'auto',
-    display: 'block',
-    transition: 'transform 0.3s ease-in-out',
-  },
-  leftImageHover: {
-    transform: 'scale(1.05)',
-  },
-  rightContent: {
+  leftContent: {
     flex: '2',
     paddingLeft: '20px',
     transition: 'opacity 0.3s ease-in-out, transform 0.3s ease-in-out',
   },
-  rightContentHover: {
+  leftContentHover: {
     opacity: '0.8',
     transform: 'translateX(10px)',
   },
@@ -47,26 +42,26 @@ const styles = {
   },
 };
 
-const LeftImage = ({ sectionTitle, image, title, description }) => {
+const RightVideo = ({ sectionTitle, videoUrl, title, description, videoWidth, videoHeight }) => {
   return (
     <div className='col-span-9 text-center pb-4'>
       <AnimatedText text={sectionTitle} className='text-primary' />
-      <p className='text-accentpink font-bold text-lg'>Learn more below</p>
-      <div style={styles.leftImageContainer}>
-        <div style={styles.leftImage}>
-          <Image
-            src={image}
-            alt={title}
-            style={{ ...styles.leftImageImg, ...(styles.leftImageHoverHover ? styles.leftImageHover : {}) }}
-          />
-        </div>
-        <div style={styles.rightContent}>
+      <div style={styles.rightVideoContainer}>
+        <div style={styles.leftContent}>
           <h2 style={{ ...styles.h2, ...(styles.h2Hover ? styles.h2Hover : {}) }}>{title}</h2>
           <p style={{ ...styles.p, ...(styles.pHover ? styles.pHover : {}) }}>{description}</p>
+        </div>
+        <div style={styles.rightVideo}>
+          <ReactPlayer
+            url={videoUrl}
+            width="1000px"
+            height="500px"
+            controls={true}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default LeftImage;
+export default RightVideo;

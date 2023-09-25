@@ -6,12 +6,12 @@ import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const VideoHeader = ({ projectName, role, shortDesc, link, img }) => {
+const VideoHeader = ({ projectName, role, shortDesc, link, videoUrl }) => {
   return (
       <div className='grid w-full grid-cols-8 gap-16 px-8 my-16'>
         <div className='col-span-6 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 dark:bg-dark'>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=vX6pijRv8NM"
+            url={videoUrl}
             config={{ youtube: { playerVars: { showinfo: 1 } } }}
             controls={true}
             playing={true}

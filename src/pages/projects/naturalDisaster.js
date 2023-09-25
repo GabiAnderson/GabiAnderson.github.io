@@ -9,7 +9,9 @@ import ScrollableColumn from '@/components/Projects/ScrollableColumn';
 import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
 import RightHandImageBox from '@/components/Projects/RightHandImageBox';
 import LeftImage from '@/components/Projects/LeftImage';
+import RightImage from '@/components/Projects/RightImage';
 import VideoHeader from '@/components/Projects/VideoHeader';
+import RightVideo from '@/components/Projects/RightVideo';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -63,9 +65,16 @@ const naturalDisaster =() => {
                 role="Lead Engineer"
                 shortDesc="TODO - small desc"
                 link="/"
-                img={HeaderImg} />
+                videoUrl={"https://www.youtube.com/watch?v=vX6pijRv8NM"} />
 
-            <LeftImage
+            <RightVideo
+              sectionTitle="blah blah"
+              videoUrl={"https://www.youtube.com/watch?v=vX6pijRv8NM"}
+              title="Your Title"
+              description="Your Description goes here."
+            />
+            
+            <RightImage
               sectionTitle="blah blah"
               image={ArcadeLight}
               title="Your Title"
