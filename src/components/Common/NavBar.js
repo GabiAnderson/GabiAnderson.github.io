@@ -80,7 +80,7 @@ const NavBar = () => {
                     <h1 className='capitalize font-bold text-2xl mt-2'>Status Update</h1>
                     <p className='my-4'>
                         Welcome to my portfolio! Please note that my current website is a personal project where 
-                        I'm learning ReactJS, NextJS, and CSS and is thus a work in progress. To view my old portfolio 
+                        I am learning ReactJS, NextJS, and CSS and is thus a work in progress. To view my old portfolio 
                         site, click the button below.
                     </p>
                     <p className='my-4'>
