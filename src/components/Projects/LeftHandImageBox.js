@@ -1,14 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedText from '../Common/AnimatedText';
 import AnimatedTextType from '../Common/AnimatedTextType';
 
-const LeftHandImageBox = ({ sectionTitle, sections }) => {
+const LeftHandImageBox = ({ sections }) => {
   return (
     <div className='col-span-9 text-center pb-4'>
-      <AnimatedText text={sectionTitle} className='text-primary'/>
-      <p className='text-accentpink font-bold text-lg'>Learn more below</p>
-
       {sections.map((section, index) => (
         <section className="section-container" key={index}>
           <div className="section-content">

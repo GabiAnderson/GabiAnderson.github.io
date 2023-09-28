@@ -1,22 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
-const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
-
-const VideoHeader = ({ projectName, role, shortDesc, link, videoUrl }) => {
+const ImageHeader = ({ projectName, role, shortDesc, link, img }) => {
   return (
       <div className='grid w-full grid-cols-8 gap-16 px-8 my-16'>
         <div className='col-span-6 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 dark:bg-dark'>
-          <ReactPlayer
-            url={videoUrl}
-            config={{ youtube: { playerVars: { showinfo: 1 } } }}
-            controls={true}
-            playing={true}
-            volume={0.2}
-            width="100%"
-            height="500px"
-          />
+          <Image src={img}  />
         </div>
         <div className='col-span-2 flex flex-col items-start justify-center'>
           <h1 className="text-3xl font-bold text-primary mb-2">{projectName}</h1>
@@ -30,4 +20,4 @@ const VideoHeader = ({ projectName, role, shortDesc, link, videoUrl }) => {
   );
 };
 
-export default VideoHeader;
+export default ImageHeader;

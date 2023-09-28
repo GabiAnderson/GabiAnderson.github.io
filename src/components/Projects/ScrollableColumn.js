@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { RightArrowButton, LeftArrowButton } from '../Common/Icons';
-import AnimatedTextType from '../Common/AnimatedTextType';
-import AnimatedText from '../Common/AnimatedText';
 
-const ScrollableColumn = ({ content, sectionTitle }) => {
+const ScrollableColumn = ({ content}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -19,8 +17,6 @@ const ScrollableColumn = ({ content, sectionTitle }) => {
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <AnimatedText text={sectionTitle} className='text-primary'/>
-      <p className='text-accentpink font-bold text-lg'>Click the arrows to scroll</p>
       <div className="container">
         <div className="column arrow" onClick={handlePrev}>
           <div className="arrow-container">
