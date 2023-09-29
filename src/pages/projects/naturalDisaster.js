@@ -18,6 +18,8 @@ import RightHandVideo from '@/components/Projects/RightHandVideo';
 import MiddleImage from '@/components/Projects/MiddleImage';
 import MiddleVideo from '@/components/Projects/MiddleVideo';
 import ScrollableColumnVideo from '@/components/Projects/ScrollableColumnVideo';
+import VerticalStackedImage from '@/components/Projects/VerticalStackedImage';
+import VerticalStackedVideo from '@/components/Projects/VerticalStackedVideo';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -86,39 +88,50 @@ const naturalDisaster =() => {
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
             <VideoHeader
-                projectName="Natural Disaster" 
-                role="Lead Engineer"
-                shortDesc="TODO - small desc"
-                link="/"
-                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" />
+              projectName="Natural Disaster" 
+              role="Lead Engineer"
+              shortDesc="TODO - small desc"
+              link="/"
+              videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" 
+            />
 
-            
+            <VerticalStackedVideo
+              videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
+              title="Lighting Engineer"
+              desc="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+            />
+
+            <VerticalStackedImage
+              img={ArcadeLight}
+              title="Lighting Engineer"
+              desc="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+            />
 
             <ScrollableColumnVideo content={contentVideo} />
             
             <ScrollableColumn content={content} />
 
             <MiddleVideo 
-                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
-                title1="Lighting Engineer"
-                title2="Machinima Producer"
-                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
-                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+              videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
+              title1="Lighting Engineer"
+              title2="Machinima Producer"
+              desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+              desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
             />
 
             <RightHandVideo
-                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
-                title="Lighting Engineer"
-                desc="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+              videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
+              title="Lighting Engineer"
+              desc="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
             />
 
             <DoubleColumn 
-                img1={ArcadeLight}
-                img2={MachinimaPipeline}
-                title1="Lighting Engineer"
-                title2="Machinima Producer"
-                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
-                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+              img1={ArcadeLight}
+              img2={MachinimaPipeline}
+              title1="Lighting Engineer"
+              title2="Machinima Producer"
+              desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+              desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
             />
 
             <LeftHandImageBox
@@ -126,30 +139,30 @@ const naturalDisaster =() => {
             />
 
             <HoverTripleColumn 
-                img1={ArcadeLight}
-                img2={MachinimaPipeline}
-                img3={ScannerCode}
-                title1="Lighting Engineer"
-                title2="Machinima Producer"
-                title3="Engineer"
-                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
-                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
-                desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
+              img1={ArcadeLight}
+              img2={MachinimaPipeline}
+              img3={ScannerCode}
+              title1="Lighting Engineer"
+              title2="Machinima Producer"
+              title3="Engineer"
+              desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+              desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+              desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
             />
 
             <SectionTitle
               sectionTitle="Testing"
               sectionDescription="more testing" />
             <TripleColumn 
-                img1={ArcadeLight}
-                img2={MachinimaPipeline}
-                img3={ScannerCode}
-                title1="Lighting Engineer"
-                title2="Machinima Producer"
-                title3="Engineer"
-                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
-                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
-                desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
+              img1={ArcadeLight}
+              img2={MachinimaPipeline}
+              img3={ScannerCode}
+              title1="Lighting Engineer"
+              title2="Machinima Producer"
+              title3="Engineer"
+              desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+              desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+              desc3="Conceptualized features, developed systems, and provided general engineering support for game development."
             />
         </main>
     </>
