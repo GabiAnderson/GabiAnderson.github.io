@@ -15,6 +15,8 @@ import LeftHandImage from '@/components/Projects/LeftHandImage';
 import RightHandImage from '@/components/Projects/RightHandImage';
 import LeftHandVideo from '@/components/Projects/LeftHandVideo';
 import RightHandVideo from '@/components/Projects/RightHandVideo';
+import MiddleImage from '@/components/Projects/MiddleImage';
+import MiddleVideo from '@/components/Projects/MiddleVideo';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -69,6 +71,14 @@ const naturalDisaster =() => {
                 shortDesc="TODO - small desc"
                 link="/"
                 videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" />
+
+            <MiddleVideo 
+                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
+                title1="Lighting Engineer"
+                title2="Machinima Producer"
+                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+            />
 
             <RightHandVideo
                 videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
