@@ -15,7 +15,7 @@ const VideoHeader = ({ projectName, role, shortDesc, link, videoUrl }) => {
             playing={true}
             volume={0.2}
             width="100%"
-            height="500px"
+            height="800px"
           />
         </div>
         <div className='col-span-2 flex flex-col items-start justify-center'>

@@ -13,6 +13,8 @@ import ImageHeader from '@/components/Projects/ImageHeader';
 import DoubleColumn from '@/components/Projects/DoubleColumn';
 import LeftHandImage from '@/components/Projects/LeftHandImage';
 import RightHandImage from '@/components/Projects/RightHandImage';
+import LeftHandVideo from '@/components/Projects/LeftHandVideo';
+import RightHandVideo from '@/components/Projects/RightHandVideo';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -61,15 +63,15 @@ const naturalDisaster =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
-            <ImageHeader
+            <VideoHeader
                 projectName="Natural Disaster" 
                 role="Lead Engineer"
                 shortDesc="TODO - small desc"
                 link="/"
-                img={ArcadeLight} />
+                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" />
 
-            <RightHandImage 
-                img={ArcadeLight}
+            <RightHandVideo
+                videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
                 title="Lighting Engineer"
                 desc="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
             />
