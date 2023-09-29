@@ -6,7 +6,7 @@ const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const VideoHeader = ({ projectName, role, shortDesc, link, videoUrl }) => {
   return (
-      <div className='grid w-full grid-cols-8 gap-16 px-8 my-16'>
+      <div className='grid w-full grid-cols-8 gap-16 px-8 my-8'>
         <div className='col-span-6 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 dark:bg-dark'>
           <ReactPlayer
             url={videoUrl}

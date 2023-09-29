@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+// imports for standard usage
+import React from 'react'
+import { motion } from 'framer-motion';
 import Head from 'next/head'
+
+// imports for components
 import Header from '@/components/Projects/Header'
-import TripleColumn from '../../components/Projects/TripleColumn';
-import HoverTripleColumn from '../../components/Projects/HoverTripleColumn';
-import AnimatedText from '@/components/Common/AnimatedText'
+import TripleColumn from '@/components/Projects/TripleColumn';
+import HoverTripleColumn from '@/components/Projects/HoverTripleColumn';
 import ScrollableColumn from '@/components/Projects/ScrollableColumn';
 import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
 import VideoHeader from '@/components/Projects/VideoHeader';
@@ -21,13 +23,17 @@ import ScrollableColumnVideo from '@/components/Projects/ScrollableColumnVideo';
 import VerticalStackedImage from '@/components/Projects/VerticalStackedImage';
 import VerticalStackedVideo from '@/components/Projects/VerticalStackedVideo';
 
-import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
-import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
-import ScannerCode from "../../../public/images/projects/naturalDisaster/ND_ScannerConcept_Code_1_14.png";
-import ArcadeLight from "../../../public/images/projects/naturalDisaster/ND_ArcadeLighting_4_4.png";
-import testGif from "../../../public/images/projects/naturalDisaster/ND_LoadingIconFinal.gif"
+// imports for animations
+import { rotateInVariant, scaleInVariant } from '@/animations/ScrollAnimationVariants';
 
-const naturalDisaster =() => {
+// imports for media
+import HeaderImg from "@/images/projects/naturalDisaster/ND_header.png";
+import MachinimaPipeline from "@/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
+import ScannerCode from "@/images/projects/naturalDisaster/ND_ScannerConcept_Code_1_14.png";
+import ArcadeLight from "@/images/projects/naturalDisaster/ND_ArcadeLighting_4_4.png";
+import testGif from "@/images/projects/naturalDisaster/ND_LoadingIconFinal.gif"
+
+const naturalDisaster = () => {
     const content = [
         {
           title: 'Title 1',
@@ -87,6 +93,7 @@ const naturalDisaster =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
+ 
             <VideoHeader
               projectName="Natural Disaster" 
               role="Lead Engineer"
@@ -95,11 +102,20 @@ const naturalDisaster =() => {
               videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" 
             />
 
-            <VerticalStackedVideo
-              videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
-              title="Lighting Engineer"
-              desc="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
-            />
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <div/>
+              <motion.div variants={rotateInVariant}>
+                {<VerticalStackedVideo
+                  videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
+                  title="Lighting Engineer"
+                  desc="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+                />}
+              </motion.div>
+            </motion.div>
 
             <VerticalStackedImage
               img={ArcadeLight}

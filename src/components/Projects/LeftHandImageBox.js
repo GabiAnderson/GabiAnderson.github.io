@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedTextType from '../Common/AnimatedTextType';
+import AnimatedTextType from '../../animations/AnimatedTextType';
 
 const LeftHandImageBox = ({ sections }) => {
   return (

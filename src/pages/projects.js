@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import {motion} from 'framer-motion';
 import Layout from '@/components/Common/Layout'
-import AnimatedText from '@/components/Common/AnimatedText'
+import AnimatedText from '@/animations/AnimatedText'
 import { GithubIcon } from '@/components/Common/Icons'
 import NDHeader from "../../public/images/projects/naturalDisaster/ND_header.png";
 import AKHeader from "../../public/images/projects/acidKnockout/AK_header.png";

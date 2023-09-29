@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {motion, useMotionValue} from 'framer-motion';
 import Layout from '@/components/Common/Layout'
-import AnimatedText from '@/components/Common/AnimatedText'
+import AnimatedText from '@/animations/AnimatedText'
 import comingSoon from "../../public/images/comingSoon.png";
 
 const FramerImage = motion(Image);
