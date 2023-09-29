@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatedTextType from '../../animations/AnimatedTextType';
+import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
 import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
@@ -26,7 +26,7 @@ function RightHandVideo({ videoUrl, title, desc }) {
       <div className='grid w-full grid-cols-8 gap-8 px-8 my-16'>
         <div className='col-span-2 flex flex-col items-start justify-center'>
           <div className='text-primary font-bold mx-auto py-8'>
-            <AnimatedTextType text={title} delay={100} />
+            <AnimatedTextTypeInView text={title} delay={100} />
           </div>
           <p className='dark:text-light mx-auto'>{desc}</p>
         </div>

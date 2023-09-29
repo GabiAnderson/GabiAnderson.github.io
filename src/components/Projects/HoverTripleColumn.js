@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import AnimatedTextTypeInView from '@/animations/AnimatedTextTypeInView';
 
 const colorClassMap = {
   accentgreen: 'border-accentgreen/60',
@@ -65,7 +66,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           </div>
           {hoveredIndex === 1 && (
             <div className='p-4 text-center'>
-              <h2 className='text-primary font-bold pb-2'>{title2}</h2>
+              <div className='text-primary font-bold pb-2'>{title2}</div>
               <p>{desc2}</p>
             </div>
           )}

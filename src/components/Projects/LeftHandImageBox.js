@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedTextType from '../../animations/AnimatedTextType';
+import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
 
 const LeftHandImageBox = ({ sections }) => {
   return (
@@ -50,7 +50,7 @@ const LeftHandImageBox = ({ sections }) => {
             >
               <div className="section-header" style={{ padding: '10px' }}>
                 <span className='mb-4 text-lg font-bold uppercase text-accentgreen/75'>
-                  <AnimatedTextType text={section.title} delay={100} />
+                  <AnimatedTextTypeInView text={section.title} delay={100} />
                 </span>
               </div>
               <div className="section-content">

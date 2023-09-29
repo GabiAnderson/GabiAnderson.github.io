@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import AnimatedTextType from '../../animations/AnimatedTextType';
+import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
 
 const colorClassMap = {
   accentgreen: 'border-accentgreen/60',
@@ -28,7 +28,7 @@ function LeftHandImage({ img, title, desc }) {
 
         <div className='col-span-2 flex flex-col items-start justify-center'>
           <div className='text-primary font-bold mx-auto py-8'>
-            <AnimatedTextType text={title} delay={100} />
+            <AnimatedTextTypeInView text={title} delay={100} />
           </div>
           <p className='dark:text-light mx-auto'>{desc}</p>
         </div>
