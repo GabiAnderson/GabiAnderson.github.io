@@ -30,7 +30,7 @@ const MiddleVideo = ({videoUrl, title1, title2, desc1, desc2}) => {
         </div>
 
         <div className={`col-span-5 flex flex-col items-start justify-center border-4 border-solid ${borderColorClass} p-2`}>
-            <ReactPlayer
+          <ReactPlayer
             url={videoUrl}
             config={{ youtube: { playerVars: { showinfo: 1 } } }}
             controls={true}

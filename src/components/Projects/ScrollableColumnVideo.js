@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { RightArrowButton, LeftArrowButton } from '../Common/Icons';
+import dynamic from 'next/dynamic';
+
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 const colorClassMap = {
   accentgreen: 'fill-accentgreen/60',
@@ -30,7 +32,7 @@ const ScrollableColumn = ({ content }) => {
   const arrowColorClass = getRandomColorClass();
 
   return (
-    <div className='col-span-9 text-center pb-4'>
+    <div className='col-span-9 text-center pb-16'>
       <div
         className="container"
         style={{
@@ -92,11 +94,14 @@ const ScrollableColumn = ({ content }) => {
               position: 'relative',
             }}
           >
-            <Image
-              src={currentItem.image}
-              alt={currentItem.title}
-              width={500} // Set a fixed width for the image
-              height={500} // Set a fixed height for the image
+            <ReactPlayer
+              url={currentItem.videoUrl}
+              config={{ youtube: { playerVars: { showinfo: 1 } } }}
+              controls={true}
+              playing={false}
+              volume={0.0}
+              width="800px"
+              height="500px"
             />
           </div>
           <p>{currentItem.description}</p>

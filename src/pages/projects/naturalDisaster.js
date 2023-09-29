@@ -17,6 +17,7 @@ import LeftHandVideo from '@/components/Projects/LeftHandVideo';
 import RightHandVideo from '@/components/Projects/RightHandVideo';
 import MiddleImage from '@/components/Projects/MiddleImage';
 import MiddleVideo from '@/components/Projects/MiddleVideo';
+import ScrollableColumnVideo from '@/components/Projects/ScrollableColumnVideo';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -29,7 +30,7 @@ const naturalDisaster =() => {
         {
           title: 'Title 1',
           image: testGif,
-          description: 'Description 1',
+          description: 'ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg',
         },
         {
           title: 'Title 2',
@@ -37,10 +38,29 @@ const naturalDisaster =() => {
           description: 'Description 2',
         },
         {
-            title: 'Title 3',
-            image: ArcadeLight,
-            description: 'Description 3',
-          },
+          title: 'Title 3',
+          image: ArcadeLight,
+          description: 'Description 3',
+        },
+        // Add more content items as needed
+      ];
+
+      const contentVideo = [
+        {
+          title: 'Title 1',
+          videoUrl: "https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL",
+          description: 'Description 1',
+        },
+        {
+          title: 'Title 2',
+          videoUrl: "https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL",
+          description: 'Description 2',
+        },
+        {
+          title: 'Title 3',
+          videoUrl: "https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL",
+          description: 'Description 3',
+        },
         // Add more content items as needed
       ];
     
@@ -72,6 +92,12 @@ const naturalDisaster =() => {
                 link="/"
                 videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL" />
 
+            
+
+            <ScrollableColumnVideo content={contentVideo} />
+            
+            <ScrollableColumn content={content} />
+
             <MiddleVideo 
                 videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
                 title1="Lighting Engineer"
@@ -96,14 +122,10 @@ const naturalDisaster =() => {
             />
 
             <LeftHandImageBox
-              sectionTitle="Section Title"
               sections={sectionsData}
             />
 
-            <ScrollableColumn content={content} sectionTitle={"Role Breakdown"}/>
-
             <HoverTripleColumn 
-                sectionTitle="Role Breakdown"
                 img1={ArcadeLight}
                 img2={MachinimaPipeline}
                 img3={ScannerCode}
