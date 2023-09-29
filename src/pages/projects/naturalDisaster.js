@@ -10,6 +10,9 @@ import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
 import VideoHeader from '@/components/Projects/VideoHeader';
 import SectionTitle from '@/components/Projects/SectionTitle';
 import ImageHeader from '@/components/Projects/ImageHeader';
+import DoubleColumn from '@/components/Projects/DoubleColumn';
+import LeftHandImage from '@/components/Projects/LeftHandImage';
+import RightHandImage from '@/components/Projects/RightHandImage';
 
 import HeaderImg from "../../../public/images/projects/naturalDisaster/ND_header.png";
 import MachinimaPipeline from "../../../public/images/projects/naturalDisaster/ND_MachinimaPipeline.png";
@@ -64,6 +67,21 @@ const naturalDisaster =() => {
                 shortDesc="TODO - small desc"
                 link="/"
                 img={ArcadeLight} />
+
+            <RightHandImage 
+                img={ArcadeLight}
+                title="Lighting Engineer"
+                desc="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+            />
+
+            <DoubleColumn 
+                img1={ArcadeLight}
+                img2={MachinimaPipeline}
+                title1="Lighting Engineer"
+                title2="Machinima Producer"
+                desc1="Sole lighting designer/engineer for 7 custom scenes. Led the design, critique, and polishing of lighting while maintaining game performance."
+                desc2="Developed the machinima pipeline, led the team, assigned tasks, and contributed actively to team tasks while producing polished machinima."
+            />
 
             <LeftHandImageBox
               sectionTitle="Section Title"
