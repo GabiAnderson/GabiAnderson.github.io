@@ -26,9 +26,9 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
 
     return (
         <article className='w-full flex items-center justify-between first-letter rounded-3xl border border-solid 
-        border-primary bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark'>
+        border-primaryColor bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark'>
 
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primary rounded-br-3xl'/>
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primaryColor rounded-br-3xl'/>
 
             <Link href={link} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
                 <FramerImage src={img} alt={title} className="w-full h-auto"
@@ -42,9 +42,9 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
             <div className='w-1/2 flex flex-col items-start justify-between pl-6 '>
                 {/* Apply the custom CSS classes to each part of the "type" prop */}
                 <span className='font-medium text-xl'>
-                    <span className='text-primary'>{firstPart}</span>{' '}
+                    <span className='text-primaryColor'>{firstPart}</span>{' '}
                     <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
-                    <span className='text-accentpink'>{thirdPart}</span>
+                    <span className='text-secondaryTertiaryColor'>{thirdPart}</span>
                 </span>
 
                 <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
@@ -54,7 +54,7 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                 <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
 
                 <div className='mt-2 flex items-center'>
-                    <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
+                    <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
 
                     {githubLink && (
                         <Link href={githubLink} target="_blank" className='ml-4 w-10'>
@@ -63,13 +63,13 @@ const FeaturedProject = ({type, title, summary, img, link, githubLink, documenta
                     )}
 
                     {documentationLink && (
-                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>
+                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>
                         Documentation
                         </Link>
                     )}
 
                     {publicLink && (
-                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
+                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
                     )}
                 </div>
             </div>
@@ -86,9 +86,9 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
   
     return (
       <article className='w-full flex flex-col items-center justify-center rounded-2xl 
-      border border-solid border-primary bg-light p-6 relative rounded-br-2xl dark:bg-dark'>
+      border border-solid border-primaryColor bg-light p-6 relative rounded-br-2xl dark:bg-dark'>
 
-        <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primary rounded-br-3xl'/>
+        <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primaryColor rounded-br-3xl'/>
 
         <Link href={link} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -102,9 +102,9 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
         <div className='w-full flex flex-col items-start justify-between mt-4'>
           {/* Apply the custom CSS classes to each part of the "type" prop */}
           <span className='font-medium text-xl'>
-            <span className='text-primary'>{firstPart}</span>{' '}
+            <span className='text-primaryColor'>{firstPart}</span>{' '}
             <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
-            <span className='text-accentpink'>{thirdPart}</span>
+            <span className='text-secondaryTertiaryColor'>{thirdPart}</span>
           </span>
   
           <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
@@ -114,7 +114,7 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
           <p className='my-2 font-normal text-dark dark:text-light'>{summary}</p>
   
           <div className='w-full mt-2 flex items-center justify-between'>
-            <Link href={link} className='rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
+            <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
   
             {githubLink && (
                 <Link href={githubLink} target="_blank" className='ml-4 w-10'>
@@ -123,13 +123,13 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
             )}
 
             {documentationLink && (
-                <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>
+                <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>
                 Documentation
                 </Link>
             )}
   
             {publicLink && (
-                <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-accentgreen text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
+                <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
             )}
           </div>
         </div>
@@ -145,9 +145,9 @@ const projects =() => {
             <title>Gabi Anderson | Projects</title>
             <meta name="description" content="any thing here" />
         </Head> 
-        <main className='w-full mb-16 flex flex-col items-center justify-center'>
-            <Layout className='pt-16'>
-                <AnimatedText text="Player to Creator!" className='mb-16 text-primary'/>
+        <main className='w-full mb-8 flex flex-col items-center justify-center'>
+            <Layout className='pt-8'>
+                <AnimatedText text="Player to Creator!" className='mb-8 text-secondaryColor'/>
 
                 <div className='grid grid-cols-12 gap-24'>
                     <div className='col-span-12'>
