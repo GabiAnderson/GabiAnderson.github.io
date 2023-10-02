@@ -13,8 +13,8 @@ const ConnectWithMe = () => {
                 <Link href="https://linkedin.com/in/gabriela-anderson" target={'_blank'} className='flex items-center justify-center 
                 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark 
                 text-light shadow-md border border-solid border-dark
-                w-32 h-32 rounded-full font-semibold hover:bg-light hover:text-primary hover:border-primary hover:border-b-5 text-center
-                dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-primary'
+                w-32 h-32 rounded-full font-semibold hover:bg-light hover:text-primaryColor hover:border-primaryColor hover:border-b-5 text-center
+                dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-primaryColor'
                 >
                     Connect w/ Me
                 </Link>

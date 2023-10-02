@@ -36,11 +36,11 @@ export default function Home() {
             
             <div className='w-1/2 flex flex-col item-center self-center'>
             <h1 className="text-6xl text-left">
-              <span className="text-primary">Gabriela </span> Anderson
+              <span className="text-primaryColor">Gabriela </span> Anderson
             </h1>
-              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left mt-4 text-dark/50 dark:text-light/50' />
+              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left mt-4 text-secondaryDark dark:text-secondaryLight' />
               
-              <p className='my-4 text-base font-medium'>
+              <p className='my-4 text-base font-medium text-tertiaryDark dark:tertiaryLight'>
                 As a recent computer science graduate with a specialization in video game
                 development and a flair for creative code, I&apos;m on a mission to bring captivating
                 gaming experiences to life. Explore my projects that fuse art, technology, and
@@ -51,14 +51,14 @@ export default function Home() {
                 <Link href="/GabrielaAnderson_Resume.pdf" target={"_blank"}
                   className='flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
-                  border-2 border-solid border-transparent hover:border-primary
+                  border-2 border-solid border-transparent hover:border-primaryColor
                   dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light'
                   download={true}
                 >Resume
                   <LinkArrow className={"w-6 ml-1"} /></Link>
                 
                 <Link href="mailto:gabi84095@gmail.com" target={"_blank"}
-                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-primary hover:border-b-accentgreen dark:text-light'>Contact</Link>
+                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-secondaryColor hover:border-b-tertiaryColor dark:text-light'>Contact</Link>
               </div>
             </div>
           </div>

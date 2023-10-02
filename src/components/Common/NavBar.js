@@ -29,10 +29,10 @@ const NavBar = () => {
             {/* First Row */}
             <nav className='flex items-center justify-between w-full mb-4'>
                 <div>
-                    <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primary'></CustomLink>
-                    <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primary'></CustomLink>
-                    <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primary'></CustomLink>
-                    <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primary'></CustomLink>
+                    <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primaryColor'></CustomLink>
+                    <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
+                    <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
+                    <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                 </div>
 
                 <div className='flex items-center'>
@@ -41,27 +41,27 @@ const NavBar = () => {
                         whileTap={{ scale: 0.9 }}
                         className='w-6 mx-3'
                     >
-                        <DiscordIcon className='dark:fill-light' />
+                        <DiscordIcon className='dark:fill-light hover:fill-primaryColor dark:hover:fill-primaryColor' />
                     </motion.a>
                     <motion.a href="https://github.com/GabiAnderson" target={'_blank'}
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         className='w-6 mx-3'
                     >
-                        <GithubIcon className='dark:fill-light' />
+                        <GithubIcon className='dark:fill-light hover:fill-primaryColor dark:hover:fill-primaryColor' />
                     </motion.a>
                     <motion.a href="https://linkedin.com/in/gabriela-anderson" target={'_blank'}
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         className='w-6 mx-3'
                     >
-                        <LinkedInIcon className='dark:fill-light' />
+                        <LinkedInIcon className='dark:fill-light hover:fill-primaryColor dark:hover:fill-primaryColor' />
                     </motion.a>
                     <button
                         onClick={() => setMode(mode === "light" ? "dark" : "light")}
                         className={`ml-3 flex items-center justify-center rounded-full p-1 
-              ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-              `}
+                        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+                        `}
                     >
                         {mode === "dark" ? <SunIcon className={"fill-dark"} /> : <MoonIcon className={"fill-dark"} />}
                     </button>
