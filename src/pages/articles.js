@@ -12,8 +12,8 @@ const FramerImage = motion(Image);
 const FeaturedArticle = ({img, title, time, summary, link}) => {
 
     return (
-        <li className=' relative col-span-1 w-full p-4 bg-light border border-solid border-primary rounded-2xl dark:bg-dark'>
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primary rounded-br-3xl'/>
+        <li className=' relative col-span-1 w-full p-4 bg-light border border-solid border-primaryColor rounded-2xl dark:bg-dark'>
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primaryColor rounded-br-3xl'/>
 
             <Link href={link} className='w-full inline-block cursor-pointer overflow-hidden rounded-lg'>
                 <FramerImage src={img} alt={title} className="w-full h-auto"
@@ -27,9 +27,9 @@ const FeaturedArticle = ({img, title, time, summary, link}) => {
             <Link href={link}>
                 <h2 className='capitalize text-2xl font-bold my-2 mt-4 hover:underline dark:text-light'>{title}</h2>
 
-                <p className='text-sm mb-2 dark:text-light'>{summary}</p>
+                <p className='text-sm mb-2 text-secondaryDark dark:text-secondaryLight'>{summary}</p>
 
-                <span className='text-accentgreen font-semibold'>{time}</span>
+                <span className='text-tertiaryColor font-semibold'>{time}</span>
             </Link>
         </li>
     )
@@ -74,12 +74,12 @@ const Article = ({img, title, date, link}) => {
             whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"}}}
             viewport={{once:true}}
             className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center
-            justify-between bg-light text-primary first:mt-0 border border-solid border-primary
+            justify-between bg-light text-primaryColor first:mt-0 border border-solid border-primaryColor
             border-r-4 border-b-4 dark:bg-dark'
         >
             <MovingImage title={title} img={img} link={link} />
 
-            <span className='text-accentpink font-semibold pl-4'>{date}</span>
+            <span className='text-secondaryTertiaryColor font-semibold pl-4'>{date}</span>
         </motion.li>
     )
 }
@@ -93,7 +93,7 @@ const articles =() => {
         </Head>
         <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden'>
             <Layout className='pt-16'>
-                <AnimatedText text="Player to Creator!" className='mb-16 text-primary'/>
+                <AnimatedText text="Player to Creator!" className='mb-16 text-secondaryColor'/>
 
                 <ul className='grid grid-cols-2 gap-16'>
 
@@ -107,7 +107,7 @@ const articles =() => {
 
                 </ul>
 
-                <h2 className='font-bold text-4xl w-full text-center my-32 dark:text-light'>All Articles</h2>
+                <h2 className='font-bold text-6xl w-full text-center my-8 py-8 dark:text-light'>All Articles</h2>
 
                 <ul>
 
