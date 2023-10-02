@@ -41,11 +41,11 @@ import {motion} from 'framer-motion'
 const Skills = () => {
     return (
         <>
-        <h2 className='font-bold text-8xl mt-64 w-full text-center text-primary'>Skills</h2>
+        <h2 className='font-bold text-8xl mt-8 w-full text-center text-secondaryColor'>Skills</h2>
         <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark'>
 
             <motion.div className='flex items-end justify-center rounded-full 
-            font-semibold bg-primary text-light 
+            font-semibold bg-primaryColor text-light 
             p-8 shadow-dark cursor-pointer'
             whileHover={{scale:1.05}}>
                 Video Game Development

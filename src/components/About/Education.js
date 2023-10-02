@@ -21,14 +21,14 @@ const Details = ({ type, time, place, info, placeColor }) => {
             transition={{ duration: 0.5, type: "spring" }}
           >
             <h3 className='capitalize font-bold text-2xl'>{type}</h3>
-            <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
+            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight'>
               {time} |{" "}
               <span style={{ color: placeColor }}>{place}</span>
             </span>
             {info.map((paragraph, index) => (
                 <p
                 key={index}
-                className='font-medium w-full mb-4'
+                className='font-medium w-full mb-4 text-tertiaryDark dark:text-tertiaryLight'
                 dangerouslySetInnerHTML={{ __html: formatParagraph(paragraph) }}
                 />
             ))}
@@ -46,8 +46,8 @@ const Education = () => {
         }
     )
     return (
-        <div className='my-64'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-primary'>
+        <div className='my-8'>
+            <h2 className='font-bold text-8xl mb-16 w-full text-center text-primaryColor'>
                 Education
             </h2>
 

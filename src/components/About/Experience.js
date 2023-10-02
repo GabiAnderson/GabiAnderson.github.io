@@ -14,7 +14,7 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
             whileInView={{y:0}}
             transition={{duration:0.5, type:"spring"}}
             >
-                <h3 className='captilize font-bold text-2xl'>
+                <h3 className='captilize font-bold text-2xl dark:text-primaryLight'>
                     {position}&nbsp;
                     <a href={companyLink}
                     target='_blank'
@@ -23,10 +23,10 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
                         @{company}
                     </a>
                 </h3>
-                <span className='capitlize font-medium text-dark/75'>
+                <span className='capitlize font-medium text-secondaryDark dark:text-secondaryLight'>
                     {time} | {address}
                 </span>
-                <p className='font-medium w-full'>
+                <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight'>
                     {work}
                 </p>
             </motion.div>
@@ -43,8 +43,8 @@ const Experience = () => {
         }
     )
     return (
-        <div className='my-64'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-primary'>
+        <div className='my-10'>
+            <h2 className='font-bold text-8xl mb-16 w-full text-center text-secondaryColor'>
                 Experience
             </h2>
 

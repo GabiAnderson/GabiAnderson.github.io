@@ -17,10 +17,10 @@ const CertificationDetails = ({ course, dateTaken, placeTaken, info, placeColor 
             <h3 style={{ fontSize: '1.25rem' }} className='capitalize font-bold'>
                 {course}
             </h3>
-            <span className='capitalize font-medium text-dark/75 dark:text-light/75'>
+            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight'>
                 {dateTaken} | <span style={{ color: placeColor }}>{placeTaken}</span>
             </span>
-            <p className='font-medium w-full mb-4'>{info}</p>
+            <p className='font-medium w-full mb-4 text-tertiayrDark dark:text-tertiaryLight'>{info}</p>
         </motion.div>
       </li>
     );
@@ -35,8 +35,8 @@ const OtherLearning = () => {
         }
     )
     return (
-        <div className='my-64'>
-            <h2 className='font-bold text-8xl mb-32 w-full text-center text-primary'>
+        <div className='my-8'>
+            <h2 className='font-bold text-8xl mb-16 w-full text-center text-primary'>
                 Other Learning
             </h2>
 

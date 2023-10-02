@@ -21,7 +21,8 @@ module.exports = {
         tertiaryLight: "#bababa",
         primaryColor: "#5b9a8b",
         secondaryColor: "#445069",
-        tertiaryColor: "#f7e987",
+        tertiaryColor: "#ffa400",
+        secondaryTertiaryColor: "#c83e4d",
         
         primary: "#9370db",
         primaryDark: "#cb1dcd",
@@ -37,8 +38,8 @@ module.exports = {
         'spin-slow': 'spin 10s linear infinite'
       },
       backgroundImage:{
-        circularLight: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #f5f5f5 7px, #f5f5f5 100px);',
-        circularDark: 'repeating-radial-gradient(rgba(26,197,176, 0.4) 3px, #1b1b1b 7px, #1b1b1b 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(86,80,105, 0.6) 2px, #f5f5f5 7px, #f5f5f5 100px);',
+        circularDark: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 7px, #0a0a0a 100px);'
       }
     },
   },

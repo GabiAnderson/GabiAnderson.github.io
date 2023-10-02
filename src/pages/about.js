@@ -61,11 +61,11 @@ const about =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center dark:text-light'>
-            <Layout className='pt-16'>
-                <AnimatedText text="Player to Creator!" className='mb-16 text-primary' />
+            <Layout className='pt-8'>
+                <AnimatedText text="Player to Creator!" className='mb-8 text-secondaryColor' />
                 <div className='grid w-full grid-cols-8 gap-16'>
                     <div className='col-span-4 flex flex-col items-start justify-center'>
-                        <span className='mb-4 text-lg font-bold uppercase text-accentgreen/75'>
+                        <span className='mb-4 text-lg font-bold uppercase text-primaryColor'>
                                 <AnimatedList text="Biography" delay={100} />
                         </span>
 
@@ -96,8 +96,8 @@ const about =() => {
                         </p>
                     </div>
 
-                    <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-primary bg-light p-8 my-24 dark:bg-dark'>
-                        <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-primary' />
+                    <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-secondaryColor bg-light p-8 my-24 dark:bg-dark'>
+                        <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-secondaryColor' />
                         <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl' 
                         priority
                         sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 33vw" />
@@ -105,19 +105,19 @@ const about =() => {
 
                     <div className='col-span-1 flex flex-col items-end justify-center'>
                         <div className='flex flex-col items-end justify-center'>
-                            <span className='inline-block text-7xl text-accentgreen font-bold'>
+                            <span className='inline-block text-7xl text-primaryColor font-bold'>
                                 <AnimatedNumbers value={30}/>+
                             </span>
                             <h2 className='text-xl font-medium capitalize text-center text-dark/75 dark:text-light/75'>Courses</h2>
                         </div>
                         <div className='flex flex-col items-end justify-center py-8'>
-                            <span className='inline-block text-7xl text-accentpink font-bold'>
+                            <span className='inline-block text-7xl text-tertiaryColor font-bold'>
                                 <AnimatedNumbers value={7}/>+
                             </span>
                             <h2 className='text-xl font-medium capitalize text-center text-dark/75 max-h-16 dark:text-light/75'>Game Projects</h2>
                         </div>
                         <div className='flex flex-col items-end justify-center'>
-                            <span className='inline-block text-7xl text-accentblue font-bold'>
+                            <span className='inline-block text-7xl text-secondaryTertiaryColor font-bold'>
                                 <AnimatedNumbers value={10}/>+
                             </span>
                             <h2 className='text-xl font-medium capitalize text-center text-dark/75 dark:text-light/75'>Certifications</h2>
