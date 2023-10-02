@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Head from 'next/head'
 
 // imports for components
-import Header from '@/components/Projects/Header'
 import TripleColumn from '@/components/Projects/TripleColumn';
 import HoverTripleColumn from '@/components/Projects/HoverTripleColumn';
 import ScrollableColumn from '@/components/Projects/ScrollableColumn';

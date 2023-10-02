@@ -2,7 +2,6 @@ import Head from 'next/head'
 import React from 'react'
 
 import DoubleColumn from "@/components/Projects/DoubleColumn";
-import Header from "@/components/Projects/Header";
 import HoverTripleColumn from "@/components/Projects/HoverTripleColumn";
 import ImageHeader from "@/components/Projects/ImageHeader";
 import LeftHandImage from "@/components/Projects/LeftHandImage";
@@ -30,14 +29,15 @@ const projectComponentTest =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
-
-            <VideoHeader
-                projectName="VideoHeader"
-                role="role"
-                desc={"desc"}
-                link="\"
-                videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
-            />
+            <div className='w-full bg-gray-800' >
+                <VideoHeader
+                    projectName="VideoHeader"
+                    role="role"
+                    desc={"desc"}
+                    link="\"
+                    videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
+                />
+            </div>
 
             <VerticalStackedVideo
                 videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
@@ -184,14 +184,6 @@ const projectComponentTest =() => {
                 desc1="Desc 1"
                 desc2="Desc 2"
                 desc3="Desc 3"
-            />
-
-            <Header
-                projectName="Header"
-                role="role"
-                desc={"desc"}
-                link="\"
-                img={testImg}
             />
 
             <DoubleColumn
