@@ -1,8 +1,10 @@
+// See bottom of code for 2 ways to call
+
 import React from 'react';
 import Image from 'next/image';
 import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
 
-const LeftHandImageBox = ({ sections }) => {
+const LeftHandImageBox = ({ sections, height, width }) => {
   return (
     <div className='col-span-9 text-center pb-4'>
       {sections.map((section, index) => (
@@ -37,7 +39,10 @@ const LeftHandImageBox = ({ sections }) => {
               }}
             >
               <div className="section-image">
-                <Image src={section.image} cover style={{ maxWidth: '100%' }} />
+                <Image src={section.image}
+                width={width || "900"} // Use provided width or default to "100%"
+                height={height || "300"} // Use provided height or default to "500px"
+                />
               </div>
             </div>
             <div
@@ -54,7 +59,7 @@ const LeftHandImageBox = ({ sections }) => {
                 </span>
               </div>
               <div className="section-content">
-                <p className='text-justify'>{section.description}</p>
+                <p className='text-center dark:text-light'>{section.description}</p>
               </div>
             </div>
           </div>
@@ -65,3 +70,46 @@ const LeftHandImageBox = ({ sections }) => {
 };
 
 export default LeftHandImageBox;
+
+/* 
+In Line
+<LeftHandImageBox
+  sections={[
+    {
+      image: '/path/to/your/image1.jpg', // Replace with your image path
+      title: 'Section 1 Title',
+      description: 'Description for section 1',
+    },
+    {
+      image: '/path/to/your/image2.jpg', // Replace with your image path
+      title: 'Section 2 Title',
+      description: 'Description for section 2',
+    },
+    // Add more sections as needed
+  ]}
+/>
+
+Variable 
+const sectionsData = [
+  {
+    image: '/path/to/your/image1.jpg', // Replace with your image path
+    title: 'Section 1 Title',
+    description: 'Description for section 1',
+  },
+  {
+    image: '/path/to/your/image2.jpg', // Replace with your image path
+    title: 'Section 2 Title',
+    description: 'Description for section 2',
+  },
+  // Add more sections as needed
+];
+
+const YourComponent = () => {
+  return (
+    <div>
+      Call the LeftHandImageBox component and pass the sections prop 
+      <LeftHandImageBox sections={sectionsData} />
+    </div>
+  );
+}; */
+

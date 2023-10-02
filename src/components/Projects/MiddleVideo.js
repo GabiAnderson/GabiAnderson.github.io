@@ -17,7 +17,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-const MiddleVideo = ({videoUrl, title1, title2, desc1, desc2}) => {
+const MiddleVideo = ({videoUrl, title1, title2, desc1, desc2, width, height}) => {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -36,8 +36,8 @@ const MiddleVideo = ({videoUrl, title1, title2, desc1, desc2}) => {
             controls={true}
             playing={false}
             volume={0.0}
-            width="100%"
-            height="500px"
+            width={width || "100%"} // Use provided width or default to "100%"
+            height={height || "500px"} // Use provided height or default to "500px"
           />
         </div>
 

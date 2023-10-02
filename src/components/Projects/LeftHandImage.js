@@ -16,14 +16,17 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-function LeftHandImage({ img, title, desc }) {
+function LeftHandImage({ img, title, desc, width, height }) {
   const borderColorClass = getRandomColorClass();
 
   return (
     <div className='col-span-8 text-center pb-4'>
       <div className='grid w-full grid-cols-8 gap-8 px-8 my-16'>
         <div className='col-span-6 flex flex-col items-start justify-center'>
-          <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} />
+          <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} 
+          width={width || "900"} // Use provided width or default to "100%"
+          height={height || "300"} // Use provided height or default to "500px"
+          />
         </div>
 
         <div className='col-span-2 flex flex-col items-start justify-center'>

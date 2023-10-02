@@ -17,7 +17,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-const VerticalStackedVideo = ({ videoUrl, title, desc }) => {
+const VerticalStackedVideo = ({ videoUrl, title, desc, width, height }) => {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -30,8 +30,8 @@ const VerticalStackedVideo = ({ videoUrl, title, desc }) => {
             controls={true}
             playing={false}
             volume={0.0}
-            width="1200px"
-            height="500px"
+            width={width || "1200px"} // Use provided width or default to "100%"
+            height={height || "500px"} // Use provided height or default to "500px"
           />
         </div>
 

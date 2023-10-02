@@ -16,7 +16,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-function RightHandImage({ img, title, desc }) {
+function RightHandImage({ img, title, desc, width, height }) {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -30,7 +30,10 @@ function RightHandImage({ img, title, desc }) {
         </div>
 
         <div className='col-span-6 flex flex-col items-start justify-center'>
-          <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} />
+          <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} 
+          width={width || "900"} // Use provided width or default to "100%"
+          height={height || "300"} // Use provided height or default to "500px"
+          />
         </div>
       </div>
     </div>

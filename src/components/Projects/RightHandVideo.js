@@ -18,7 +18,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-function RightHandVideo({ videoUrl, title, desc }) {
+function RightHandVideo({ videoUrl, title, desc, width, height }) {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -38,8 +38,8 @@ function RightHandVideo({ videoUrl, title, desc }) {
             controls={true}
             playing={false}
             volume={0.0}
-            width="100%"
-            height="500px"
+            width={width || "100%"} // Use provided width or default to "100%"
+            height={height || "500px"} // Use provided height or default to "500px"
           />
         </div>
       </div>

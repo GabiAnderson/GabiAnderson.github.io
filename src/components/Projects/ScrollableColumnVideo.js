@@ -16,7 +16,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-const ScrollableColumn = ({ content }) => {
+const ScrollableColumnVideo = ({ content }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -104,7 +104,7 @@ const ScrollableColumn = ({ content }) => {
               height="500px"
             />
           </div>
-          <p>{currentItem.description}</p>
+          <p className='dark:text-light'>{currentItem.description}</p>
         </div>
         <div
           className="column arrow"
@@ -137,4 +137,4 @@ const ScrollableColumn = ({ content }) => {
   );
 };
 
-export default ScrollableColumn;
+export default ScrollableColumnVideo;

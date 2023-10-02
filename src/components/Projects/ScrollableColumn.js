@@ -99,7 +99,7 @@ const ScrollableColumn = ({ content }) => {
               height={500} // Set a fixed height for the image
             />
           </div>
-          <p>{currentItem.description}</p>
+          <p className='dark:text-light'>{currentItem.description}</p>
         </div>
         <div
           className="column arrow"

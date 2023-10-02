@@ -15,7 +15,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-const MiddleImage = ({img, title1, title2, desc1, desc2}) => {
+const MiddleImage = ({img, title1, title2, desc1, desc2, width, height}) => {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -28,7 +28,10 @@ const MiddleImage = ({img, title1, title2, desc1, desc2}) => {
         </div>
 
         <div className='col-span-5 flex flex-col items-start justify-center'>
-            <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} />
+            <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} 
+            width={width || "900"} // Use provided width or default to "100%"
+            height={height || "300"} // Use provided height or default to "500px"
+            />
         </div>
 
         <div className='col-span-2 flex flex-col items-start justify-center'>

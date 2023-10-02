@@ -15,7 +15,7 @@ function getRandomColorClass() {
   return classNames[randomIndex];
 }
 
-const VerticalStackedImage = ({ img, title, desc }) => {
+const VerticalStackedImage = ({ img, title, desc, width, height }) => {
   const borderColorClass = getRandomColorClass();
 
   return (
@@ -26,8 +26,8 @@ const VerticalStackedImage = ({ img, title, desc }) => {
           <Image
             src={img}
             className={`border-4 border-solid ${borderColorClass} p-2`}
-            width={900} // Adjust the width as needed
-            height={300} // Adjust the height as needed
+            width={width || "900"} // Use provided width or default to "100%"
+            height={height || "300"} // Use provided height or default to "500px"
           />
         </div>
 
