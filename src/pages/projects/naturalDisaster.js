@@ -2,6 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import Head from 'next/head'
+import Image from 'next/image';
 
 // imports for components
 import TripleColumn from '@/components/Projects/TripleColumn';
@@ -105,25 +106,33 @@ const naturalDisaster = () => {
             sectionDescription="The University of Utah Entertainment Arts and Engineering's Final Class"
           />
 
-          <div className='mx-16 text-center'>
+          <div className='mx-16 text-center mb-16'>
             <TextFormat className="text-2xl text-secondaryDark dark:text-secondaryLight mb-6" 
-              text={`The purpose of a capstone course is to provide students with a venue to test and explore the skills they have learned throughout their academic 
-              careers and to provide them with guidance in abstracting their experience. In the EAE capstone course, students were tasked with making a videogame 
-              from the ground up. They followed an industry model and worked in teams to accomplish this goal. Professors contributed to the process by acting as 
-              technical and creative producers on the project, while students filled all engineering, creative, and administrative duties on the teams.
+              text={`The capstone course aimed to test and apply the skills acquired throughout our academic journey while providing guidance in abstracting our 
+              experiences. In the EAE capstone course, our challenge was to create a video game from the ground up. Following an industry model, we worked collaboratively 
+              in smaller teams, with students taking on engineering, creative, and administrative roles.
               <br><br>
-              Within this context, working in smaller teams and adhering to shorter development timelines meant that students had to wear multiple hats. 
-              This multifaceted experience allowed me to take on various roles within the framework of <em>Natural Disaster</em>. In addition to my primary role as a 
-              lead engineer, I also contributed as a lighting engineer, UI/UX engineer, machinima producer, machinima engineer, and more. This dynamic and 
-              collaborative environment challenged me to adapt and excel in various domains, enhancing my skills and knowledge in the process.
+              This context required us to wear multiple hats due to smaller teams and shorter development timelines. Within the framework of <em>Natural Disaster</em>, I took on 
+              various roles, including lead engineer, lighting engineer, UI/UX engineer, machinima producer, and more. This dynamic environment fostered adaptation and skill 
+              enhancement.
               <br><br>
-              The games created in the capstone course were similar in scope and design to those found on platforms like Steam or Itch.io. This challenge 
-              not only provided us with outstanding additions to our portfolios but also pushed us intellectually and personally.
-              <br><br>
-              By the end of the course, students had the opportunity to experience the full spectrum of the game development process. We thrived in an 
-              interdisciplinary environment, interacting not only with students and faculty from across campus but also collaborating with various professionals 
-              in the field. This rich tapestry of experiences enriched our educational journey and prepared us for the diverse and ever-evolving world of game development.`}
+              Our games resembled those on platforms like Steam or Itch.io, offering an excellent addition to our portfolios. This challenge pushed us intellectually and 
+              personally. By course end, we'd experienced the full game development process and thrived in an interdisciplinary setting, collaborating with peers, faculty, 
+              and industry professionals.
+              `} 
             />
+            <div className="flex items-center mt-16">
+              <div>
+                <TextFormat className="text-2xl text-secondaryDark dark:text-secondaryLight mb-6 mr-8" 
+                    text={`<strong><em>Natural Disaster</em> gained immense popularity among the staff and stood out as a visually impressive game. Its impact was so 
+                    profound that the EAE department chose a screenshot of the game as the header image for the Master's program, despite its origin as a project within 
+                    the Bachelor's program. This recognition underscored the exceptional quality and creativity that our team brought to the project.</strong>`} />
+                </div>
+              <Image src={MEAE_Hompage} className={`border-4 border-solid border-secondaryColor bg-primaryColorShade3 p-2`} 
+                width={"1000"} // Use provided width or default to "100%"
+                height={"500"} // Use provided height or default to "500px"
+              />
+            </div>
           </div>
 
           <SectionTitle
@@ -131,17 +140,7 @@ const naturalDisaster = () => {
             sectionDescription=""
           />
 
-          <HoverTripleColumn 
-            img1={testImg}
-            img2={testImg}
-            img3={testImg}
-            title1="HoverTripleColumn"
-            title2="HoverTripleColumn"
-            title3="HoverTripleColumn"
-            desc1="Desc 1"
-            desc2="Desc 2"
-            desc3="Desc 3"
-          />
+          
 
         </main>
     </>
