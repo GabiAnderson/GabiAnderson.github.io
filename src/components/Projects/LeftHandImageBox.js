@@ -54,7 +54,7 @@ const LeftHandImageBox = ({ sections, height, width }) => {
               }}
             >
               <div className="section-header" style={{ padding: '10px' }}>
-                <span className='mb-4 text-lg font-bold uppercase text-accentgreen/75'>
+                <span className='mb-4 text-lg font-bold uppercase text-tertiaryColor'>
                   <AnimatedTextTypeInView text={section.title} delay={100} />
                 </span>
               </div>

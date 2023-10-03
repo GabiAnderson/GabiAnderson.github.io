@@ -29,13 +29,14 @@ const projectComponentTest =() => {
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
-            <div className='w-full bg-gray-800' >
+            <div className='w-full' >
                 <VideoHeader
                     projectName="VideoHeader"
                     role="role"
-                    desc={"desc"}
+                    desc="desc"
                     link="\"
                     videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
+                    linkText="Play on Steam"
                 />
             </div>
 

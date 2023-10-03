@@ -3,22 +3,22 @@ import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const colorClassMap = {
-  accentgreen: 'border-accentgreen/60',
-  accentblue: 'border-accentblue/60',
-  accentpink: 'border-accentpink/60',
-  accentyellow: 'border-accentyellow/60',
-  accentmaroon: 'border-accentmaroon/60',
+const colorShades = {
+  Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
+  Shade2: ["border-primaryColorShade2", "border-secondaryColorShade2", "border-tertiaryColorShade2", "border-secondaryTertiaryColorShade2"],
+  Shade3: ["border-primaryColorShade3", "border-secondaryColorShade3", "border-tertiaryColorShade3", "border-secondaryTertiaryColorShade3"],
+  Shade4: ["border-primaryColorShade4", "border-secondaryColorShade4", "border-tertiaryColorShade4", "border-secondaryTertiaryColorShade4"],
 };
 
-function getRandomColorClass() {
-  const classNames = Object.values(colorClassMap);
-  const randomIndex = Math.floor(Math.random() * classNames.length);
-  return classNames[randomIndex];
+function getRandomColorClass(shadeName) {
+  const shades = colorShades[shadeName];
+  if (!shades) return ""; // Return an empty string if shadeName is not valid
+  const randomIndex = Math.floor(Math.random() * shades.length);
+  return shades[randomIndex];
 }
 
-const VerticalStackedVideo = ({ videoUrl, title, desc, width, height }) => {
-  const borderColorClass = getRandomColorClass();
+const VerticalStackedVideo = ({ videoUrl, title, desc, width, height, shadeName = 'Shade1' }) => {
+  const borderColorClass = getRandomColorClass(shadeName);
 
   return (
     <div className='col-span-9 text-center pb-4'>
@@ -37,7 +37,7 @@ const VerticalStackedVideo = ({ videoUrl, title, desc, width, height }) => {
 
         {/* Title */}
         <div className='col-span-9 flex flex-col items-center justify-center'>
-          <h2 className='text-primary font-bold mx-auto pb-2'>{title}</h2>
+          <h2 className='text-primaryColor font-bold mx-auto pb-2'>{title}</h2>
         </div>
 
         {/* Description */}

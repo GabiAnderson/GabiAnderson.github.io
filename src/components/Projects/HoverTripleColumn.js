@@ -3,23 +3,21 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const colorClassMap = {
-  accentgreen: 'border-accentgreen/60',
-  accentblue: 'border-accentblue/60',
-  accentpink: 'border-accentpink/60',
-  accentyellow: 'border-accentyellow/60',
-  accentmaroon: 'border-accentmaroon/60',
+const colorShades = {
+  Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
+  Shade2: ["border-primaryColorShade2", "border-secondaryColorShade2", "border-tertiaryColorShade2", "border-secondaryTertiaryColorShade2"],
+  Shade3: ["border-primaryColorShade3", "border-secondaryColorShade3", "border-tertiaryColorShade3", "border-secondaryTertiaryColorShade3"],
+  Shade4: ["border-primaryColorShade4", "border-secondaryColorShade4", "border-tertiaryColorShade4", "border-secondaryTertiaryColorShade4"],
 };
 
-function getRandomColorClass() {
-  const classNames = Object.values(colorClassMap);
-  const randomIndex = Math.floor(Math.random() * classNames.length);
-  return classNames[randomIndex];
+function getRandomColorClass(shadeName) {
+  const shades = colorShades[shadeName];
+  if (!shades) return ""; // Return an empty string if shadeName is not valid
+  const randomIndex = Math.floor(Math.random() * shades.length);
+  return shades[randomIndex];
 }
 
-// ...
-
-const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, desc2, desc3, width1, height1, width2, height2, width3, height3, }) => {
+const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, desc2, desc3, width1, height1, width2, height2, width3, height3, shadeName = 'Shade1' }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseOver = (index) => {
@@ -30,12 +28,20 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
     setHoveredIndex(null);
   };
 
-  const borderColorClass1 = getRandomColorClass();
-  const borderColorClass2 = getRandomColorClass();
-  const borderColorClass3 = getRandomColorClass();
+  const borderColorClass1 = getRandomColorClass(shadeName);
+  let borderColorClass2 = getRandomColorClass(shadeName);
+  let borderColorClass3 = getRandomColorClass(shadeName);
+  // Ensure borderColorClass2 is different from borderColorClass1
+  while (borderColorClass2 === borderColorClass1) {
+    borderColorClass2 = getRandomColorClass(shadeName);
+  }
+  // Ensure borderColorClass3 is different from both borderColorClass1 and borderColorClass2
+  while (borderColorClass3 === borderColorClass1 || borderColorClass3 === borderColorClass2) {
+    borderColorClass3 = getRandomColorClass(shadeName);
+  }
 
   return (
-    <div className='grid w-full grid-cols-9 gap-8 px-8 my-16'>
+    <div className='grid w-full grid-cols-9 gap-8 px-8 my-8'>
       <div className='col-span-3 flex flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(0)}
@@ -54,7 +60,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           </div>
           {hoveredIndex === 0 && (
             <div className='p-4 text-center'>
-              <h2 className='text-primary font-bold pb-2'>{title1}</h2>
+              <h2 className='text-primaryColor font-bold pb-2'>{title1}</h2>
               <p>{desc1}</p>
             </div>
           )}
@@ -79,7 +85,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           </div>
           {hoveredIndex === 1 && (
             <div className='p-4 text-center'>
-              <div className='text-primary font-bold pb-2'>{title2}</div>
+              <div className='text-primaryColor font-bold pb-2'>{title2}</div>
               <p>{desc2}</p>
             </div>
           )}
@@ -104,7 +110,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           </div>
           {hoveredIndex === 2 && (
             <div className='p-4 text-center'>
-              <h2 className='text-primary font-bold pb-2'>{title3}</h2>
+              <h2 className='text-primaryColor font-bold pb-2'>{title3}</h2>
               <p>{desc3}</p>
             </div>
           )}

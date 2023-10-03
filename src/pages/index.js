@@ -58,7 +58,7 @@ export default function Home() {
                   <LinkArrow className={"w-6 ml-1"} /></Link>
                 
                 <Link href="mailto:gabi84095@gmail.com" target={"_blank"}
-                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-secondaryColor hover:border-b-tertiaryColor dark:text-light'>Contact</Link>
+                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-primaryColor hover:border-b-tertiaryColor dark:text-light'>Contact</Link>
               </div>
             </div>
           </div>

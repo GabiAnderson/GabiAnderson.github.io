@@ -4,19 +4,21 @@ import dynamic from 'next/dynamic';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const colorClassMap = {
-  accentgreen: 'fill-accentgreen/60',
-  accentblue: 'fill-accentblue/60',
-  accentpink: 'fill-accentpink/60',
+const colorShades = {
+  Shade1: ["fill-primaryColorShade1", "fill-secondaryColorShade1", "fill-tertiaryColorShade1", "fill-secondaryTertiaryColorShade1"],
+  Shade2: ["fill-primaryColorShade2", "fill-secondaryColorShade2", "fill-tertiaryColorShade2", "fill-secondaryTertiaryColorShade2"],
+  Shade3: ["fill-primaryColorShade3", "fill-secondaryColorShade3", "fill-tertiaryColorShade3", "fill-secondaryTertiaryColorShade3"],
+  Shade4: ["fill-primaryColorShade4", "fill-secondaryColorShade4", "fill-tertiaryColorShade4", "fill-secondaryTertiaryColorShade4"],
 };
 
-function getRandomColorClass() {
-  const classNames = Object.values(colorClassMap);
-  const randomIndex = Math.floor(Math.random() * classNames.length);
-  return classNames[randomIndex];
+function getRandomColorClass(shadeName) {
+  const shades = colorShades[shadeName];
+  if (!shades) return ""; // Return an empty string if shadeName is not valid
+  const randomIndex = Math.floor(Math.random() * shades.length);
+  return shades[randomIndex];
 }
 
-const ScrollableColumnVideo = ({ content }) => {
+const ScrollableColumnVideo = ({ content, shadeName = 'Shade1' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -29,10 +31,10 @@ const ScrollableColumnVideo = ({ content }) => {
 
   const currentItem = content[currentIndex];
 
-  const arrowColorClass = getRandomColorClass();
+  const arrowColorClass = getRandomColorClass(shadeName);
 
   return (
-    <div className='col-span-9 text-center pb-16'>
+    <div className='col-span-9 text-center pb-8'>
       <div
         className="container"
         style={{
