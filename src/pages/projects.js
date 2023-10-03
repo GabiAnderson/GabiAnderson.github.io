@@ -6,7 +6,7 @@ import {motion} from 'framer-motion';
 import Layout from '@/components/Common/Layout'
 import AnimatedText from '@/animations/AnimatedText'
 import { GithubIcon } from '@/components/Common/Icons'
-import NDHeader from "../../public/images/projects/naturalDisaster/ND_header.png";
+import NDHeader from "../../public/images/projects/naturalDisaster/ND_SteamHeader.png";
 import AKHeader from "../../public/images/projects/acidKnockout/AK_header.png";
 import FFTHeader from "../../public/images/projects/foodForThought/FFT_header.png";
 import CRRHeader from "../../public/images/projects/classRegistrationRedesign/CRR_header.png";
