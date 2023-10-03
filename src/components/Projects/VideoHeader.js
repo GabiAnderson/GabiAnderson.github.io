@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import TextFormat from '../Common/TextFormat';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -24,7 +25,7 @@ const VideoHeader = ({ projectName, role, desc, link, videoUrl, linkText }) => {
       <div className='col-span-2 flex flex-col items-start justify-center'>
         <h1 className="text-3xl font-bold text-primaryColor mb-2">{projectName}</h1>
         <h2 className="text-xl mb-4 dark:text-light">{role}</h2>
-        <p className="text-sm text-secondaryDark dark:text-secondaryLight mb-6">{desc}</p>
+        <TextFormat className="text-sm text-secondaryDark dark:text-secondaryLight mb-6" text={desc}/>
         <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor'>
           {linkContent}
         </Link>

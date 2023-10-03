@@ -6,7 +6,7 @@ const SectionTitle = ({sectionTitle, sectionDescription}) => {
     <div className='col-span-9 text-center pb-8'>
       <AnimatedText text={sectionTitle} className='text-secondaryColor'/>
       <p className='text-tertiaryColor font-bold text-lg'>{sectionDescription}</p>
-      </div>
+    </div>
   );
 };
 
