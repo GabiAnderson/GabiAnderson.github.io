@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
@@ -20,23 +21,23 @@ const MiddleImage = ({img, title1, title2, desc1, desc2, width, height, shadeNam
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-8 px-8 my-8'>
+      <div className='grid w-full grid-cols-9 gap-4 px-16 my-8'>
 
         <div className='col-span-2 flex flex-col items-start justify-center'>
             <h2 className='text-primaryColor font-bold mx-auto py-8'>{title1}</h2>
-            <p className='dark:text-light mx-auto'>{desc1}</p>
+            <TextFormat className='dark:text-light mx-auto' text={desc1} />
         </div>
 
         <div className='col-span-5 flex flex-col items-start justify-center'>
             <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} 
-            width={width || "900"} // Use provided width or default to "100%"
-            height={height || "300"} // Use provided height or default to "500px"
+            width={width || "100%"} // Use provided width or default to "100%"
+            height={height || "600"} // Use provided height or default to "500px"
             />
         </div>
 
         <div className='col-span-2 flex flex-col items-start justify-center'>
             <h2 className='text-primaryColor font-bold mx-auto py-8'>{title2}</h2>
-            <p className='dark:text-light mx-auto'>{desc2}</p>
+            <TextFormat className='dark:text-light mx-auto' text={desc2} />
         </div>
       </div>
     </div>

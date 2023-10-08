@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
@@ -41,7 +42,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
   }
 
   return (
-    <div className='grid w-full grid-cols-9 gap-8 px-8 my-8'>
+    <div className='grid w-full grid-cols-9 gap-8 px-8 my-4'>
       <div className='col-span-3 flex flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(0)}
@@ -61,7 +62,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           {hoveredIndex === 0 && (
             <div className='p-4 text-center'>
               <h2 className='text-primaryColor font-bold pb-2'>{title1}</h2>
-              <p>{desc1}</p>
+              <TextFormat text={desc1} />
             </div>
           )}
         </div>
@@ -86,7 +87,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           {hoveredIndex === 1 && (
             <div className='p-4 text-center'>
               <div className='text-primaryColor font-bold pb-2'>{title2}</div>
-              <p>{desc2}</p>
+              <TextFormat text={desc2} />
             </div>
           )}
         </div>
@@ -111,7 +112,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
           {hoveredIndex === 2 && (
             <div className='p-4 text-center'>
               <h2 className='text-primaryColor font-bold pb-2'>{title3}</h2>
-              <p>{desc3}</p>
+              <TextFormat text={desc3} />
             </div>
           )}
         </div>

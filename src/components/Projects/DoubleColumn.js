@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
@@ -27,7 +28,7 @@ const DoubleColumn = ({ img1, img2, title1, title2, desc1, desc2, width1, height
 
   return (
     <div className='col-span-8 text-center pb-4'>
-      <div className='grid w-full grid-cols-8 gap-8 px-8 my-8'>
+      <div className='grid w-full grid-cols-8 gap-4 px-8 my-4'>
         <div className='col-span-4 flex flex-col items-start justify-center'>
           <Image
             src={img1}
@@ -36,7 +37,7 @@ const DoubleColumn = ({ img1, img2, title1, title2, desc1, desc2, width1, height
             height={height1 || "300"} // Use provided height or default to "500px"
           />
           <h2 className='text-primaryColor font-bold mx-auto py-8'>{title1}</h2>
-          <p className='dark:text-light mx-auto'>{desc1}</p>
+          <TextFormat className='dark:text-light mx-auto' text={desc1} />
         </div>
 
         <div className='col-span-4 flex flex-col items-start justify-center'>
@@ -47,7 +48,7 @@ const DoubleColumn = ({ img1, img2, title1, title2, desc1, desc2, width1, height
             height={height2 || "300"} // Use provided height or default to "500px"
           />
           <h2 className='text-primaryColor font-bold mx-auto py-8'>{title2}</h2>
-          <p className='dark:text-light mx-auto'>{desc2}</p>
+          <TextFormat className='dark:text-light mx-auto' text={desc2} />
         </div>
       </div>
     </div>

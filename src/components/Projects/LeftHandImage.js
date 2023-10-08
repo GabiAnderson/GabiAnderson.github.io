@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
@@ -21,19 +22,19 @@ function LeftHandImage({ img, title, desc, width, height, shadeName = 'Shade1' }
 
   return (
     <div className='col-span-8 text-center pb-4'>
-      <div className='grid w-full grid-cols-8 gap-8 px-8 my-8'>
-        <div className='col-span-6 flex flex-col items-start justify-center'>
+      <div className='grid w-full grid-cols-8 gap-2 px-16 my-8'>
+        <div className='col-span-5 flex flex-col items-start justify-center'>
           <Image src={img} className={`border-4 border-solid ${borderColorClass} p-2`} 
           width={width || "900"} // Use provided width or default to "100%"
           height={height || "300"} // Use provided height or default to "500px"
           />
         </div>
 
-        <div className='col-span-2 flex flex-col items-start justify-center'>
+        <div className='col-span-3 flex flex-col items-start justify-center'>
           <div className='text-primaryColor font-bold mx-auto py-8'>
             <AnimatedTextTypeInView text={title} delay={100} />
           </div>
-          <p className='dark:text-light mx-auto'>{desc}</p>
+          <TextFormat className='dark:text-light mx-auto' text={desc} />
         </div>
       </div>
     </div>

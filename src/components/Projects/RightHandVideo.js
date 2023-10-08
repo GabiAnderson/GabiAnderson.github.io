@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedTextTypeInView from '../../animations/AnimatedTextTypeInView';
 import dynamic from 'next/dynamic';
+import TextFormat from '../Common/TextFormat';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
@@ -28,7 +29,7 @@ function RightHandVideo({ videoUrl, title, desc, width, height, shadeName = 'Sha
           <div className='text-primaryColor font-bold mx-auto py-8'>
             <AnimatedTextTypeInView text={title} delay={100} />
           </div>
-          <p className='dark:text-light mx-auto'>{desc}</p>
+          <TextFormat className='dark:text-light mx-auto' text={desc} />
         </div>
 
         <div className={`col-span-6 flex flex-col items-start justify-center border-4 border-solid ${borderColorClass} p-2`}>
