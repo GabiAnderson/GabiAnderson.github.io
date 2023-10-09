@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { RightArrowButton, LeftArrowButton } from '../Common/Icons';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["fill-primaryColorShade1", "fill-secondaryColorShade1", "fill-tertiaryColorShade1", "fill-secondaryTertiaryColorShade1"],
@@ -101,7 +102,7 @@ const ScrollableColumn = ({ content, shadeName = 'Shade1' }) => {
               height={500} // Set a fixed height for the image
             />
           </div>
-          <p className='dark:text-light'>{currentItem.description}</p>
+          <TextFormat className='dark:text-light mt-8' text={currentItem.description} />
         </div>
         <div
           className="column arrow"

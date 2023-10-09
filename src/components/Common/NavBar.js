@@ -32,6 +32,7 @@ const NavBar = () => {
                     <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
+                    <CustomLink href="/miniprojects" title="Mini Projects" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                 </div>
 
@@ -90,7 +91,7 @@ const NavBar = () => {
                     </p>
 
                     <p className='my-4 pb-4'>
-                        Last Updated 9/23/23
+                        Last Updated 10/08/23
                     </p>
                     <Link href="https://gabi84095.wixsite.com/portfolio/portfolio" target={"_blank"}
                         className='bg-dark text-light p-2.5 px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
