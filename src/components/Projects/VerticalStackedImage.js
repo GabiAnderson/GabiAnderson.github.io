@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import TextFormat from '../Common/TextFormat';
 
 const colorShades = {
   Shade1: ["border-primaryColorShade1", "border-secondaryColorShade1", "border-tertiaryColorShade1", "border-secondaryTertiaryColorShade1"],
@@ -20,7 +21,7 @@ const VerticalStackedImage = ({ img, title, desc, width, height, shadeName = 'Sh
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-4 px-8 my-8'>
+      <div className='grid w-full grid-cols-9 gap-4 px-8 my-2'>
         {/* Image */}
         <div className='col-span-9 flex flex-col items-center justify-center'>
           <Image
@@ -38,7 +39,7 @@ const VerticalStackedImage = ({ img, title, desc, width, height, shadeName = 'Sh
 
         {/* Description */}
         <div className='col-span-9 flex flex-col items-center justify-center'>
-          <p className='dark:text-light mx-auto'>{desc}</p>
+          <TextFormat className='dark:text-light mx-auto' text={desc} />
         </div>
       </div>
     </div>

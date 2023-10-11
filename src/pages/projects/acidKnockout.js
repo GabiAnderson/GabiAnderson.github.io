@@ -30,6 +30,21 @@ import { rotateInVariant, scaleInVariant, springInVariant, fadeAndSlideInVariant
 
 // imports for media
 import AKHeader from "@/images/projects/acidKnockout/AK_header.png";
+import Credits from "@/images/projects/acidKnockout/AK_Credits.gif";
+import Flamethrower from "@/images/projects/acidKnockout/AK_FlamethrowerPop.jpg";
+import GameOver from "@/images/projects/acidKnockout/AK_GameOver.gif";
+import HealthBar from "@/images/projects/acidKnockout/AK_HealthBar.png";
+import Health from "@/images/projects/acidKnockout/AK_HealthPop.jpg";
+import MainMenu from "@/images/projects/acidKnockout/AK_MainMenu.gif";
+import PowerUp from "@/images/projects/acidKnockout/AK_PowerUp.gif";
+import Score from "@/images/projects/acidKnockout/AK_Score.png";
+import Settings from "@/images/projects/acidKnockout/AK_SettingsUI.png";
+import Shotgun from "@/images/projects/acidKnockout/AK_ShotgunPop.jpg";
+import Theme from "@/images/projects/acidKnockout/AK_ThemeSong.png";
+import Title from "@/images/projects/acidKnockout/AK_TitleScreen.png";
+import AcidDripSpriteSheet from "@/images/projects/acidKnockout/AK_AcidDripSpriteSheet.png";
+import AcidDripGif from "@/images/projects/acidKnockout/AK_AcidDripGif.gif";
+import BlankImage from "@/images/BlankImage.png";
 
 const acidKnockout = () => {
     return (
@@ -75,6 +90,89 @@ const acidKnockout = () => {
                     <SectionTitle
                         sectionTitle="UI/UX Engineer"
                         sectionDescription=""
+                    />
+
+                    <RightHandImage
+                        img={MainMenu}
+                        title="Menus and PopUps"
+                        desc="As the lead UI/UX Engineer, my responsibilities included the design, development, and implementation of various UI/UX components, such as menu 
+                        screens like the Main Menu screen shown here. The typical workflow involved identifying the need for a new UI/UX element, which could arise from my 
+                        insights, playtesting, or input from other developers. Subsequently, I would create a preliminary mockup on paper, followed by collaborative discussions 
+                        with the the UI artist to ensure the layout and functionality met our goals. Once approved, the UI artist would produce the necessary 
+                        assets, which I would then integrate into Unreal Engine, adhering to the original sketch's structure. Finally, I would utilize Unreal Engine blueprints 
+                        to add functionality to the element."
+                        width={1100}
+                    />
+
+                    <VerticalStackedImage
+                        img={PowerUp}
+                        title="Pop Ups!"
+                        desc="Because <em>Acid Knockout</em> was designed to be a fast-paced game, it was important to ensure the player could understand what was happening quickly
+                        and easily without taking away from the playing experience. One big element of the king-of-the-hill-style games we enjoyed were the power-ups. We implemented our
+                        own versions - flamethrower, shotgun, and health boost. It was clear after a few rounds of playtesting that players wanted to be told what exactly they were picking
+                        up.
+                        <br></br>
+                        I implemented a very quick pop-up that would display to the player what they had unlocked. Above is a gif of how the element 'pops' into and out of view. In reality
+                        it is less of a 'pop' and more of a 'fade' as the idea was to ensure it was clear enough to see and read but not to abrupt that it took away from gameplay.
+                        <br></br>
+                        <strong>Below are the 3 different versions for the 3 different power-ups.</strong>"
+                    />
+
+                    <TripleColumn
+                        img1={Shotgun}
+                        img2={Health}
+                        img3={Flamethrower}
+                        title1=""
+                        title2=""
+                        title3=""
+                        desc1=""
+                        desc2=""
+                        desc3=""
+                    />
+
+                    <LeftHandImage
+                        img={AcidDripGif}
+                        title="Custom UI Asset"
+                        desc="To liven up the menu's and other UI elements, I created an acid drip sprite sheet which I converted into an animation.
+                        <br></br>
+                        This asset can be found on the main menu and the player's health bar."
+                        width={1100}
+                    />
+
+                    <div className='col-span-9 text-center pb-8 mt-8'>
+                        <TextFormat className='text-tertiaryColor font-bold text-4xl' text="Hover to Learn More" />
+                    </div>
+
+                    <HoverTripleColumn
+                        img1={Credits}
+                        img2={Settings}
+                        img3={GameOver}
+                        title1="Rolling Credits"
+                        title2="Functional Settings"
+                        title3="Game Over"
+                        desc1="Found on the main menu, if the Credits button is pressed a rolling credits screen is played before exiting back to the main menu."
+                        desc2="Due to the short development time, the amount of settings was very minimal. But due to the fast-paced nature of the game, it was important
+                        to us to ensure any and all distractions could be altered. Thus, both the background music and the sound effects volume can be custom set."
+                        desc3="Whether it be falling through a crack or dying to a Gobby, Friggy, or Jummy, a Game Over screen will be shown with the ability to 
+                        exit back to the main menu."
+                    />
+
+                    <HoverTripleColumn
+                        img1={HealthBar}
+                        img2={BlankImage}
+                        img3={Score}
+                        title1="Health Bar"
+                        title2=""
+                        title3="Score"
+                        desc1="Tied into the player character and the 3 different enemy types, when damage is taken, the length of the health bar decreases based on how much
+                        damage was taken and how much health was remaining."
+                        desc2=""
+                        desc3="Each of the 3 enemy types has a different score based on how many bullets it requires to kill them. This score increments up as the player kills more
+                        enemies."
+                        width2={100}
+                        height2={5}
+                        height3={100}
+                        width3={300}
                     />
                 </div>
 
