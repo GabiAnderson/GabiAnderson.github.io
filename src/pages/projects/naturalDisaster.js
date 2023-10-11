@@ -112,20 +112,15 @@ const naturalDisaster = () => {
               ['Development Time', ['8 months']],
             ]}
           />
-          <motion.div
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
-          >
-            <motion.div variants={rotateInVariant}>
-              {<div><SectionTitle
-                sectionTitle="About My Capstone Experience"
-                sectionDescription="The University of Utah Entertainment Arts and Engineering's Final Class"
-              />
+          <div>
+            <SectionTitle
+              sectionTitle="About My Capstone Experience"
+              sectionDescription="The University of Utah Entertainment Arts and Engineering's Final Class"
+            />
 
-                <div className='mx-16 text-center mb-16'>
-                  <TextFormat className="text-xl text-secondaryDark dark:text-secondaryLight mb-6"
-                    text={`The capstone course aimed to test and apply the skills acquired throughout our academic journey while providing guidance in abstracting our 
+            <div className='mx-16 text-center mb-16'>
+              <TextFormat className="text-xl text-secondaryDark dark:text-secondaryLight mb-6"
+                text={`The capstone course aimed to test and apply the skills acquired throughout our academic journey while providing guidance in abstracting our 
                 experiences. In the EAE capstone course, our challenge was to create a video game from the ground up. Following an industry model, we worked collaboratively 
                 in smaller teams, with students taking on engineering, creative, and administrative roles.
                 <br><br>
@@ -137,25 +132,33 @@ const naturalDisaster = () => {
                 personally. By course end, we'd experienced the full game development process and thrived in an interdisciplinary setting, collaborating with peers, faculty, 
                 and industry professionals.
                 `}
-                  />
+              />
 
-                  <div className="flex items-center mt-16">
-                    <div>
-                      <TextFormat className="text-xl text-secondaryDark dark:text-secondaryLight mb-6 mr-8"
-                        text={`<strong><em>Natural Disaster</em> gained immense popularity among the staff and stood out as a visually impressive game. Its impact was so 
-                      profound that the EAE department chose a screenshot of the game as the header image for the Master's program, despite its origin as a project within 
-                      the Bachelor's program. This recognition underscored the exceptional quality and creativity that our team brought to the project.</strong>`} />
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+              >
+                <motion.div variants={rotateInVariant}>
+                  {<div>
+                    <div className="flex items-center mt-16">
+                      <div>
+                        <TextFormat className="text-xl text-secondaryDark dark:text-secondaryLight mb-6 mr-8"
+                          text={`<strong><em>Natural Disaster</em> gained immense popularity among the staff and stood out as a visually impressive game. Its impact was so 
+                            profound that the EAE department chose a screenshot of the game as the header image for the Master's program, despite its origin as a project within 
+                            the Bachelor's program. This recognition underscored the exceptional quality and creativity that our team brought to the project.</strong>`} />
+                      </div>
+                      <Image src={MEAE_Hompage} className={`border-4 border-solid border-secondaryColor bg-primaryColorShade3 p-2`}
+                        width={"800"} // Use provided width or default to "100%"
+                        height={"300"} // Use provided height or default to "500px"
+                      />
                     </div>
-                    <Image src={MEAE_Hompage} className={`border-4 border-solid border-secondaryColor bg-primaryColorShade3 p-2`}
-                      width={"800"} // Use provided width or default to "100%"
-                      height={"300"} // Use provided height or default to "500px"
-                    />
-                  </div>
-                </div></div>}
-            </motion.div>
-          </motion.div>
-
-
+                  </div>}
+                </motion.div>
+              </motion.div>
+              
+            </div>
+          </div>
 
           <div className='text-center py-8 mb-16 bg-secondaryTertiaryColor/30'>
             <TextFormat className="text-2xl text-secondaryDark dark:text-secondaryLight mx-16"
@@ -180,20 +183,22 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={fadeAndSlideInVariant}>
-              {<div><HoverTripleColumn
-                img1={MouseControl_Concept}
-                img2={HackNPlan}
-                img3={SceneChange_Concept}
-                title1="Mouse Control Concept"
-                title2="Manage Engineering HackNPlan"
-                title3="Scene Change with Trigger Concept"
-                desc1="Early in development the team wanted to look into the concept of controlling player movement with the mouse.
-              I developed a proof of concept showcasing the ability to control the player in a more or less 3D space with a mouse."
-                desc2="As the lead engineer I was in charge of managing the engineering department's HackNPlan. This included writing up tasks/bugs, assigning individuals, 
-              and updating the status as needed."
-                desc3="To ensure <em>Natural Disaster</em> felt like looking through a ViewMaster, the team wanted controller support and wanted to make the scene change via 
-              trigger. I set up the code to add in controller support to our previous mouse+keyboard code to handle scene changing."
-              /></div>}
+              {<div>
+                <HoverTripleColumn
+                  img1={MouseControl_Concept}
+                  img2={HackNPlan}
+                  img3={SceneChange_Concept}
+                  title1="Mouse Control Concept"
+                  title2="Manage Engineering HackNPlan"
+                  title3="Scene Change with Trigger Concept"
+                  desc1="Early in development the team wanted to look into the concept of controlling player movement with the mouse.
+                  I developed a proof of concept showcasing the ability to control the player in a more or less 3D space with a mouse."
+                  desc2="As the lead engineer I was in charge of managing the engineering department's HackNPlan. This included writing up tasks/bugs, assigning individuals, 
+                  and updating the status as needed."
+                  desc3="To ensure <em>Natural Disaster</em> felt like looking through a ViewMaster, the team wanted controller support and wanted to make the scene change via 
+                  trigger. I set up the code to add in controller support to our previous mouse+keyboard code to handle scene changing."
+                />
+              </div>}
             </motion.div>
           </motion.div>
 
@@ -219,20 +224,22 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={scaleInVariant}>
-              {<div><HoverTripleColumn
-                img1={ScrapbookUI_Concept}
-                img2={SemesterTimeline}
-                img3={LiveCharacterView}
-                title1="Scrapbook UI Concept"
-                title2="Semester/Release Timeline"
-                title3="Live Character Customization View Concept"
-                desc1="Early in development the team wanted to look into the concept of controlling player movement with the mouse.
-              I developed a proof of concept showcasing the ability to control the player in a more or less 3D space with a mouse."
-                desc2="As the lead engineer I was in charge of managing the engineering department's HackNPlan. This included writing up tasks/bugs, assigning individuals, 
-              and updating the status as needed."
-                desc3="To ensure <em>Natural Disaster</em> felt like looking through a ViewMaster, the team wanted controller support and wanted to make the scene change via 
-              trigger. I set up the code to add in controller support to our previous mouse+keyboard code to handle scene changing."
-              /></div>}
+              {<div>
+                <HoverTripleColumn
+                  img1={ScrapbookUI_Concept}
+                  img2={SemesterTimeline}
+                  img3={LiveCharacterView}
+                  title1="Scrapbook UI Concept"
+                  title2="Semester/Release Timeline"
+                  title3="Live Character Customization View Concept"
+                  desc1="Early in development the team wanted to look into the concept of controlling player movement with the mouse.
+                  I developed a proof of concept showcasing the ability to control the player in a more or less 3D space with a mouse."
+                  desc2="As the lead engineer I was in charge of managing the engineering department's HackNPlan. This included writing up tasks/bugs, assigning individuals, 
+                  and updating the status as needed."
+                  desc3="To ensure <em>Natural Disaster</em> felt like looking through a ViewMaster, the team wanted controller support and wanted to make the scene change via 
+                  trigger. I set up the code to add in controller support to our previous mouse+keyboard code to handle scene changing."
+                />
+              </div>}
             </motion.div>
           </motion.div>
 
@@ -259,25 +266,27 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={bounceInVariant}>
-              {<div><HoverTripleColumn
-                img1={PathCompleteUI_Concept}
-                img2={Scanner_Concept}
-                img3={SettingsMenu_UI}
-                title1="Path Complete UI Concept"
-                title2="Object Scanner Concept"
-                title3="Settings Menu UI"
-                desc1="An example for the design team about what a completed path UI element could look like. The idea was to create a proof of concept that showcased how a path
-              complete UI could influence player experience. A more refined version of this path complete screen was eventually made as the team felt it was a positive impact to players."
-                desc2="Early in development we were received feedback that finding interactable objects was difficult. Originally, the design team had great ideas on how to utilize
-              the environment and art assets to help nudge players into what objects are interactable. If you have played <em>Natural Disaster</em>, Akash's path is an example
-              of the design team doing this.
-              <br></br>
-              Unfortunatly, due to time issues, the art team did not have the bandwidth to create all the required assets for this design idea. I was tasked with creating a proof
-              of concept that allowed the interactable objects to show themselves in the scenes when the player presses a button. This original concept can be seen here. The scanner concept
-              was a hit to players and the teaching staff so we iterated on it to have both sound and a visual cue of what was interactable in the scene."
-                desc3="I worked heavily with the UI artist and another engineer to create all UI components. As a strike team, we focused heavily on the scrapbook, main menu, and
-              the settings menu. We worked to create layerable UI assets for the menus, you can see the final version of the settings menu here."
-              /></div>}
+              {<div>
+                <HoverTripleColumn
+                  img1={PathCompleteUI_Concept}
+                  img2={Scanner_Concept}
+                  img3={SettingsMenu_UI}
+                  title1="Path Complete UI Concept"
+                  title2="Object Scanner Concept"
+                  title3="Settings Menu UI"
+                  desc1="An example for the design team about what a completed path UI element could look like. The idea was to create a proof of concept that showcased how a path
+                  complete UI could influence player experience. A more refined version of this path complete screen was eventually made as the team felt it was a positive impact to players."
+                  desc2="Early in development we were received feedback that finding interactable objects was difficult. Originally, the design team had great ideas on how to utilize
+                  the environment and art assets to help nudge players into what objects are interactable. If you have played <em>Natural Disaster</em>, Akash's path is an example
+                  of the design team doing this.
+                  <br></br>
+                  Unfortunatly, due to time issues, the art team did not have the bandwidth to create all the required assets for this design idea. I was tasked with creating a proof
+                  of concept that allowed the interactable objects to show themselves in the scenes when the player presses a button. This original concept can be seen here. The scanner concept
+                  was a hit to players and the teaching staff so we iterated on it to have both sound and a visual cue of what was interactable in the scene."
+                  desc3="I worked heavily with the UI artist and another engineer to create all UI components. As a strike team, we focused heavily on the scrapbook, main menu, and
+                  the settings menu. We worked to create layerable UI assets for the menus, you can see the final version of the settings menu here."
+                />
+              </div>}
             </motion.div>
           </motion.div>
         </div>
@@ -295,22 +304,24 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={springInVariant}>
-              {<div><DoubleColumn
-                img1={MachinimaPipeline}
-                img2={MachinimaPipelineAssignment}
-                title1="Pipeline Creation"
-                title2="Pipeline Assignment"
-                desc1="We wanted the pipeline utilized by the machinima team to be as efficient as possible. We all had other school responsibilities and other areas of <em>Natural 
-              Disaster</em> that we were working on. I sat down to iron out the best way to split the machinima team and the best way
-              to define the development pipeline to ensure we were able to both complete all the machinima events but also to ensure they were well done. <br></br> As shown in the image
-              above, we ironed out a process that ensured each machinima event passed through the hands of at least 3 individuals, each of which with a different skillset and a different
-              goal in mind. Our designers were apart of the base team, they set up basic block outs of our machinima elements, then they passed through myself or my other engineer 
-              where we polished what was given to us and added engineering elements like blended animations, VFX, and attached assets (characters holding things properly). Finally, the machinima 
-              events passed to our VFX and animation artists who either marked the events as complete or did the final polish on them."
-                desc2="After determining the pipeline that would best work for the machinima team I worked with a producer to hand select which members of Burning Reel Studios would be apart
-              of the machinima team. I assigned each member the sub-team they would be on and provided them with what they would be tasked with.<br></br>The final element of being a producer
-              for the machinima team required I ran the stand-up's, assigned tasks, managed the team's HackNPlan, and ensured the sub-teams were completing their tasks and working together."
-              /></div>}
+              {<div>
+                <DoubleColumn
+                  img1={MachinimaPipeline}
+                  img2={MachinimaPipelineAssignment}
+                  title1="Pipeline Creation"
+                  title2="Pipeline Assignment"
+                  desc1="We wanted the pipeline utilized by the machinima team to be as efficient as possible. We all had other school responsibilities and other areas of <em>Natural 
+                  Disaster</em> that we were working on. I sat down to iron out the best way to split the machinima team and the best way
+                  to define the development pipeline to ensure we were able to both complete all the machinima events but also to ensure they were well done. <br></br> As shown in the image
+                  above, we ironed out a process that ensured each machinima event passed through the hands of at least 3 individuals, each of which with a different skillset and a different
+                  goal in mind. Our designers were apart of the base team, they set up basic block outs of our machinima elements, then they passed through myself or my other engineer 
+                  where we polished what was given to us and added engineering elements like blended animations, VFX, and attached assets (characters holding things properly). Finally, the machinima 
+                  events passed to our VFX and animation artists who either marked the events as complete or did the final polish on them."
+                  desc2="After determining the pipeline that would best work for the machinima team I worked with a producer to hand select which members of Burning Reel Studios would be apart
+                  of the machinima team. I assigned each member the sub-team they would be on and provided them with what they would be tasked with.<br></br>The final element of being a producer
+                  for the machinima team required I ran the stand-up's, assigned tasks, managed the team's HackNPlan, and ensured the sub-teams were completing their tasks and working together."
+                />
+              </div>}
             </motion.div>
           </motion.div>
 
@@ -320,16 +331,18 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={scaleInVariant}>
-              {<div><LeftHandImage
-                img={FerrisWheelRoll}
-                title="Largest Dynamic Narrative Event"
-                desc="This sequence showcases the largest machinima element created by the machinima team, it had the most moving characters, it was the longest in terms of time,
-              it utilized the largest objects, and it was the the dynamic narrative event the team had been dreaming about for months. I was fortunate enough to get to work on this event.
-              <br></br>
-              Getting the ferris wheel to even move was a challenge, to ensure it moved at a realistic speed and in the correct directions I had to create two of it's own level sequences.
-              From there I needed to time the sub-level sequences and the clown's to make the climbing and the overall sequence look at least somewhat realistic. It took over 2 hours just
-              to get the ferris wheel to spin and roll properly before I could even think about getting the clowns and the environement to react to it."
-              /></div>}
+              {<div>
+                <LeftHandImage
+                  img={FerrisWheelRoll}
+                  title="Largest Dynamic Narrative Event"
+                  desc="This sequence showcases the largest machinima element created by the machinima team, it had the most moving characters, it was the longest in terms of time,
+                  it utilized the largest objects, and it was the the dynamic narrative event the team had been dreaming about for months. I was fortunate enough to get to work on this event.
+                  <br></br>
+                  Getting the ferris wheel to even move was a challenge, to ensure it moved at a realistic speed and in the correct directions I had to create two of it's own level sequences.
+                  From there I needed to time the sub-level sequences and the clown's to make the climbing and the overall sequence look at least somewhat realistic. It took over 2 hours just
+                  to get the ferris wheel to spin and roll properly before I could even think about getting the clowns and the environement to react to it."
+                />
+              </div>}
             </motion.div>
           </motion.div>
 
@@ -355,26 +368,26 @@ const naturalDisaster = () => {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div variants={springInVariant}>
-              {<div><MiddleImage
-                img={LightingPerformanceTest}
-                title1="Lighting Overhaul"
-                desc1="I took all 7 scenes and worked with lighting elements to increase player immersion. I would rotate and change the hue of the 'sun' within sublevels, add in additional lighting 
-              (bulb, spotlight, etc), created light-emitting materials to put on objects, and work in level sequences to make lights change based on player actions. I utilized all these
-              options within each scene to customize each scene to have disctinct and realistic lighting.
-              "
-                title2="Performance Check"
-                desc2="Working in Unreal Engine 5 I had the opportunity to poke around with static, old-school dynamic, and Lumen dynamic lighting. Because each scene was in a different sub-level, 
-              each scene's lighting was in a different sub-level, and the 'sun' was in it's own sublevel I had to ensure I was thorougly testing the performance of additional lighting and 
-              lighting changes. It was important to the team that the game was still functional on developer's machines but also was able to run consistently at 30 FPS for release. I frequently
-              ran performance testing for lighting and other areas of the game."
-              />
+              {<div>
+                <MiddleImage
+                  img={LightingPerformanceTest}
+                  title1="Lighting Overhaul"
+                  desc1="I took all 7 scenes and worked with lighting elements to increase player immersion. I would rotate and change the hue of the 'sun' within sublevels, add in additional lighting 
+                  (bulb, spotlight, etc), created light-emitting materials to put on objects, and work in level sequences to make lights change based on player actions. I utilized all these
+                  options within each scene to customize each scene to have disctinct and realistic lighting."
+                  title2="Performance Check"
+                  desc2="Working in Unreal Engine 5 I had the opportunity to poke around with static, old-school dynamic, and Lumen dynamic lighting. Because each scene was in a different sub-level, 
+                  each scene's lighting was in a different sub-level, and the 'sun' was in it's own sublevel I had to ensure I was thorougly testing the performance of additional lighting and 
+                  lighting changes. It was important to the team that the game was still functional on developer's machines but also was able to run consistently at 30 FPS for release. I frequently
+                  ran performance testing for lighting and other areas of the game."
+                />
 
                 <div className='text-center py-8 mb-16'>
                   <TextFormat className="text-4xl text-secondaryDark dark:text-secondaryLight mx-16"
-                    text={`Below I have put before and after images of each scene to showcase the lighting change.
-                `}
+                    text={`Below I have put before and after images of each scene to showcase the lighting change.`}
                   />
-                </div></div>}
+                </div>
+              </div>}
             </motion.div>
           </motion.div>
 
@@ -451,7 +464,6 @@ const naturalDisaster = () => {
         >
           <motion.div variants={rotateInVariant}>
             {<div>
-
               <SectionTitle
                 sectionTitle="Artist"
                 sectionDescription="Small art peices that allowed the main artists of the team to focus on the bigger art elements."
@@ -487,7 +499,6 @@ const naturalDisaster = () => {
                   ]}
                 />
               </div>
-
             </div>}
           </motion.div>
         </motion.div>

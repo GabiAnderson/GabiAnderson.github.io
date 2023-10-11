@@ -32,7 +32,6 @@ const NavBar = () => {
                     <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
-                    <CustomLink href="/miniprojects" title="Mini Projects" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                     <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                 </div>
 
