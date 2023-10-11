@@ -45,7 +45,7 @@ const VideoHeaderStats = ({ projectName, about, desc, link, videoUrl, linkText, 
           playing={true}
           volume={0.2}
           width="100%"
-          height="550px"
+          height="600px"
         />
       </div>
       <div className='col-span-3 flex flex-col'>

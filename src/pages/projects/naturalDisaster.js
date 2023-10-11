@@ -81,6 +81,7 @@ import TheaterLighting from "@/images/projects/naturalDisaster/TheaterLightingOl
 import ParkLightingOld from "@/images/projects/naturalDisaster/ParkLightingOld.png";
 import TrainLightingOld from "@/images/projects/naturalDisaster/TrainLightingOld.png";
 import HackNPlan from "@/images/projects/naturalDisaster/ND_HackNPlan.png";
+import PitchDocument from "@/images/projects/naturalDisaster/OG_PitchDocument.png";
 
 const naturalDisaster = () => {
   return (
@@ -96,22 +97,82 @@ const naturalDisaster = () => {
             projectName="Natural Disaster: A Butterfly's Guide to Mass Destruction"
             about="Steam Game"
             desc={`
-                  Explore my journey in the Final Capstone course at the University of Utah, a year-long endeavor that led to the creation of 
+                  Explore my journey through the EAE Capstone course at the University of Utah, a year-long endeavor that led to the creation of 
                   <em>Natural Disaster: A Butterfly’s Guide to Mass Destruction</em>, a whimsical puzzle game now available on Steam.
-                  <br><br>
                   This course brought together a team of 30 developers from various disciplines, 
-                  challenging us to collaborate and innovate while acting as a functioning video game studio.
+                  challenging us to collaborate and innovate while acting as a functioning video game studio. 
+                  <br><br>
+                  The team, Burning Reel Studios, utilized
+                  Unreal Engine 5, Perforce, Wwise, HackNPlan, Blendr, Adobe Creative Suite, and more to develop <em>Natural Disaster</em>. I took on
+                  the role of Lead Engineer while also picking up a few additional roles during development. Learn more below.
                   `}
-            link="/"
+            link="https://store.steampowered.com/app/2311140/Natural_Disaster_A_Butterflys_Guide_to_Mass_Destruction/"
             linkText="Play on Steam"
             videoUrl="https://youtu.be/vX6pijRv8NM?si=2-YN4zEJvOxlGpnL"
             pairs={[
               ['Role(s)', ['Lead Engineer', 'Machinima Producer', 'Machinima Engineer', 'Lighting Engineer', 'Artist']],
-              ['Skills', ['Time Management', 'Task Management', 'UE Blueprints', 'Source Control', 'SDL']],
-              ['Tools', ['Unreal Engine 5', 'HackNPlan', 'Perforce']],
+              ['Skills', ['UE Blueprints', 'Source Control', 'SDL', 'Time Management', 'Task Management',]],
+              ['Tools', ['Unreal Engine 5', 'HackNPlan', 'Perforce', 'Adobe Photoshop']],
               ['Development Time', ['8 months']],
             ]}
           />
+
+          <div>
+            <SectionTitle
+              sectionTitle="Natural Disaster"
+              sectionDescription="A Butterfly's Guide to Mass Destruction"
+            />
+            <div className='mx-16 text-center mb-16'>
+              <motion.div
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+              >
+                <motion.div variants={bounceInVariant}>
+                  {<div>
+                    <div className="flex items-center mt-4">
+                      <div>
+                        <TextFormat className="text-md text-secondaryDark dark:text-secondaryLight mb-6 mr-8"
+                          text={`<em>Natural Disaster</em> was originally pitched as a 'silly, morbid game'. The pitched emphasized the desire to have 7 locations tied together through
+                          potential player actions view through a View Master. In fact, up until halfway through development, the razor pitch for all presentations and documentation was
+                          <br></br>
+                          "<em>Natural Disaster</em> is a point-and-click inspired adventure game set in a View Master. In which the player explores different scenes, insighting different 
+                          disasters by virtue of the butterfly effect."
+                          <br></br>
+                          Burning Reel Studios had no desire to drastically change or alter the premise of <em>Natural Disaster</em>. However, through the standard course of development
+                          it was clear the game was developing into something much bigger than a 'silly, morbid game'. This is how <em>Natural Disaster</em> is presented on Steam.
+                          <br></br>
+                          “Does the flap of a butterfly’s wings in Brazil set off a tornado in Texas?” –Edward Lorenz, “The Butterfly Effect”
+                          <br></br>
+                          Natural Disaster: A Butterfly’s Guide to Mass Destruction is a slapstick puzzle game with inspiration from point-and-click classics of how one very evil butterfly can bring down an empire. Explore a world through a stereoscope, test your limits as a teeny butterfly in a human’s world, and start chains of cause-and-effect that ripple across the seven scenes to disastrous results.
+                          <br></br>
+                          <strong>A SMALL WORLD OF SMALL PUZZLES</strong>
+                          Investigate the environment to discover items you can carry, objects you can activate, and places you can land to find how to lead these people to their worst nightmares.
+                          <br></br>
+                          <strong>PLAY THROUGH A STEREOSCOPE VIEWER</strong>
+                          Explore seven rich 3D locations through the lens of a stereoscope. Follow the characters through paths with multiple endings as your actions in one scene continue in another.
+                          <br></br>
+                          <strong>TIME LOOP TRIALS</strong>
+                          Upon your death, you find yourself back at the beginning, and all of the humans’ peaceful lives restored. It’s a time loop trap…or an opportunity for new methods.
+                          <br></br>
+                          <strong>A BUTTERFLY NEVER FORGETS</strong>
+                          Your shenanigans are logged the Scrapbook. It journals everything you’ve learned about your targets across multiple trials and is a guide for what the butterfly might be curious to try next.
+                          <br></br>
+                          <strong>HOLD ON…A WIZARD?</strong>
+                          In all your exploits, no one seems to notice that it is a butterfly causing their misfortune. But what happens when somebody does?  
+                          `} />
+                      </div>
+                      <Image src={PitchDocument} className={`border-4 border-solid border-secondaryColor bg-primaryColorShade3 mb-4`}
+                        width={"500"} // Use provided width or default to "100%"
+                        height={"600"} // Use provided height or default to "500px"
+                      />
+                    </div>
+                  </div>}
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+
           <div>
             <SectionTitle
               sectionTitle="About My Capstone Experience"
@@ -156,7 +217,7 @@ const naturalDisaster = () => {
                   </div>}
                 </motion.div>
               </motion.div>
-              
+
             </div>
           </div>
 
