@@ -72,18 +72,34 @@ const acidKnockout = () => {
 
                 {/* UI/UX Engineer */}
                 <div>
+                    <SectionTitle
+                        sectionTitle="UI/UX Engineer"
+                        sectionDescription=""
+                    />
                 </div>
 
                 {/* General Engineer */}
                 <div>
+                    <SectionTitle
+                        sectionTitle="General Engineer"
+                        sectionDescription=""
+                    />
                 </div>
 
                 {/* Composer */}
                 <div>
+                    <SectionTitle
+                        sectionTitle="Composer"
+                        sectionDescription=""
+                    />
                 </div>
 
                 {/* Producer */}
                 <div>
+                    <SectionTitle
+                        sectionTitle="Producer"
+                        sectionDescription=""
+                    />
                 </div>
             </main>
         </>

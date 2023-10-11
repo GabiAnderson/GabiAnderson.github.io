@@ -82,6 +82,9 @@ import ParkLightingOld from "@/images/projects/naturalDisaster/ParkLightingOld.p
 import TrainLightingOld from "@/images/projects/naturalDisaster/TrainLightingOld.png";
 import HackNPlan from "@/images/projects/naturalDisaster/ND_HackNPlan.png";
 import PitchDocument from "@/images/projects/naturalDisaster/OG_PitchDocument.png";
+import EarlyWheelConcept from "@/images/projects/naturalDisaster/ND_EarlyWheelConcept.gif";
+import ScrapbookAnimation from "@/images/projects/naturalDisaster/ND_ScrapbookAnimation.gif";
+import ScrapbookConcept from "@/images/projects/naturalDisaster/ND_ScrapbookConcept.gif"; 
 
 const naturalDisaster = () => {
   return (
@@ -350,6 +353,25 @@ const naturalDisaster = () => {
               </div>}
             </motion.div>
           </motion.div>
+
+          <HoverTripleColumn
+            img1={ScrapbookConcept}
+            img2={ScrapbookAnimation}
+            img3={EarlyWheelConcept}
+            title1="Scrapbook Concept - Mission/Story Tracker"
+            title2="UI Scrapbook Animation"
+            title3="Moving Objects Concept"
+            desc1="With so many different characters and stories to ruin, the design team thought of a scrapbook that could act as a mission tracker. I worked with the UI artist
+            to get some base UI elements mocked up and a quick functioning prototype of what the scrapbook could look like. This concept was enough for the entire team to determine
+            a scrapbook was how characters and stories should be tracked."
+            desc2="After further development of the scrapbook, playtesting confirmed players were not interacting with it as much as desired. To draw attention to the scrapbook, and 
+            thus attention to how to progress through the game, I made an animation mockup. This animation would play everytime the player made progress in a character's story. Eventually,
+            this was further iterated on to the point when a character's story is progressed the scrapbook animates, emits a sound, and the character's photograph animates and holds a '!' 
+            for future reference."
+            desc3="Early in development, when large disasters were still on designers minds, we wanted to ensure we could get larger objects to move within scenes. With the help of an artist,
+            we created a ferris wheel object that could rotate forward, backward, and forward quickly via player interaction. This was a very early mock-up of what would be <em>Natural Disaster's
+            </em> largest narritive event which I will highlight in the next section."
+          />
         </div>
 
         {/* Machinima Section */}
