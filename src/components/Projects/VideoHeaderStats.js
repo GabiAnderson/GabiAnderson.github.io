@@ -31,9 +31,10 @@ function Stats({ pairs }) {
   );
 }
 
-const VideoHeaderStats = ({ projectName, about, desc, link, videoUrl, linkText, pairs }) => {
+const VideoHeaderStats = ({ projectName, about, desc, link, videoUrl, linkText, pairs, secondLink, link2, link2Text }) => {
   // Conditionally set the link text based on the presence of linkText prop
   const linkContent = linkText ? linkText : 'Visit the Project';
+  const link2Content = link2Text ? link2Text : "Documentation";
 
   return (
     <div className='grid w-full grid-cols-8 gap-16 px-8 my-8'>
@@ -55,9 +56,16 @@ const VideoHeaderStats = ({ projectName, about, desc, link, videoUrl, linkText, 
           <TextFormat className="text-sm text-secondaryDark dark:text-secondaryLight" text={desc}/>
         </div>
         <div className='mt-auto flex flex-col items-center justify-center'>
-          <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor'>
-            {linkContent}
-          </Link>
+          <div className="flex items-center">
+            <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor'>
+              {linkContent}
+            </Link>
+            {secondLink &&
+              <Link href={link2} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor ml-4'>
+                {link2Content}
+              </Link>
+            }
+          </div>
           <Stats className='flex justify-center' pairs={pairs} />
         </div>
       </div>

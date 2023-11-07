@@ -5,9 +5,9 @@ import TextFormat from '../Common/TextFormat';
 
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
-const VideoHeader = ({ projectName, role, desc, link, videoUrl, linkText }) => {
-  // Conditionally set the link text based on the presence of linkText prop
+const VideoHeader = ({ projectName, role, desc, link, videoUrl, linkText, secondLink, link2, link2Text }) => {
   const linkContent = linkText ? linkText : 'Visit the Project';
+  const link2Content = link2Text ? link2Text : "Documentation";
 
   return (
     <div className='grid w-full grid-cols-8 gap-16 px-8 my-8'>
@@ -22,13 +22,20 @@ const VideoHeader = ({ projectName, role, desc, link, videoUrl, linkText }) => {
           height="800px"
         />
       </div>
-      <div className='col-span-2 flex flex-col items-start justify-center'>
+      <div className={`col-span-2 flex flex-col items-${secondButton ? 'start' : 'center'} justify-center`}>
         <h1 className="text-3xl font-bold text-primaryColor mb-2">{projectName}</h1>
         <h2 className="text-xl mb-4 dark:text-light">{role}</h2>
         <TextFormat className="text-sm text-secondaryDark dark:text-secondaryLight mb-6" text={desc}/>
-        <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor'>
-          {linkContent}
-        </Link>
+        <div className="flex flex-column">
+          <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor mr-4'>
+            {linkContent}
+          </Link>
+          {secondLink &&
+            <Link href={link2} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold hover:bg-secondaryTertiaryColor'>
+              {link2Text}
+            </Link>
+          }
+        </div>
       </div>
     </div>
   );

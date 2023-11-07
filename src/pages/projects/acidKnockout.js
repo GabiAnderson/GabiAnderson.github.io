@@ -83,6 +83,8 @@ const acidKnockout = () => {
                             ['Tools', ['Unreal Engine 4', 'Perforce', 'Bandlab']],
                             ['Development Time', ['2.5 months']],
                         ]}
+                        secondLink={true}
+                        link2="https://drive.google.com/drive/folders/10ZkyKRft48uq245jMRkt3JNGfs66vCVE"
                     />
                 </div>
 
