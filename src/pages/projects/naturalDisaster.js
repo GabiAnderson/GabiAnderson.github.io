@@ -118,6 +118,7 @@ const naturalDisaster = () => {
               ['Tools', ['Unreal Engine 5', 'HackNPlan', 'Perforce', 'Adobe Photoshop']],
               ['Development Time', ['8 months']],
             ]}
+            secondLink={false}
           />
 
           <div>

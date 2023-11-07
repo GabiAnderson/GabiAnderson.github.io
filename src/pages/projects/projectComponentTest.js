@@ -37,6 +37,7 @@ const projectComponentTest =() => {
                     link="\"
                     videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
                     linkText="Play on Steam"
+                    secondLink={false}
                 />
             </div>
 

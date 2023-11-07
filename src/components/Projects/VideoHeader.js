@@ -22,7 +22,7 @@ const VideoHeader = ({ projectName, role, desc, link, videoUrl, linkText, second
           height="800px"
         />
       </div>
-      <div className={`col-span-2 flex flex-col items-${secondButton ? 'start' : 'center'} justify-center`}>
+      <div className={`col-span-2 flex flex-col items-${secondLink ? 'start' : 'center'} justify-center`}>
         <h1 className="text-3xl font-bold text-primaryColor mb-2">{projectName}</h1>
         <h2 className="text-xl mb-4 dark:text-light">{role}</h2>
         <TextFormat className="text-sm text-secondaryDark dark:text-secondaryLight mb-6" text={desc}/>

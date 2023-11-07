@@ -69,7 +69,7 @@ const acidKnockout = () => {
                         This game was created by 6 students at the University of Utah for Entertainment Arts and Engineering 3710: Traditional Game Development during the Spring 
                         2021 semester.
                         <br><br>
-                        Traditional Game Development is describe as "exploring game development essentials through lectures, discussions, and hands-on activities. Students hone 
+                        Traditional Game Development is described as "exploring game development essentials through lectures, discussions, and hands-on activities. Students hone 
                         their skills in pitching original game ideas, using traditional game design techniques, and crafting games within agile teams. The course delves into 
                         game theory, fostering the ability to present and lead postmortems. The course combines theory with practice, with students gradually taking on more 
                         active roles."
