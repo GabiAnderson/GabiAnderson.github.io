@@ -206,11 +206,10 @@ const acidKnockout = () => {
                 <div>
                     <SectionTitle
                         sectionTitle="Other Roles"
-                        sectionDescription=""
+                        sectionDescription="Producer, General Programmer and Designer"
                     />
 
                     <MiddleText
-                        title="Producer, General Programmer and Designer"
                         desc="During the creation of <em>Acid Knockout</em>, we were a busy, each of us wearing multiple hats to make things happen. I mainly 
                         handled what I listed above but in addition to that I took on the role of a enemy designer and programmer, focusing on pop-ups and enemy spawning. 
                         We had this cool enemy spawner designed by an engineer, but it didn't get used. So, I took charge, integrated it into our main level, and tweaked 
