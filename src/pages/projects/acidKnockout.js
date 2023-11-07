@@ -24,6 +24,7 @@ import VerticalStackedVideo from '@/components/Projects/VerticalStackedVideo';
 import TextFormat from '@/components/Common/TextFormat';
 import StatsGrid from '@/components/Projects/StatsGrid';
 import VideoHeaderStats from '@/components/Projects/VideoHeaderStats';
+import MiddleText from '@/components/Projects/MiddleText';
 
 // imports for animations
 import { rotateInVariant, scaleInVariant, springInVariant, fadeAndSlideInVariant, bounceInVariant } from '@/animations/ScrollAnimationVariants';
@@ -176,28 +177,48 @@ const acidKnockout = () => {
                     />
                 </div>
 
-                {/* General Engineer */}
-                <div>
-                    <SectionTitle
-                        sectionTitle="General Engineer"
-                        sectionDescription=""
-                    />
-                </div>
-
                 {/* Composer */}
                 <div>
                     <SectionTitle
                         sectionTitle="Composer"
                         sectionDescription=""
                     />
+
+                    <RightHandImage
+                        img={Theme}
+                        title="Theme Composer"
+                        desc="The <em>Acid Knockout</em> team was small but talented. Everyone had something they wanted to work on and something they wanted to learn.
+                        This allowed everyone to grow their skills. However, we did not have anyone that had worked with music or sound effects before. I was the only
+                        team member that had any music experience whatsoever so I was asked to attempt to make a theme song.
+                        <br></br>
+                        It was very new to me, and I have not done it since, but I worked with a software that allowed me to use pre-defined instrument tracks for free.
+                        I first made a simple melody (Determination.m4a) using the instrument tracks. Then I add some base and some keys to help flesh it out more. Finally,
+                        I found some 'horror' tracks to tie it all together with the game's concepts.
+                        <br></br>
+                        This track can be heard in the trailer video, from the main menu, and during gameplay."
+                        width={1100}
+                    />
                 </div>
 
-                {/* Producer */}
+                {/* Producer/General Programmer/Designer */}
                 <div>
                     <SectionTitle
-                        sectionTitle="Producer"
+                        sectionTitle="Other Roles"
                         sectionDescription=""
                     />
+
+                    <MiddleText
+                        title="Producer, General Programmer and Designer"
+                        desc="During the creation of <em>Acid Knockout</em>, we were a busy, each of us wearing multiple hats to make things happen. I mainly 
+                        handled what I listed above but in addition to that I took on the role of a enemy designer and programmer, focusing on pop-ups and enemy spawning. 
+                        We had this cool enemy spawner designed by an engineer, but it didn't get used. So, I took charge, integrated it into our main level, and tweaked 
+                        it to make the game more exciting without being too overwhelming.
+                        <br></br>
+                        Apart from that, I also pitched in as a producer. That meant I scheduled meetings, made sure all the documents were in place, and ensured 
+                        our assignments were submitted on time. My aim was to keep the team on track and moving ahead efficiently."
+                    />
+
+
                 </div>
             </main>
         </>
