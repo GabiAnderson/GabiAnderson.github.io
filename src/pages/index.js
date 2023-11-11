@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Layout from '@/components/Common/Layout'
 import AnimatedText from '@/animations/AnimatedText'
-import profilePic from "../../public/images/profile/ProfileIcon2.png";
+import profilePic from "../../public/images/profile/ProfilePic.jpeg";
 import Link from 'next/link'
 import { LinkArrow } from '@/components/Common/Icons'
 import ConnectWithMe from '@/components/Home/ConnectWithMe'
@@ -28,7 +28,7 @@ export default function Home() {
           <div className='flex items-center justify-between w-full'>
             <div className='w-1/2'>
 
-              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto'
+              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto rounded-3xl'
               priority
               sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 50vw" />
             
@@ -65,9 +65,6 @@ export default function Home() {
         </Layout>
 
         <ConnectWithMe />
-        <div className='absolute right-16 bottom-16 inline-block w-24'>
-          <Image src={controller} alt="GabiAnderson" className='w-full h-auto' style={{ transform: 'scale(2)' }} />
-        </div>
       </main>
     </>
   )
