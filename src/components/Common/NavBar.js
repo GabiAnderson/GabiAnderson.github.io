@@ -90,7 +90,7 @@ const NavBar = () => {
                     </p>
 
                     <p className='my-4 pb-4'>
-                        Last Updated 11/11/23
+                        Last Updated 1/20/24
                     </p>
                     <Link href="https://gabi84095.wixsite.com/portfolio/portfolio" target={"_blank"}
                         className='bg-dark text-light p-2.5 px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
