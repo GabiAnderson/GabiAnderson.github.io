@@ -7,7 +7,7 @@ const Header = ({ projectName, role, desc, link, img, linkText }) => {
   // Conditionally set the link text based on the presence of linkText prop
   const linkContent = linkText ? linkText : 'Visit the Project';
   return (
-      <div className='grid w-full grid-cols-8 gap-16 px-8 my-8'>
+      <div className='grid w-full grid-cols-8 gap-16 my-8'>
         <div className='col-span-6 relative h-max rounded-2xl border-2 border-solid border-secondaryColor bg-light p-8 dark:bg-dark'>
           <Image src={img} alt={projectName} className='w-full h-auto rounded-2xl' 
           priority

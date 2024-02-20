@@ -24,7 +24,7 @@ function RightHandVideo({ videoUrl, title, desc, width, height, shadeName = 'Sha
 
   return (
     <div className='col-span-8 text-center pb-4'>
-      <div className='grid w-full grid-cols-8 gap-8 px-8 my-8'>
+      <div className='grid w-full grid-cols-8 gap-8 my-8'>
         <div className='col-span-2 flex flex-col items-start justify-center'>
           <div className='text-primaryColor font-bold mx-auto py-8'>
             <AnimatedTextTypeInView text={title} delay={100} />
@@ -41,6 +41,7 @@ function RightHandVideo({ videoUrl, title, desc, width, height, shadeName = 'Sha
             volume={0.0}
             width={width || "100%"} // Use provided width or default to "100%"
             height={height || "500px"} // Use provided height or default to "500px"
+            style={{ margin: 'auto' }} // Center the player horizontally
           />
         </div>
       </div>

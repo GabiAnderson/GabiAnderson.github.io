@@ -21,7 +21,7 @@ const VerticalStackedImage = ({ img, title, desc, width, height, shadeName = 'Sh
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-4 px-8 my-2'>
+      <div className='grid w-full grid-cols-9 gap-4 my-2'>
         {/* Image */}
         <div className='col-span-9 flex flex-col items-center justify-center'>
           <Image

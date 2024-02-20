@@ -28,7 +28,7 @@ const DoubleColumn = ({ img1, img2, title1, title2, desc1, desc2, width1, height
 
   return (
     <div className='col-span-8 text-center pb-2'>
-      <div className='grid w-full grid-cols-8 gap-4 px-8 my-2'>
+      <div className='grid w-full grid-cols-8 gap-4 my-2'>
         <div className='col-span-4 flex flex-col items-start justify-center'>
           <Image
             src={img1}

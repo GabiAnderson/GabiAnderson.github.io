@@ -37,7 +37,7 @@ const VideoHeaderStats = ({ projectName, about, desc, link, videoUrl, linkText, 
   const link2Content = link2Text ? link2Text : "Documentation";
 
   return (
-    <div className='grid w-full grid-cols-8 gap-16 px-8 my-8'>
+    <div className='grid w-full grid-cols-8 gap-16 my-8'>
       <div className='col-span-5 relative h-max rounded-2xl border-2 border-solid border-secondaryColor bg-light p-8 dark:bg-dark'>
         <ReactPlayer
           url={videoUrl}

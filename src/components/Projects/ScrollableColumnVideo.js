@@ -34,103 +34,31 @@ const ScrollableColumnVideo = ({ content, shadeName = 'Shade1' }) => {
   const arrowColorClass = getRandomColorClass(shadeName);
 
   return (
-    <div className='col-span-9 text-center pb-8'>
-      <div
-        className="container"
-        style={{
-          display: 'flex',
-          justifyContent: 'center', // Center the content horizontally
-          alignItems: 'center', // Center the content vertically
-          paddingTop: '58px',
-          marginBottom: '100px',
-          height: '400px', // Set a fixed height for the container
-          width: '2000px',
-        }}
-      >
-        <div
-          className="column arrow"
-          onClick={handlePrev}
-          style={{
-            flex: '1',
-            textAlign: 'center',
-            cursor: 'pointer',
-            fontSize: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            height: '100%', // Set a fixed height for the arrow button container
-          }}
-        >
-          <div
-            className="arrow-container"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%', // Match the height of the container
-            }}
-          >
+    <div className='col-span-9 text-center pb-4'>
+      <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '58px', marginBottom: '100px', height: '400px' }}>
+        <div className="arrow" onClick={handlePrev} style={{ flex: '1', textAlign: 'center', cursor: 'pointer', fontSize: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <div className="arrow-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             <LeftArrowButton className={`${arrowColorClass}`} style={{ width: '50px', height: '50px' }} />
           </div>
         </div>
-        <div
-          className="column content"
-          style={{
-            flex: '6', // Adjust the flex value to control the size ratio
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            paddingTop: '100px',
-          }}
-        >
-          <span className='text-lg font-bold uppercase text-accentgreen/75'>
+        <div className="content" style={{ flex: '6', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}>
+          <span className='text-lg font-bold uppercase text-primaryColor'>
             <h1>{currentItem.title}</h1>
           </span>
-          <div
-            className="image-container"
-            style={{
-              maxWidth: '100%',
-              maxHeight: '500px', // Set a fixed height for the image container
-              overflow: 'hidden', // Hide overflow content if the image is too large
-              position: 'relative',
-            }}
-          >
+          <div className="video-container" style={{ maxWidth: '120%', maxHeight: '800px', overflow: 'hidden', position: 'relative', display: 'inline-block', minWidth: '400px', minHeight: '200px' }}>
             <ReactPlayer
               url={currentItem.videoUrl}
               config={{ youtube: { playerVars: { showinfo: 1 } } }}
               controls={true}
               playing={false}
               volume={0.0}
-              width="800px"
-              height="500px"
+              style={{ width: '120%', height: '120%' }}
             />
           </div>
           <p className='dark:text-light'>{currentItem.description}</p>
         </div>
-        <div
-          className="column arrow"
-          onClick={handleNext}
-          style={{
-            flex: '1',
-            textAlign: 'center',
-            cursor: 'pointer',
-            fontSize: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            height: '100%', // Set a fixed height for the arrow button container
-          }}
-        >
-          <div
-            className="arrow-container"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%', // Match the height of the container
-            }}
-          >
+        <div className="arrow" onClick={handleNext} style={{ flex: '1', textAlign: 'center', cursor: 'pointer', fontSize: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <div className="arrow-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             <RightArrowButton className={`${arrowColorClass}`} style={{ width: '50px', height: '50px' }} />
           </div>
         </div>

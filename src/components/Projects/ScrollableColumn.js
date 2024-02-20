@@ -34,99 +34,23 @@ const ScrollableColumn = ({ content, shadeName = 'Shade1' }) => {
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div
-        className="container"
-        style={{
-          display: 'flex',
-          justifyContent: 'center', // Center the content horizontally
-          alignItems: 'center', // Center the content vertically
-          paddingTop: '58px',
-          marginBottom: '100px',
-          height: '400px', // Set a fixed height for the container
-          width: '2000px',
-        }}
-      >
-        <div
-          className="column arrow"
-          onClick={handlePrev}
-          style={{
-            flex: '1',
-            textAlign: 'center',
-            cursor: 'pointer',
-            fontSize: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            height: '100%', // Set a fixed height for the arrow button container
-          }}
-        >
-          <div
-            className="arrow-container"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%', // Match the height of the container
-            }}
-          >
+      <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '58px', marginBottom: '100px', height: '400px' }}>
+        <div className="arrow" onClick={handlePrev} style={{ flex: '1', textAlign: 'center', cursor: 'pointer', fontSize: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <div className="arrow-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             <LeftArrowButton className={`${arrowColorClass}`} style={{ width: '50px', height: '50px' }} />
           </div>
         </div>
-        <div
-          className="column content"
-          style={{
-            flex: '6', // Adjust the flex value to control the size ratio
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            paddingTop: '100px',
-          }}
-        >
+        <div className="content" style={{ flex: '6', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}>
           <span className='text-lg font-bold uppercase text-primaryColor'>
             <h1>{currentItem.title}</h1>
           </span>
-          <div
-            className="image-container"
-            style={{
-              maxWidth: '100%',
-              maxHeight: '500px', // Set a fixed height for the image container
-              overflow: 'hidden', // Hide overflow content if the image is too large
-              position: 'relative',
-            }}
-          >
-            <Image
-              src={currentItem.image}
-              alt={currentItem.title}
-              width={500} // Set a fixed width for the image
-              height={500} // Set a fixed height for the image
-            />
+          <div className="image-container" style={{ maxWidth: '100%', maxHeight: '500px', overflow: 'hidden', position: 'relative' }}>
+            <Image src={currentItem.image} alt={currentItem.title} width={500} height={500} />
           </div>
           <TextFormat className='dark:text-light mt-8' text={currentItem.description} />
         </div>
-        <div
-          className="column arrow"
-          onClick={handleNext}
-          style={{
-            flex: '1',
-            textAlign: 'center',
-            cursor: 'pointer',
-            fontSize: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            height: '100%', // Set a fixed height for the arrow button container
-          }}
-        >
-          <div
-            className="arrow-container"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100%', // Match the height of the container
-            }}
-          >
+        <div className="arrow" onClick={handleNext} style={{ flex: '1', textAlign: 'center', cursor: 'pointer', fontSize: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
+          <div className="arrow-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             <RightArrowButton className={`${arrowColorClass}`} style={{ width: '50px', height: '50px' }} />
           </div>
         </div>

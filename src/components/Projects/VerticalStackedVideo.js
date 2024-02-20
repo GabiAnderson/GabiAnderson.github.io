@@ -22,7 +22,7 @@ const VerticalStackedVideo = ({ videoUrl, title, desc, width, height, shadeName 
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-4 px-8 my-8'>
+      <div className='grid w-full grid-cols-9 gap-4 my-8'>
         <div className={`col-span-9 flex flex-col items-center justify-center border-4 border-solid ${borderColorClass} p-2`}>
           <ReactPlayer
             url={videoUrl}

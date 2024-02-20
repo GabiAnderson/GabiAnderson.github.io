@@ -22,7 +22,7 @@ function RightHandImage({ img, title, desc, width, height, shadeName = 'Shade1' 
 
   return (
     <div className='col-span-8 text-center pb-4'>
-      <div className='grid w-full grid-cols-8 gap-2 px-16 my-8'>
+      <div className='grid w-full grid-cols-8 gap-2 my-8'>
         <div className='col-span-3 flex flex-col items-start justify-center'>
           <div className='text-primaryColor font-bold mx-auto py-8'>
             <AnimatedTextTypeInView text={title} delay={100} />

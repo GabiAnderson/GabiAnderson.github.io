@@ -51,7 +51,7 @@ const NavBar = () => {
     }
 
     return (
-        <header className='w-full px-32 py-8 font-medium flex flex-col items-center justify-between dark:text-light relative'>
+        <header className='w-full px-32 py-8 font-medium flex flex-col items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:p-8'>
             {/* First Row */}
             <nav className='flex items-center justify-between w-full mb-4'>
 

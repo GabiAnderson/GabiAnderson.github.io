@@ -42,7 +42,7 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
   }
 
   return (
-    <div className='grid w-full grid-cols-9 gap-8 px-8 my-4'>
+    <div className='grid w-full grid-cols-9 gap-8 my-4'>
       <div className='col-span-3 flex flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(0)}

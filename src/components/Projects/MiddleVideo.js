@@ -22,7 +22,7 @@ const MiddleVideo = ({videoUrl, title1, title2, desc1, desc2, width, height, sha
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-8 px-8 my-8'>
+      <div className='grid w-full grid-cols-9 gap-8 my-8'>
 
         <div className='col-span-2 flex flex-col items-start justify-center'>
             <h2 className='text-primaryColor font-bold mx-auto py-8'>{title1}</h2>

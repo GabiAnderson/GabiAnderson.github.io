@@ -24,41 +24,50 @@ export default function Home() {
       </Head>
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
         
-        <Layout className='pt-0'>
-          <div className='flex items-center justify-between w-full'>
-            <div className='w-1/2'>
+        <Layout className='pt-0 md:pt-16 sm:pt-8'>
+          <div className='flex items-center justify-between w-full lg:flex-col'>
+            <div className='w-1/2 md:w-3/4'>
 
-              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto rounded-3xl'
+              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto rounded-3xl lg:hidden md:inline-block md:w-full'
               priority
               sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 50vw" />
             
             </div>
             
-            <div className='w-1/2 flex flex-col item-center self-center'>
-            <h1 className="text-6xl text-left">
-              <span className="text-primaryColor">Gabriela </span> Anderson
-            </h1>
-              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left mt-4 text-secondaryDark dark:text-secondaryLight' />
+            <div className='w-1/2 flex flex-col item-center self-center lg:w-full lg:text-center'>
+
+              <h1 className="text-6xl text-left xl:text-5xl lg:text-center lg:text-6xl md:text-4xl sm:text-2xl">
+                <span className="text-primaryColor">Gabriela </span> Anderson
+              </h1>
+
+              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left 
+              xl:!text-2xl lg:!text-center lg:!text-3xl md:!text-2xl sm:!text-xl
+              mt-4 text-secondaryDark dark:text-secondaryLight' />
               
-              <p className='my-4 text-base font-medium text-tertiaryDark dark:tertiaryLight'>
+              <p className='my-4 text-base font-medium text-tertiaryDark dark:tertiaryLight md:text-small sm:text-xs'>
                 As a recent computer science graduate with a specialization in video game
                 development and a flair for creative code, I&apos;m on a mission to bring captivating
                 gaming experiences to life. Explore my projects that fuse art, technology, and
                 problem-solving, unleashing the power of imagination in the gaming world.
               </p>
               
-              <div className='flex items-center self-start mt-2'>
+              <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link href="/GabrielaAnderson_Resume.pdf" target={"_blank"}
                   className='flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                   border-2 border-solid border-transparent hover:border-primaryColor
-                  dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light'
+                  dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light
+                  md:p-2 md:px-4 md:text-base sm:p-1.5 sm:px-2 sm:text-sm'
                   download={true}
-                >Resume
-                  <LinkArrow className={"w-6 ml-1"} /></Link>
+                >
+                  Resume
+                  <LinkArrow className={"w-6 ml-1"} />
+                </Link>
                 
                 <Link href="mailto:gabi84095@gmail.com" target={"_blank"}
-                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-primaryColor hover:border-b-tertiaryColor dark:text-light'>Contact</Link>
+                className='ml-4 text-lg font-medium capitilize text-dark border-b-2 border-b-primaryColor hover:border-b-tertiaryColor dark:text-light md:text-base sm:text-sm'>
+                  Contact
+                </Link>
               </div>
             </div>
           </div>

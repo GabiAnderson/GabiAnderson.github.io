@@ -30,7 +30,7 @@ const TripleColumn = ({img1, img2, img3, title1, title2, title3, desc1, desc2, d
 
   return (
     <div className='col-span-9 text-center pb-4'>
-      <div className='grid w-full grid-cols-9 gap-8 px-8 my-4'>
+      <div className='grid w-full grid-cols-9 gap-8 my-4'>
 
         <div className='col-span-3 flex flex-col items-start justify-center'>
             <Image src={img1} className={`border-4 border-solid ${borderColorClass1} p-2`}
