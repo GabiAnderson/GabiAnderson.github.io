@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import Layout from '@/components/Common/Layout'
 
 const toppleTheMonarchy =() => {
     return (

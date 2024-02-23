@@ -162,8 +162,8 @@ const NavBar = () => {
             </div>
 
             {/* Second Row */}
-            {/* TODO - to remove just add hidden to the end of the nav classname */}
-            <nav className='w-full flex items-center justify-center py-2 hidden'>
+            {/* TODO - to remove just add hidden to the end of the nav classname and remove flex from the start*/}
+            <nav className='w-full flex items-center justify-center py-2'>
                 <div className='bg-yellow-500 text-center items-center p-4 rounded-lg' style={{ maxWidth: '1000px' }}>
                     <span className='text-6xl text-black font-extrabold'>!</span>
                     <h1 className='capitalize font-bold text-2xl mt-2'>Status Update</h1>
@@ -179,7 +179,7 @@ const NavBar = () => {
                     </p>
 
                     <p className='my-4 pb-4'>
-                        Last Updated 1/20/24
+                        Last Updated 2/19/24
                     </p>
                     <Link href="https://gabi84095.wixsite.com/portfolio/portfolio" target={"_blank"}
                         className='bg-dark text-light p-2.5 px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
