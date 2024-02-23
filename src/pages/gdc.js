@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout from '@/components/Common/Layout'
 import AnimatedText from '@/animations/AnimatedText'
 
-const articles =() => {
+const gdc =() => {
     return (
     <>
         <Head>
@@ -19,4 +19,4 @@ const articles =() => {
     )
 }
 
-export default articles
+export default gdc
