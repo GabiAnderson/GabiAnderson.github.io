@@ -64,12 +64,15 @@ const about = () => {
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
                     <AnimatedText text="Player to Creator!" className='mb-4 text-secondaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl' />
+                    {/* About Section and Stats for larger screens */}
                     <div className='grid w-full grid-cols-8 gap-16 lg:gap-8 md:grid-cols-4'>
+                        {/* About me description */}
                         <div className='col-span-4 flex flex-col items-start justify-center lg:col-span-6 md:col-span-4 md:items-center'>
+
                             <span className='mb-4 text-lg font-bold uppercase text-primaryColor'>
                                 <AnimatedList text="Biography" delay={100} />
                             </span>
-
+                            {/* About me long text (lg-2xl) */}
                             <TextFormat className='text-sm font-medium md:hidden'
                                 text="Hello there! I recently graduated in 2023 from the University of Utah with an Honors Bachelor of 
                             Science degree in Computer Science, with an emphasis in Entertainment Arts and Engineering, 
@@ -94,7 +97,7 @@ const about = () => {
                             courses and similar video/book courses to further expand my knowledge and skillset. With a deep appreciation for both the 
                             artistry and technology that drive the gaming industry, I'm excited for the future adventures that await in this ever-evolving field."
                             />
-
+                            {/* About me short text (xs-md) */}
                             <TextFormat className='text-xs font-medium text-center hidden md:flex'
                                 text="Hello there! I'm a 2023 University of Utah graduate with an Honors BS in Computer Science, focusing on Entertainment Arts and Engineering, 
                             and a minor in Mathematics. My academic journey provided a solid foundation in computer science, including software development and game 
@@ -108,6 +111,7 @@ const about = () => {
                             />
                         </div>
 
+                        {/* Image for 2xl screens */}
                         <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-secondaryColor bg-light p-8 my-24 dark:bg-dark lg:hidden xl:hidden'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-secondaryColor' />
                             <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl'
@@ -115,15 +119,16 @@ const about = () => {
                                 sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 33vw" />
                         </div>
 
-                        {/* Stats for 2xl to med screen */}
+                        {/* Stats and Image for lg-2xl*/}
                         <div className='col-span-1 flex flex-col items-end justify-center lg:col-span-2 md:hidden xl:col-span-4'>
-                            {/* Stats for xl screen*/}
+                            {/* Image for xl screens*/}
                             <div className='relative h-max rounded-2xl border-2 border-solid border-secondaryColor bg-light p-8 my-24 dark:bg-dark hidden xl:flex lg:hidden'>
                                 <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-secondaryColor' />
                                 <Image src={profilePic} alt="GabiAnderson" className='w-full h-auto rounded-2xl'
                                     priority
                                     sizes="(max-width: 500px) 100vs, (max-width: 800px) 50vw, 33vw" />
                             </div>
+                            {/* Stats for xl screen */}
                             <div className='w-full grid-cols-3 gap-8 hidden xl:grid lg:hidden'>
                                 <div className='col-span-1 flex flex-col items-center'>
                                     <span className='text-4xl text-primaryColor font-bold'>
@@ -167,7 +172,7 @@ const about = () => {
                         </div>
                     </div>
 
-                    {/* Stats for small screen */}
+                    {/* Stats for md-xs screen */}
                     <div className='w-full grid-cols-3 gap-8 pt-4 hidden md:grid'>
                         <div className='col-span-1 flex flex-col items-center'>
                             <span className='text-4xl text-primaryColor font-bold'>
