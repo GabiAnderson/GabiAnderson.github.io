@@ -163,7 +163,7 @@ const NavBar = () => {
 
             {/* Second Row */}
             {/* TODO - to remove just add hidden to the end of the nav classname and remove flex from the start*/}
-            <nav className='w-full flex items-center justify-center py-2'>
+            <nav className='w-full items-center justify-center py-2 hidden'>
                 <div className='bg-yellow-500 text-center items-center p-4 rounded-lg' style={{ maxWidth: '1000px' }}>
                     <span className='text-6xl text-black font-extrabold'>!</span>
                     <h1 className='capitalize font-bold text-2xl mt-2'>Status Update</h1>

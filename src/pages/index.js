@@ -28,7 +28,7 @@ export default function Home() {
           <div className='flex items-center justify-between w-full lg:flex-col'>
             <div className='w-1/2 md:w-3/4'>
 
-              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto rounded-3xl lg:hidden md:inline-block md:w-full'
+              <Image src={profilePic} alt="ProfilePhoto" className='w-[70%] h-auto mx-auto rounded-3xl lg:inline-block lg:w-full'
               priority
               sizes="(max-width: 768px) 100vs, (max-width: 1200px) 50vw, 50vw" />
             
@@ -37,7 +37,7 @@ export default function Home() {
             <div className='w-1/2 flex flex-col item-center self-center lg:w-full lg:text-center'>
 
               <h1 className="text-6xl text-left xl:text-5xl lg:text-center lg:text-6xl md:text-4xl sm:text-2xl">
-                <span className="text-primaryColor">Gabriela </span> Anderson
+                <span className="text-primaryColor">Gabi </span>Anderson
               </h1>
 
               <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left 
