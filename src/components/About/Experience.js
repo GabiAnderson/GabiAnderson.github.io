@@ -5,7 +5,7 @@ import LineIcon from '@/components/About/LineIcon'
 const Details = ({position, company, companyLink, time, address, work, brandColor}) => {
     const ref = useRef(null);
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
             
             <LineIcon reference={ref}/>
 
@@ -14,7 +14,7 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
             whileInView={{y:0}}
             transition={{duration:0.5, type:"spring"}}
             >
-                <h3 className='captilize font-bold text-2xl dark:text-primaryLight'>
+                <h3 className='captilize font-bold text-2xl dark:text-primaryLight sm:text-xl sx:text-lg'>
                     {position}&nbsp;
                     <a href={companyLink}
                     target='_blank'
@@ -23,10 +23,10 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
                         @{company}
                     </a>
                 </h3>
-                <span className='capitlize font-medium text-secondaryDark dark:text-secondaryLight'>
+                <span className='capitlize font-medium text-secondaryDark dark:text-secondaryLight xs:text-sm'>
                     {time} | {address}
                 </span>
-                <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight'>
+                <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight md:text-sm'>
                     {work}
                 </p>
             </motion.div>
@@ -44,16 +44,16 @@ const Experience = () => {
     )
     return (
         <div className='my-10'>
-            <h2 className='font-bold text-8xl mb-16 w-full text-center text-secondaryColor'>
+            <h2 className='font-bold text-8xl mb-16 w-full text-center text-secondaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl'>
                 Experience
             </h2>
 
-            <div ref={ref} className='w-[75%] mx-auto relative'>
+            <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                <motion.div className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light'
+                <motion.div className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]'
                 style={{scaleY: scrollYProgress}}/>
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                     <Details 
                         position="Associate Firmware Test Engineer"
                         company="Cricut"
