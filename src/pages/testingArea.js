@@ -2,6 +2,21 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Layout from '@/components/Common/Layout'
 import DoubleColumn from '@/components/Projects/DoubleColumn'
+import HoverTripleColumn from "@/components/Projects/HoverTripleColumn";
+import ImageHeader from "@/components/Projects/ImageHeader";
+import LeftHandImage from "@/components/Projects/LeftHandImage";
+import LeftHandVideo from "@/components/Projects/LeftHandVideo";
+import MiddleImage from "@/components/Projects/MiddleImage";
+import MiddleVideo from "@/components/Projects/MiddleVideo";
+import RightHandImage from "@/components/Projects/RightHandImage";
+import RightHandVideo from "@/components/Projects/RightHandVideo";
+import ScrollableColumn from "@/components/Projects/ScrollableColumn";
+import ScrollableColumnVideo from "@/components/Projects/ScrollableColumnVideo";
+import SectionTitle from "@/components/Projects/SectionTitle";
+import TripleColumn from "@/components/Projects/TripleColumn";
+import VerticalStackedImage from "@/components/Projects/VerticalStackedImage";
+import VerticalStackedVideo from "@/components/Projects/VerticalStackedVideo";
+import VideoHeader from "@/components/Projects/VideoHeader";
 
 import testImg from "@/images/comingSoon.png"
 
@@ -47,14 +62,17 @@ const TestingArea = () => {
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
                     <p className='bg-blue-200'>Current Screen Size: {screenSize}</p>
-                    <DoubleColumn
+                    <HoverTripleColumn 
                     img1={testImg}
                     img2={testImg}
-                    title1="testing legit double"
-                    title2="testing legit double"
-                    desc1="we are attempting to test a legit double column so we want actual text here"
-                    desc2="we are attempting to test a legit double column so we want actual text here"
-                    />
+                    img3={testImg}
+                    title1="HoverTripleColumn"
+                    title2="HoverTripleColumn"
+                    title3="HoverTripleColumn"
+                    desc1="Desc 1"
+                    desc2="Desc 2"
+                    desc3="Desc 3"
+                />
                 </Layout>
             </main>
         </>
