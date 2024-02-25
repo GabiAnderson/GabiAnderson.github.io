@@ -66,12 +66,12 @@ const TestingArea = () => {
                     img1={testImg}
                     img2={testImg}
                     img3={testImg}
-                    title1="HoverTripleColumn"
-                    title2="HoverTripleColumn"
-                    title3="HoverTripleColumn"
-                    desc1="Desc 1"
-                    desc2="Desc 2"
-                    desc3="Desc 3"
+                    title1="Hover Triple Column1"
+                    title2="Hover Triple Column2"
+                    title3="Hover Triple Column3"
+                    desc1="testing like actual descriptions that could cause problems in the futre"
+                    desc2="testing like actual descriptions that could cause problems in the futre"
+                    desc3="testing like actual descriptions that could cause problems in the futre"
                 />
                 </Layout>
             </main>

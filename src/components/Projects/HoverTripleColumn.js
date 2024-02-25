@@ -1,5 +1,3 @@
-// See Bottom of code for different ways to call this
-
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import TextFormat from '../Common/TextFormat';
@@ -70,20 +68,22 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
   const borderColorClass3 = getRandomColorClass(shadeName);
 
   return (
-    <div className='grid w-full grid-cols-9 gap-8 my-4'>
-      <div className='col-span-3 flex flex-col items-center justify-center'>
+    <div className='grid w-full grid-cols-9 gap-8 my-4 sm:gap-1'>
+      <div className='col-span-3 flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(0)}
           onMouseOut={handleMouseOut}
           onClick={() => handleImageClick(img1)}
           className={`relative transition-transform ${hoveredIndex === 0 || isSmartDevice ? 'hover:text-dark dark:hover:text-light' : ''}`}
         >
-          <div className={`border-4 border-solid ${borderColorClass1} p-2 rounded-lg`}>
+          <div className={`border-4 border-solid ${borderColorClass1} p-2 rounded-lg sm:border-1 sm:p-0 sm:rounded-sm`}>
             <Image
               src={img1}
               className='rounded-lg'
               width={width1 || "900"}
               height={height1 || "300"}
+              // Conditionally set the width and height based on the device and screen size
+              {...(isSmartDevice && { width: "600", height: "200" })}
             />
             <button className='rounded-lg bg-light border-2 border-dark p-2 absolute top-4 right-4 md:p-1 md:top-2 md:right-2 md:border md:rounded-md dark:bg-dark dark:border-light'>
               <svg fill="None" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 lg:w-4 lg:h-4 md:w-2 md:h-2">
@@ -93,29 +93,30 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
             </button>
           </div>
           {(hoveredIndex === 0 || isSmartDevice) && (
-            <div className='p-4 text-center'>
-              <h2 className='text-primaryColor font-bold pb-2'>{title1}</h2>
-              <TextFormat text={desc1} />
+            <div className='p-4 text-center sm:p-0'>
+              <h2 className='text-primaryColor font-bold pb-2 sm:text-sm'>{title1}</h2>
+              <TextFormat className='sm:text-xs' text={desc1} />
             </div>
           )}
         </div>
       </div>
 
-      <div className='col-span-3 flex flex-col items-center justify-center'>
+      <div className='col-span-3 flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(1)}
           onMouseOut={handleMouseOut}
           onClick={() => handleImageClick(img2)}
           className={`relative transition-transform ${hoveredIndex === 1 || isSmartDevice ? 'hover:text-dark dark:hover:text-light' : ''}`}
         >
-          <div className={`border-4 border-solid ${borderColorClass2} p-2 rounded-lg`}>
+          <div className={`border-4 border-solid ${borderColorClass2} p-2 rounded-lg sm:border-1 sm:p-0 sm:rounded-sm`}>
             <Image
               src={img2}
               className='rounded-lg'
-              width={width2 || "900"}
-              height={height2 || "300"}
+              width={width1 || "900"}
+              height={height1 || "300"}
+              // Conditionally set the width and height based on the device and screen size
+              {...(isSmartDevice && { width: "600", height: "200" })}
             />
-
             <button className='rounded-lg bg-light border-2 border-dark p-2 absolute top-4 right-4 md:p-1 md:top-2 md:right-2 md:border md:rounded-md dark:bg-dark dark:border-light'>
               <svg fill="None" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 lg:w-4 lg:h-4 md:w-2 md:h-2">
                 <path d="M22 42H6V26" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
@@ -124,27 +125,29 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
             </button>
           </div>
           {(hoveredIndex === 1 || isSmartDevice) && (
-            <div className='p-4 text-center'>
-              <div className='text-primaryColor font-bold pb-2'>{title2}</div>
-              <TextFormat text={desc2} />
+            <div className='p-4 text-center sm:p-0'>
+              <h2 className='text-primaryColor font-bold pb-2 sm:text-sm'>{title2}</h2>
+              <TextFormat className='sm:text-xs' text={desc2} />
             </div>
           )}
         </div>
       </div>
 
-      <div className='col-span-3 flex flex-col items-center justify-center'>
+      <div className='col-span-3 flex-col items-center justify-center'>
         <div
           onMouseOver={() => handleMouseOver(2)}
           onMouseOut={handleMouseOut}
           onClick={() => handleImageClick(img3)}
           className={`relative transition-transform ${hoveredIndex === 2 || isSmartDevice ? 'hover:text-dark dark:hover:text-light' : ''}`}
         >
-          <div className={`border-4 border-solid ${borderColorClass3} p-2 rounded-lg`}>
+          <div className={`border-4 border-solid ${borderColorClass3} p-2 rounded-lg sm:border-1 sm:p-0 sm:rounded-sm`}>
             <Image
               src={img3}
               className='rounded-lg'
-              width={width3 || "900"}
-              height={height3 || "300"}
+              width={width1 || "900"}
+              height={height1 || "300"}
+              // Conditionally set the width and height based on the device and screen size
+              {...(isSmartDevice && { width: "600", height: "200" })}
             />
             <button className='rounded-lg bg-light border-2 border-dark p-2 absolute top-4 right-4 md:p-1 md:top-2 md:right-2 md:border md:rounded-md dark:bg-dark dark:border-light'>
               <svg fill="None" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 lg:w-4 lg:h-4 md:w-2 md:h-2">
@@ -154,13 +157,14 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
             </button>
           </div>
           {(hoveredIndex === 2 || isSmartDevice) && (
-            <div className='p-4 text-center'>
-              <h2 className='text-primaryColor font-bold pb-2'>{title3}</h2>
-              <TextFormat text={desc3} />
+            <div className='p-4 text-center sm:p-0'>
+              <h2 className='text-primaryColor font-bold pb-2 sm:text-sm'>{title3}</h2>
+              <TextFormat className='sm:text-xs' text={desc3} />
             </div>
           )}
         </div>
       </div>
+
       {/* Expanded image overlay */}
       {expandedImg && (
         <div
@@ -181,55 +185,3 @@ const HoverTripleColumn = ({ img1, img2, img3, title1, title2, title3, desc1, de
 };
 
 export default HoverTripleColumn;
-
-
-/* These examples are DoubleColumn but just add an additional img, title, desc and width/height as needed
-Without Specifying Width and Height (Default Behavior):
-<DoubleColumn
-  img1={testImg1}
-  img2={testImg2}
-  title1="Image 1"
-  title2="Image 2"
-  desc1="Description 1"
-  desc2="Description 2"
-/>
-
-
-Specifying Width and Height for One Image:
-<DoubleColumn
-  img1={testImg1}
-  img2={testImg2}
-  title1="Image 1"
-  title2="Image 2"
-  desc1="Description 1"
-  desc2="Description 2"
-  width1={300}
-  height1={200}
-/>
-
-Specifying Width and Height for Both Images:
-<DoubleColumn
-  img1={testImg1}
-  img2={testImg2}
-  title1="Image 1"
-  title2="Image 2"
-  desc1="Description 1"
-  desc2="Description 2"
-  width1={300}
-  height1={200}
-  width2={200}
-  height2={300}
-/>
-
-Specifying Width and Height for the Second Image Only:
-<DoubleColumn
-  img1={testImg1}
-  img2={testImg2}
-  title1="Image 1"
-  title2="Image 2"
-  desc1="Description 1"
-  desc2="Description 2"
-  width2={200}
-  height2={300}
-/>
- */

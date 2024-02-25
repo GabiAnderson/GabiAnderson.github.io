@@ -73,8 +73,8 @@ const DoubleColumn = ({ img1, img2, title1, title2, desc1, desc2, width1, height
             </svg>
           </button>
 
-          <h2 className='text-primaryColor font-bold mx-auto py-8 lg:py-6 sm:py-4 xs:py-2 xs:text-sm'>{title1}</h2>
-          <TextFormat className='dark:text-light mx-auto md:text-sm xs:text-xs' text={desc1} />
+          <h2 className='text-primaryColor font-bold mx-auto py-8 lg:py-6 sm:py-4 xs:py-2 xs:text-sm'>{title2}</h2>
+          <TextFormat className='dark:text-light mx-auto md:text-sm xs:text-xs' text={desc2} />
         </div>
       </div>
 
