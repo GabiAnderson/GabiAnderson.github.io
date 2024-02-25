@@ -64,9 +64,9 @@ const TestingArea = () => {
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
                     <p className='bg-blue-200'>Current Screen Size: {screenSize}</p>
-                    <LeftHandImage
-                    img={testImg}
-                    title="LeftHandImage"
+                    <LeftHandVideo
+                    videoUrl={"https://www.youtube.com/watch?v=Ts15B_PoA80"}
+                    title="LeftHandVideo"
                     desc="Desc"
                 />
                 </Layout>
