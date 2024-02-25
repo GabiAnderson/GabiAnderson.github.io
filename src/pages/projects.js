@@ -191,7 +191,7 @@ const projectsData = [
     },
     {
         title: "Topple the Monarchy",
-        summary: "A cute-horror King of the Hill style game with retro-inspired art, blending elements from Super Smash Bros. Ultimate and Brawlhalla, featuring static levels with fast-paced enemy waves and pickups.",
+        summary: "Strategic board game where players navigate political upheaval in the Revolvo Kingdom. Ascend the ranks from citizen to potential successor to Monarch Astrid Bala, facing the choice of supporting the revolution or aligning with the monarchy. With engaging gameplay and rich narrative, this game offers a thrilling experience of power, strategy, and intrigue.",
         link: "/projects/toppleTheMonarchy",
         type: "Board Game**|**Designer & Developer",
         img: TTMHeader,
@@ -201,7 +201,7 @@ const projectsData = [
     },
     {
         title: "Relocation",
-        summary: "An educational game for college students to learn cooking, budgeting, and healthy eating by making choices throughout the day and receiving updates on calorie intake, meal enjoyment, and expenses, encouraging meal planning in an enjoyable way.",
+        summary: "A single page game pitch - cozy management game, where players aid animals in constructing thier new homes in uncharted territories. Explore, gather resources, and nuture a diverse cast of characters as they settle into their new sanctuary.",
         link: "/projects/relocationGame",
         type: "Game Pitch**|**Concept Creator",
         img: RGHeader,
