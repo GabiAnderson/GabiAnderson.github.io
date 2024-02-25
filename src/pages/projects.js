@@ -232,7 +232,7 @@ const projectsData = [
     // Add more projects with tags and types
 ];
 
-const projects = () => {
+const Projects = () => {
     const [selectedTag, setSelectedTag] = useState('');
 
     const handleTagClick = (tag) => {
@@ -315,4 +315,4 @@ const projects = () => {
     );
 };
 
-export default projects;
+export default Projects;
