@@ -62,16 +62,12 @@ const TestingArea = () => {
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
                     <p className='bg-blue-200'>Current Screen Size: {screenSize}</p>
-                    <HoverTripleColumn 
-                    img1={testImg}
-                    img2={testImg}
-                    img3={testImg}
-                    title1="Hover Triple Column1"
-                    title2="Hover Triple Column2"
-                    title3="Hover Triple Column3"
-                    desc1="testing like actual descriptions that could cause problems in the futre"
-                    desc2="testing like actual descriptions that could cause problems in the futre"
-                    desc3="testing like actual descriptions that could cause problems in the futre"
+                    <ImageHeader
+                    projectName="Image Header"
+                    role="test an actual role"
+                    desc={"to test ana ctual description that could cause issues"}
+                    link="\"
+                    img={testImg}
                 />
                 </Layout>
             </main>

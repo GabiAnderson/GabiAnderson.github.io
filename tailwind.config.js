@@ -9,6 +9,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '.5rem', // Customize the size as per your requirement
+        'mmd': '1rem'
+      },
       fontFamily: {
         mont: ['var(--font-mont)', ...fontFamily.sans]
       },
