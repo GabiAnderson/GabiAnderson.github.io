@@ -25,7 +25,7 @@ const Header = ({ projectName, role, desc, link, img, linkText }) => {
         </div>
       </div>
 
-      <p className="text-secondaryDark dark:text-secondaryLight text-xs">{desc}</p>
+      <p className="hidden text-secondaryDark dark:text-secondaryLight text-xs sm:flex">{desc}</p>
     </div>
   );
 };

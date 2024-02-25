@@ -4,6 +4,7 @@ import React from 'react'
 import DoubleColumn from "@/components/Projects/DoubleColumn";
 import HoverTripleColumn from "@/components/Projects/HoverTripleColumn";
 import ImageHeader from "@/components/Projects/ImageHeader";
+import ImageHeaderStats from '@/components/Projects/ImageHeaderStats';
 import LeftHandImage from "@/components/Projects/LeftHandImage";
 import LeftHandVideo from "@/components/Projects/LeftHandVideo";
 import MiddleImage from "@/components/Projects/MiddleImage";
