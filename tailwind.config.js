@@ -57,7 +57,13 @@ module.exports = {
       },
       backgroundImage:{
         circularLight: 'repeating-radial-gradient(rgba(86,80,105, 0.6) 2px, #f5f5f5 7px, #f5f5f5 100px);',
-        circularDark: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 7px, #0a0a0a 100px);'
+        circularDark: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 7px, #0a0a0a 100px);',
+        circularLightLarge: 'repeating-radial-gradient(rgba(86,80,105, 0.6) 2px, #f5f5f5 6px, #f5f5f5 80px);',
+        circularDarkLarge: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 6px, #0a0a0a 80px);',
+        circularLightMedium: 'repeating-radial-gradient(rgba(86,80,105, 0.6) 2px, #f5f5f5 5px, #f5f5f5 60px);',
+        circularDarkMedium: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 5px, #0a0a0a 60px);',
+        circularLightSmall: 'repeating-radial-gradient(rgba(86,80,105, 0.6) 2px, #f5f5f5 4px, #f5f5f5 40px);',
+        circularDarkSmall: 'repeating-radial-gradient(rgba(91,154,139, 0.6) 2px, #0a0a0a 4px, #0a0a0a 40px);',
       }
     },
     screens: {
