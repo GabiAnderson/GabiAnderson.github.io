@@ -26,11 +26,12 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink, document
 
     return (
         <article className='w-full flex items-center justify-between first-letter rounded-3xl border border-solid 
-        border-primaryColor bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark'>
+        border-primaryColor bg-light shadow-2xl p-12 relative rounded-br-2xl dark:bg-dark
+        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4'>
 
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primaryColor rounded-br-3xl' />
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-primaryColor rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
 
-            <Link href={link} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg'>
+            <Link href={link} target="_blank" className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full'>
                 <FramerImage src={img} alt={title} className="w-full h-auto"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
@@ -39,22 +40,22 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink, document
                 />
             </Link>
 
-            <div className='w-1/2 flex flex-col items-start justify-between pl-6 '>
+            <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
                 {/* Apply the custom CSS classes to each part of the "type" prop */}
-                <span className='font-medium text-xl'>
+                <span className='font-medium text-xl sm:text-sm'>
                     <span className='text-primaryColor'>{firstPart}</span>{' '}
                     <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
                     <span className='text-secondaryTertiaryColor'>{thirdPart}</span>
                 </span>
 
                 <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
-                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light'>{title}</h2>
+                    <h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-xl'>{title}</h2>
                 </Link>
 
-                <p className='my-2 font-medium text-dark dark:text-light'>{summary}</p>
+                <p className='my-2 font-medium text-dark dark:text-light sm:text-sm sm:font-base'>{summary}</p>
 
-                <div className='mt-2 flex items-center'>
-                    <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Learn More</Link>
+                <div className='mt-2 flex items-center sm:w-full sm:justify-between'>
+                    <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold sm:px-4 sm:text-sm'>Learn More</Link>
 
                     {githubLink && (
                         <Link href={githubLink} target="_blank" className='ml-4 w-10'>
@@ -63,13 +64,13 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink, document
                     )}
 
                     {documentationLink && (
-                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>
+                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold sm:hidden'>
                             Documentation
                         </Link>
                     )}
 
                     {publicLink && (
-                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Visit Project</Link>
+                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold sm:px-4 sm:text-sm'>Visit Project</Link>
                     )}
                 </div>
             </div>
@@ -84,11 +85,18 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
     const secondPart = typeParts[1];
     const thirdPart = typeParts.slice(2).join('**');
 
+    const [showSummary, setShowSummary] = useState(false);
+
+    const toggleSummary = () => {
+        setShowSummary(!showSummary);
+    };
+
     return (
         <article className='w-full flex flex-col items-center justify-center rounded-2xl 
-      border border-solid border-primaryColor bg-light p-6 relative rounded-br-2xl dark:bg-dark'>
+        border border-solid border-primaryColor bg-light p-6 relative rounded-br-2xl dark:bg-dark
+        xs:p-4'>
 
-            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primaryColor rounded-br-3xl' />
+            <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-primaryColor rounded-br-3xl md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]' />
 
             <Link href={link} target="_blank" className='w-full cursor-pointer overflow-hidden rounded-lg'>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -99,37 +107,47 @@ const Project = ({ type, title, summary, img, link, githubLink, documentationLin
                 </div>
             </Link>
 
-            <div className='w-full flex flex-col items-start justify-between mt-4'>
+            <div className='w-full flex flex-col items-start justify-between mt-4 lg:text-lg md:text-base'>
                 {/* Apply the custom CSS classes to each part of the "type" prop */}
-                <span className='font-medium text-xl'>
+                <span className='font-medium text-xl sm:text-sm'>
                     <span className='text-primaryColor'>{firstPart}</span>{' '}
                     <span className='text-dark dark:text-light'>{secondPart}</span>{' '}
                     <span className='text-secondaryTertiaryColor'>{thirdPart}</span>
                 </span>
 
                 <Link href={link} className='hover:underline underline-offset-2 dark:text-light'>
-                    <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light'>{title}</h2>
+                    <h2 className='my-2 w-full text-left text-3xl font-bold dark:text-light lg:text-2xl sm:text-xl'>{title}</h2>
                 </Link>
 
-                <p className='my-2 font-normal text-dark dark:text-light'>{summary}</p>
+                {!showSummary && (
+                    <p className='my-2 font-normal text-dark dark:text-light sm:text-sm sm:font-base sm:hidden'>{summary}</p>
+                )}
+
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
+                    {showSummary && <p className='my-2 font-normal text-dark dark:text-light sm:text-sm sm:font-base'>{summary}</p>}
+                </motion.div>
+
+                <button className='text-primaryColor underline text-sm hidden sm:flex' onClick={toggleSummary}>
+                    {showSummary ? 'Hide Summary' : 'Show Summary'}
+                </button>
 
                 <div className='w-full mt-2 flex items-center justify-between'>
-                    <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Learn</Link>
+                    <Link href={link} className='rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold xl:px-4 xl:p-1 sm:text-sm'>Learn</Link>
 
                     {githubLink && (
-                        <Link href={githubLink} target="_blank" className='ml-4 w-10'>
+                        <Link href={githubLink} target="_blank" className='ml-4 w-10 md:w-6'>
                             <GithubIcon className='dark:fill-light' />
                         </Link>
                     )}
 
                     {documentationLink && (
-                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>
+                        <Link href={documentationLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold xl:px-4 xl:p-1 lg:hidden'>
                             Documentation
                         </Link>
                     )}
 
                     {publicLink && (
-                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold'>Visit</Link>
+                        <Link href={publicLink} target="_blank" className='ml-4 rounded-lg bg-tertiaryColor text-light p-2 px-6 text-lg font-semibold xl:px-4 xl:p-1 sm:text-sm'>Visit</Link>
                     )}
                 </div>
             </div>
@@ -214,7 +232,7 @@ const projectsData = [
     // Add more projects with tags and types
 ];
 
-const Projects = () => {
+const projects = () => {
     const [selectedTag, setSelectedTag] = useState('');
 
     const handleTagClick = (tag) => {
@@ -229,29 +247,31 @@ const Projects = () => {
             </Head>
             <main className="w-full mb-8 flex flex-col items-center justify-center">
                 <Layout className="pt-8">
-                    <AnimatedText text="Player to Creator!" className="mb-8 text-secondaryColor" />
+                    <AnimatedText text="Player to Creator!" className="mb-8 text-tertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl" />
+                    {/* Buttons to sort project types */}
                     <div className="mb-4">
                         <button
                             onClick={() => handleTagClick('')}
-                            className={`mr-2 tag-filter ${selectedTag === '' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
+                            className={`mr-2 text-lg sm:text-sm tag-filter ${selectedTag === '' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
                         >
                             All
                         </button>
                         <button
                             onClick={() => handleTagClick('Game Project')}
-                            className={`mr-2 tag-filter ${selectedTag === 'Game Project' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
+                            className={`mr-2 text-lg sm:text-sm tag-filter ${selectedTag === 'Game Project' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
                         >
                             Game Projects
                         </button>
                         <button
                             onClick={() => handleTagClick('Coding Project')}
-                            className={`tag-filter ${selectedTag === 'Coding Project' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
+                            className={`text-lg sm:text-sm tag-filter ${selectedTag === 'Coding Project' ? 'bg-primaryColor rounded p-2 text-white' : 'bg-primaryColor/30 rounded p-2 text-primaryColorShade3'}`}
                         >
                             Coding Projects
                         </button>
                         {/* Add more tag buttons for other categories */}
                     </div>
-                    <div className="grid grid-cols-12 gap-24">
+                    {/* Project reference */}
+                    <div className="grid grid-cols-12 gap-16 lg:gap-12 md:gap-9 sm:gap-6 items-center">
                         {projectsData.map((project, index) => {
                             if (project.tags.includes(selectedTag) || selectedTag === '') {
                                 if (project.format === 'Featured') {
@@ -271,7 +291,7 @@ const Projects = () => {
                                     );
                                 } else if (project.format === 'Project') {
                                     return (
-                                        <div className="col-span-6" key={index}>
+                                        <div className="col-span-6 sm:col-span-12" key={index}>
                                             <Project
                                                 title={project.title}
                                                 summary={project.summary}
@@ -295,4 +315,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default projects;
