@@ -63,7 +63,7 @@ const about = () => {
             </Head>
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
-                    <AnimatedText text="Player to Creator!" className='mb-4 text-secondaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl' />
+                    <AnimatedText text="Player to Creator!" className='mb-4 text-secondaryTertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl' />
                     {/* About Section and Stats for larger screens */}
                     <div className='grid w-full grid-cols-8 gap-16 lg:gap-8 md:grid-cols-4'>
                         {/* About me description */}

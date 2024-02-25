@@ -12,7 +12,7 @@ const Details = ({ type, time, place, info, placeColor }) => {
       };
   
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
           <LineIcon reference={ref} />
     
           <motion.div
@@ -21,14 +21,14 @@ const Details = ({ type, time, place, info, placeColor }) => {
             transition={{ duration: 0.5, type: "spring" }}
           >
             <h3 className='capitalize font-bold text-2xl'>{type}</h3>
-            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight'>
+            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight xs:text-sm'>
               {time} |{" "}
               <span style={{ color: placeColor }}>{place}</span>
             </span>
             {info.map((paragraph, index) => (
                 <p
                 key={index}
-                className='font-medium w-full mb-4 text-tertiaryDark dark:text-tertiaryLight'
+                className='font-medium w-full mb-4 text-tertiaryDark dark:text:tertiaryLight md:text-sm'
                 dangerouslySetInnerHTML={{ __html: formatParagraph(paragraph) }}
                 />
             ))}
@@ -47,16 +47,16 @@ const Education = () => {
     )
     return (
         <div className='my-8'>
-            <h2 className='font-bold text-8xl mb-16 w-full text-center text-primaryColor'>
+            <h2 className='font-bold text-8xl mb-16 w-full text-center text-secondaryTertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl'>
                 Education
             </h2>
 
-            <div ref={ref} className='w-[75%] mx-auto relative'>
+            <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
 
-                <motion.div className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light'
+                <motion.div className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]'
                 style={{scaleY: scrollYProgress}}/>
 
-                <ul className='w-full flex flex-col items-start justify-between ml-4'>
+                <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                     <Details
                         type="Honors BS in Computer Science with an Entertainment Arts & Engineering Emphasis & Mathematical Minor"
                         time="Sep 2018 - May 2023"
