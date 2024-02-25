@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const AnimatedTextTypeInView = ({ text, delay }) => {
+const AnimatedTextTypeInView = ({ text, delay, className }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +19,9 @@ const AnimatedTextTypeInView = ({ text, delay }) => {
 
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
+
+    // Check if the element is already visible on mount
+    handleScroll();
 
     // Cleanup the event listener on component unmount
     return () => {
@@ -43,6 +46,7 @@ const AnimatedTextTypeInView = ({ text, delay }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.5 }}
+      className={className} // Use the provided className
     >
       {currentText}
     </motion.span>

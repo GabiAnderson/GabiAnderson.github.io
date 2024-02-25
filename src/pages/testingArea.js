@@ -6,6 +6,7 @@ import HoverTripleColumn from "@/components/Projects/HoverTripleColumn";
 import ImageHeader from "@/components/Projects/ImageHeader";
 import ImageHeaderStats from '@/components/Projects/ImageHeaderStats';
 import LeftHandImage from "@/components/Projects/LeftHandImage";
+import LeftHandImageBox from '@/components/Projects/LeftHandImageBox';
 import LeftHandVideo from "@/components/Projects/LeftHandVideo";
 import MiddleImage from "@/components/Projects/MiddleImage";
 import MiddleVideo from "@/components/Projects/MiddleVideo";
@@ -63,32 +64,10 @@ const TestingArea = () => {
             <main className='flex w-full flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6'>
                     <p className='bg-blue-200'>Current Screen Size: {screenSize}</p>
-                    <ImageHeaderStats
-                    projectName="Image Header"
-                    about="test an actual role"
-                    desc={"to test ana ctual description that could cause issues"}
-                    link="\"
+                    <LeftHandImage
                     img={testImg}
-                    pairs={[
-                        ['Role(s)', ['Lead Engineer', 'Artist']],
-                        ['Skills', ['Lua', 'XML',]],
-                        ['Tools', ['Tabletop Sim.', 'Perforce', 'Adobe Photoshop']],
-                        ['Development Time', ['2 months']],
-                    ]}
-                />
-<p className='bg-blue-200'>Current Screen Size: {screenSize}</p>
-                <ImageHeader
-                    projectName="Image Header"
-                    role="test an actual role"
-                    desc={"to test ana ctual description that could cause issues"}
-                    link="\"
-                    img={testImg}
-                    pairs={[
-                        ['Role(s)', ['Lead Engineer', 'Artist']],
-                        ['Skills', ['Lua', 'XML',]],
-                        ['Tools', ['Tabletop Sim.', 'Perforce', 'Adobe Photoshop']],
-                        ['Development Time', ['2 months']],
-                    ]}
+                    title="LeftHandImage"
+                    desc="Desc"
                 />
                 </Layout>
             </main>
