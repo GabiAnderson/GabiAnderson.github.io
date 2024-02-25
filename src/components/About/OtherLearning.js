@@ -1,34 +1,47 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState } from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LineIcon from '@/components/About/LineIcon'
 
 const CertificationDetails = ({ courseName, dateTaken, placeTaken, info, placeColor }) => {
     const ref = useRef(null);
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleExpand = () => {
+        setIsExpanded(!isExpanded);
+    };
 
     const formatParagraph = (paragraph) => {
         // Use a regular expression to detect portions of the text wrapped with double asterisks.
         // Replace the double asterisks with <strong> tags to make the text bold.
         return paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      };
-  
+    };
+
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
-          <LineIcon reference={ref} />
-    
-          <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 0.5, type: "spring" }}
-          >
-            <h3 className='capitalize font-bold text-2xl'>{courseName}</h3>
-            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight xs:text-sm'>
-              {dateTaken} |{" "}
-              <span style={{ color: placeColor }}>{placeTaken}</span>
-            </span>
-            <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight md:text-sm'>
-                {info}
-            </p>
-          </motion.div>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%] md:my-4'>
+            <LineIcon reference={ref} />
+
+            <motion.div
+                initial={{ y: 50 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.5, type: "spring" }}
+            >
+                <h3 className='capitalize font-bold text-2xl mb-2 md:text-lg'>{courseName}</h3>
+                <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight md:text-sm'>
+                    {dateTaken} |{" "}
+                    <span style={{ color: placeColor }}>{placeTaken}</span>
+                </span>
+                <br /> {/* New line */}
+                {isExpanded ? (
+                    <>
+                        <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight md:text-sm mt-2'>
+                            {info}
+                        </p>
+                        <button className="text-primaryColor underline md:text-sm mt-2" onClick={toggleExpand}>Hide Description</button>
+                    </>
+                ) : (
+                    <button className="text-primaryColor underline md:text-sm mt-2" onClick={toggleExpand}>Show Description</button>
+                )}
+            </motion.div>
         </li>
     );
 };

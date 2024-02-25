@@ -12,7 +12,7 @@ const Details = ({ type, time, place, info, placeColor }) => {
       };
   
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%] md:my-4'>
           <LineIcon reference={ref} />
     
           <motion.div
@@ -20,15 +20,15 @@ const Details = ({ type, time, place, info, placeColor }) => {
             whileInView={{ y: 0 }}
             transition={{ duration: 0.5, type: "spring" }}
           >
-            <h3 className='capitalize font-bold text-2xl'>{type}</h3>
-            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight xs:text-sm'>
+            <h3 className='capitalize font-bold text-2xl mb-2 md:text-lg'>{type}</h3>
+            <span className='capitalize font-medium text-secondaryDark dark:text-secondaryLight md:text-sm'>
               {time} |{" "}
               <span style={{ color: placeColor }}>{place}</span>
             </span>
             {info.map((paragraph, index) => (
                 <p
                 key={index}
-                className='font-medium w-full mb-4 text-tertiaryDark dark:text:tertiaryLight md:text-sm'
+                className='font-medium w-full mb-4 text-tertiaryDark dark:text:tertiaryLight md:text-sm mt-2'
                 dangerouslySetInnerHTML={{ __html: formatParagraph(paragraph) }}
                 />
             ))}

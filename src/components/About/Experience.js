@@ -5,7 +5,7 @@ import LineIcon from '@/components/About/LineIcon'
 const Details = ({position, company, companyLink, time, address, work, brandColor}) => {
     const ref = useRef(null);
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%] md:my-4'>
             
             <LineIcon reference={ref}/>
 
@@ -14,7 +14,7 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
             whileInView={{y:0}}
             transition={{duration:0.5, type:"spring"}}
             >
-                <h3 className='captilize font-bold text-2xl dark:text-primaryLight sm:text-xl sx:text-lg'>
+                <h3 className='captilize font-bold text-2xl dark:text-primaryLight md:text-lg mb-2'>
                     {position}&nbsp;
                     <a href={companyLink}
                     target='_blank'
@@ -23,10 +23,10 @@ const Details = ({position, company, companyLink, time, address, work, brandColo
                         @{company}
                     </a>
                 </h3>
-                <span className='capitlize font-medium text-secondaryDark dark:text-secondaryLight xs:text-sm'>
+                <span className='capitlize font-medium text-secondaryDark dark:text-secondaryLight md:text-sm'>
                     {time} | {address}
                 </span>
-                <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight md:text-sm'>
+                <p className='font-medium w-full text-tertiaryDark dark:text:tertiaryLight md:text-sm mt-2'>
                     {work}
                 </p>
             </motion.div>
