@@ -26,7 +26,7 @@ const projectComponentTest =() => {
     return (
     <>
         <Head>
-            <title>Gabi Anderson | Acid Knockout</title>
+            <title>Gabi Anderson | Project Components</title>
             <meta name="description" content="any thing here" />
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
