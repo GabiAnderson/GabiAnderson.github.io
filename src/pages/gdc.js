@@ -52,7 +52,7 @@ const Gdc = () => {
                             <CustomLink href="/projects" title="My Projects!" className='' />
                         </button>
                         <button onClick={openContactModal} className="bg-secondaryColor hover:bg-secondaryColorShade3 text-white font-bold text-2xl p-6 rounded-full lg:!text-lg lg:p-4 lg:rounded-4xl md:!text-md md:rounded-2xl sm:!text-sm sm:p-2 sm:rounded-xl">
-                            Let's Talk!
+                            Let&apos;s Talk!
                         </button>
                     </div>
                 </Layout>
