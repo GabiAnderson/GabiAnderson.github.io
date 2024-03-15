@@ -221,7 +221,7 @@ const projectsData = [
     {
         title: "LifeStyle",
         summary: "An Android mobile application, featuring user login with data storage, local weather information, nearby hike suggestions, and calculations for BMR, BMI, calorie count, and weight loss goals, designed in Figma or Adobe XD and developed for Android devices.",
-        link: "/projects/lifeStyleApp",
+        link: "/projects/lifeStyle",
         type: "Mobile Application**|**Lead Designer & Developer",
         img: LSHeader,
         publicLink: "https://xd.adobe.com/view/652b2627-9a8b-4ecb-ae86-87b1dfe92eed-3078/?fullscreen",

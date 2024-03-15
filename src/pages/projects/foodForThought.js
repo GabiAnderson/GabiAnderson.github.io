@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import ComingSoonSection from '@/components/Common/ComingSoonSection'
 
 // imports for components
 import TripleColumn from '@/components/Projects/TripleColumn';
@@ -97,10 +98,12 @@ const foodForThought = () => {
                     </div>
 
                     {/* Programmer Section */}
-                    <SectionTitle
+                    {/* <SectionTitle
                         sectionTitle="Lead Engineer"
-                        sectionDescription="TODO"
-                    />
+                        sectionDescription="More Coming Soon"
+                    /> */}
+
+                    <ComingSoonSection />
                 </Layout>
             </main>
         </>
