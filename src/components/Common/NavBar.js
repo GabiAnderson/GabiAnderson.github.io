@@ -41,17 +41,31 @@ const CustomLinkMobile = ({ href, title, className = '', underlineColor = 'black
     );
 };
 
+const WorkInProgressDialog = ({ hideDialog }) => {
+    return (
+        <div className="fixed top-0 left-0 w-full bg-yellow-500 text-black p-4 text-center">
+            <p>This website is a personal project and is currently being enhanced for better mobile usability. For optimal viewing experience, please use a desktop or laptop. Thank you for your patience!</p>
+            <button onClick={hideDialog} className="bg-black text-white py-2 px-4 mt-2 rounded-md">Hide</button>
+        </div>
+    );
+};
+
 const NavBar = () => {
     const [mode, setMode] = useThemeSwitcher();
-
     const [isOpen, setIsOpen] = useState(false);
+    const [dialogVisible, setDialogVisible] = useState(true);
 
     const handleHamburgerClick = () => {
         setIsOpen(!isOpen)
     }
 
+    const hideDialog = () => {
+        setDialogVisible(false);
+    }
+
     return (
-        <header className='w-full px-32 py-8 font-medium flex flex-col items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:p-8'>
+        <header className='w-full px-32 py-8 font-medium flex flex-col items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:p-8 '>
+
             {/* First Row */}
             <nav className='flex items-center justify-between w-full mb-4'>
 
@@ -161,8 +175,12 @@ const NavBar = () => {
                 <Logo />
             </div>
 
+            <nav className='w-full items-center justify-center py-2 hidden lg:flex'>
+            {dialogVisible && <WorkInProgressDialog hideDialog={hideDialog} />}
+            </nav>
+
             {/* Second Row */}
-            {/* TODO - to remove just add hidden to the end of the nav classname and remove flex from the start*/}
+            {/* TODO - to remove just add hidden to the end of the nav classname and remove flex from the start or to show add flex to start and add hidden to end*/}
             <nav className='w-full items-center justify-center py-2 hidden'>
                 <div className='bg-yellow-500 text-center items-center p-4 rounded-lg' style={{ maxWidth: '1000px' }}>
                     <span className='text-6xl text-black font-extrabold'>!</span>
