@@ -89,7 +89,8 @@ const NavBar = () => {
                             <CustomLinkMobile href="/" title="Home" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile>
                             <CustomLinkMobile href="/about" title="About" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile>
                             <CustomLinkMobile href="/projects" title="Projects" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile>
-                            <CustomLinkMobile href="/articles" title="Articles" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile>
+                            {/* <CustomLinkMobile href="/articles" title="Articles" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile> */}
+                            <CustomLinkMobile href="/gdc" title="GDC" className='' underlineColor='bg-primaryColor' toggle={handleHamburgerClick} ></CustomLinkMobile>
                         </div>
 
                         <div className='flex items-center justify-center flex-wrap-2'>
@@ -134,7 +135,8 @@ const NavBar = () => {
                         <CustomLink href="/" title="Home" className='mr-4' underlineColor='bg-primaryColor'></CustomLink>
                         <CustomLink href="/about" title="About" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
                         <CustomLink href="/projects" title="Projects" className='mx-4' underlineColor='bg-primaryColor'></CustomLink>
-                        <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
+                        {/* <CustomLink href="/articles" title="Articles" className='ml-4' underlineColor='bg-primaryColor'></CustomLink> */}
+                        <CustomLink href="/gdc" title="GDC" className='ml-4' underlineColor='bg-primaryColor'></CustomLink>
                     </div>
 
                     <div className='flex items-center'>
