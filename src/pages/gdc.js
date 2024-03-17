@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import { DiscordIcon2, PhoneIcon, EmailIcon } from '@/components/Common/Icons'
+import { DiscordIcon2, PhoneIcon, EmailIcon, LinkedInIcon2 } from '@/components/Common/Icons'
 
 import GDCLogo from "../../public/images/other/GDC2024.png";
 
@@ -64,19 +64,26 @@ const Gdc = () => {
                     <div className="absolute inset-0 bg-black opacity-75 dark:bg-white"></div>
                     <div className="bg-white p-8 rounded-lg z-10 dark:bg-dark">
                         <h2 className="text-8xl font-bold mb-4 dark:text-light xl:text-6xl lg:text-4xl md:text-2xl sm:text-xl">Contact Information</h2>
-                        <div className="flex items-center mb-2 font-bold text-3xl lg:text-xl md:text-lg sm:text-md">
+                        {/* <div className="flex items-center mb-2 font-bold text-3xl lg:text-xl md:text-lg sm:text-md">
                             <div className=''>
                                 <PhoneIcon className='w-16 h-16 lg:w-12 lg:h-12 md:w-8 md:h-8 fill-secondaryColor' strokeColor="secondaryColor" />
                             </div>
                             <div className='w-8'></div>
                             <a className="dark:text-light" href="tel:+1234567890">+1 (801) 448-1889</a>
-                        </div>
+                        </div> */}
                         <div className="flex items-center mb-2 font-bold text-3xl lg:text-xl md:text-lg sm:text-md">
                             <div className=''>
                                 <EmailIcon className='w-16 h-16 lg:w-12 lg:h-12 md:w-8 md:h-8 fill-secondaryColor' />
                             </div>
                             <div className='w-8'></div>
-                            <a className="dark:text-light" href="mailto:example@example.com">gabi84095@gmail.com</a>
+                            <a className="dark:text-light hover:underline" href="mailto:example@example.com">gabi84095@gmail.com</a>
+                        </div>
+                        <div className="flex items-center mb-2 font-bold text-3xl lg:text-xl md:text-lg sm:text-md">
+                            <div className=''>
+                                <LinkedInIcon2 className='w-16 h-16 lg:w-12 lg:h-12 md:w-8 md:h-8 fill-secondaryColor' />
+                            </div>
+                            <div className='w-8'></div>
+                            <a className="dark:text-light hover:underline" href="www.linkedin.com/in/gabriela-anderson" target="_blank" rel="noopener noreferrer">Gabriela Anderson</a>
                         </div>
                         <div className="flex items-center font-bold text-3xl lg:text-xl md:text-lg sm:text-md">
                             <div className=''>
