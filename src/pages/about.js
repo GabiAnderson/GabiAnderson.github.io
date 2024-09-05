@@ -92,15 +92,14 @@ const about = () => {
                             {/* About me short text (xs-md) */}
                             <TextFormat
                                 className="text-xs font-medium text-center hidden md:flex"
-                                text="Hello there! I'm a 2023 University of Utah graduate with an Honors BS in Computer Science, focusing on Entertainment Arts and Engineering, 
-                            and a minor in Mathematics. My academic journey provided a solid foundation in computer science, including software development and game 
-                            design, perfectly blending with my passion for video games ignited by early experiences with titles like <i>Halo: Combat Evolved</i> and <i>Ty the Tasmanian 
-                            Tiger</i>. This passion led me to not only play but create games, with several projects now showcased on this site.
-                            <br><br>
-                            Currently, as an Associate Firmware Test Engineer at Cricut, I automate firmware testing and lead testing for new products, while also 
-                            diving into personal projects in website development and Arduino programming. Always eager to learn, I frequently engage in further education 
-                            through LinkedIn Learning. With a profound appreciation for the gaming industry's art and technology, I'm excited about the future possibilities 
-                            in this dynamic field."
+                                text="Hello there! <br></br> 
+                                I graduated in 2023 from the University of Utah with an Honors Bachelor of Science in Computer Science, emphasizing Entertainment Arts and Engineering. My studies provided a strong foundation in software development and game design.
+                                <br></br>
+                                My passion for video games started with titles like <i>Halo: Combat Evolved</i>. In college, I gained hands-on experience in game development, showcased in the Projects tab of this site.
+                                <br></br>
+                                As a Software Test Engineer, I initially focused on qualifying software releases for machine calibration. My role has since expanded to developing software, updating UI, and working on major projects like the Test Flags system.
+                                <br></br>
+                                I also engage in personal projects like website development and Arduino programming and continually enhance my skills through LinkedIn Learning. Excited about future opportunities in software development and gaming."
                             />
                         </div>
 
