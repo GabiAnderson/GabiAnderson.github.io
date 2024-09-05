@@ -10,7 +10,7 @@ import {
     useInView,
     motionValue,
 } from "framer-motion";
-import Skills from "@/components/About/Skills";
+import Skills, { SoftwareDevelopmentSkills, WorkSkills } from "@/components/About/Skills";
 import Experience from "@/components/About/Experience";
 import Education from "@/components/About/Education";
 import OtherLearning from "@/components/About/OtherLearning";
@@ -212,9 +212,11 @@ const about = () => {
                         </div>
                     </div>
 
-                    <Skills />
-
                     <Experience />
+
+                    {/* Commenting out skills now that experience has that field */}
+                    {/* <SoftwareDevelopmentSkills /> */}
+                    {/* <WorkSkills /> */}
 
                     <Education />
 
