@@ -247,7 +247,7 @@ const Projects = () => {
             </Head>
             <main className="w-full mb-8 flex flex-col items-center justify-center">
                 <Layout className="pt-8">
-                    <AnimatedText text="Player to Creator!" className="mb-8 text-tertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl" />
+                    <AnimatedText text="Concepts to Code!" className="mb-8 text-tertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl" />
                     {/* Buttons to sort project types */}
                     <div className="mb-4">
                         <button

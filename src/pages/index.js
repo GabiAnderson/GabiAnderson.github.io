@@ -40,15 +40,11 @@ export default function Home() {
                 <span className="text-primaryColor">Gabi </span>Anderson
               </h1>
 
-              <AnimatedText text="Player to Creator: Coding from Pixels to Play." className='!text-3xl !text-left 
+              <AnimatedText text="Concepts to Code: Building Practical Software Solutions." className='!text-3xl !text-left 
               xl:!text-2xl lg:!text-center lg:!text-3xl md:!text-2xl sm:!text-xl
               mt-4 text-secondaryDark dark:text-secondaryLight' />
               
-              <p className='my-4 text-base font-medium text-tertiaryDark dark:tertiaryLight md:text-small sm:text-xs'>
-                As a recent computer science graduate with a specialization in video game
-                development and a flair for creative code, I&apos;m on a mission to bring captivating
-                gaming experiences to life. Explore my projects that fuse art, technology, and
-                problem-solving, unleashing the power of imagination in the gaming world.
+              <p className='my-4 text-base font-medium text-tertiaryDark dark:tertiaryLight md:text-small sm:text-xs'>As a recent computer science graduate with a strong foundation in software development and a passion for innovative solutions, I&apos;m on a mission to build efficient, user-friendly, and impactful applications. Explore my projects that blend creativity, technology, and problem-solving to deliver exceptional results across various domains.
               </p>
               
               <div className='flex items-center self-start mt-2 lg:self-center'>

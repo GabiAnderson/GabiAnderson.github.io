@@ -67,7 +67,7 @@ const about = () => {
             <main className="flex w-full flex-col items-center justify-center dark:text-light">
                 <Layout className="pt-8 2xl:pt-8 xl:pt-8 lg:pt-6 md:pt-6 sm:pt-6">
                     <AnimatedText
-                        text="Player to Creator!"
+                        text="Concepts to Code!"
                         className="mb-4 text-secondaryTertiaryColor sm:!text-3xl md:!text-5xl lg:!text-7xl"
                     />
                     {/* About Section and Stats for larger screens */}
@@ -80,26 +80,28 @@ const about = () => {
                             {/* About me long text (lg-2xl) */}
                             <TextFormat
                                 className="text-sm font-medium md:hidden"
-                                text="Hello there! <br></br>
-                                I graduated in 2023 from the University of Utah with an Honors Bachelor of Science in Computer Science, with an emphasis in Entertainment Arts and Engineering, and a minor in Mathematics. My studies provided a strong foundation in software development, computer architecture, algorithms, and game design.
-                                <br></br>
-                                My passion for video games began early, inspired by watching my dad and uncle play Halo on the Original Xbox. Titles like <i>Halo: Combat Evolved</i> and <i>Ty the Tasmanian Tiger</i> shaped my love for gaming. In college, I combined this passion with my coursework, gaining hands-on experience in both playing and developing games, which I’ve showcased in the Projects tab of this site.
-                                <br></br>
-                                As a Software Test Engineer, I started by qualifying software releases for machine calibration, writing bugs, testing features, and automating processes. My role has expanded to include developing software releases, updating UI, and working on major projects like the Test Flags system and custom refurbishment software.
-                                <br></br>
-                                In addition to my professional work, I pursue personal projects in website development and Arduino programming and continually enhance my skills through LinkedIn Learning. With a deep appreciation for the artistry and technology behind gaming and software development, I’m excited about future opportunities in this dynamic field."
+                                text="Hello there! 
+                                <br></br> 
+                                I graduated in 2023 from the University of Utah with an Honors Bachelor of Science in Computer Science, emphasizing Entertainment Arts and Engineering, and a minor in Mathematics. My academic journey gave me a strong foundation in software development, computer architecture, and algorithms, while also allowing me to explore video game development. 
+                                <br></br> 
+                                My passion for video games began early, watching my dad and uncle play <i>Halo</i> on the Original Xbox. Games like <i>Halo: Combat Evolved</i> and <i>Ty the Tasmanian Tiger</i> sparked my curiosity and eventually led me to pursue computer science. This passion provided a unique perspective as I combined my love for games with the technical rigor of my degree, gaining hands-on experience in both software and game development. 
+                                <br></br> 
+                                Now working as a Software Test Engineer, I began by testing software releases, writing bugs, and automating processes for machine calibration tools. Over time, I transitioned into broader software development, where I've contributed to major projects like the Test Flags system and custom refurbishment software, as well as UI improvements. 
+                                <br></br> 
+                                Outside of work, I pursue personal projects in website development, Arduino programming, and more while continuously expanding my skills through LinkedIn Learning. With a solid background in both general software development and video game development, I’m eager to tackle new challenges in the ever-evolving tech industry."
                             />
                             {/* About me short text (xs-md) */}
                             <TextFormat
                                 className="text-xs font-medium text-center hidden md:flex"
-                                text="Hello there! <br></br> 
-                                I graduated in 2023 from the University of Utah with an Honors Bachelor of Science in Computer Science, emphasizing Entertainment Arts and Engineering. My studies provided a strong foundation in software development and game design.
-                                <br></br>
-                                My passion for video games started with titles like <i>Halo: Combat Evolved</i>. In college, I gained hands-on experience in game development, showcased in the Projects tab of this site.
-                                <br></br>
-                                As a Software Test Engineer, I initially focused on qualifying software releases for machine calibration. My role has since expanded to developing software, updating UI, and working on major projects like the Test Flags system.
-                                <br></br>
-                                I also engage in personal projects like website development and Arduino programming and continually enhance my skills through LinkedIn Learning. Excited about future opportunities in software development and gaming."
+                                text="Hello there! 
+                                <br></br> 
+                                I graduated in 2023 from the University of Utah with an Honors Bachelor of Science in Computer Science, emphasizing Entertainment Arts and Engineering. My studies provided a strong foundation in software development, with a focus on both general programming and game design. 
+                                <br></br> 
+                                My interest in computer science was sparked by my early love for video games, particularly titles like <i>Halo: Combat Evolved</i>. In college, I combined this passion with hands-on game development, which is showcased in the Projects tab of this site. 
+                                <br></br> 
+                                As a Software Test Engineer, I initially focused on testing software releases for machine calibration. Over time, my role expanded to include developing software, updating UI, and leading projects like the Test Flags system. 
+                                <br></br> 
+                                I also work on personal projects in website development and Arduino programming, and I continually enhance my skills through LinkedIn Learning. I’m excited about future opportunities in both software development and tech."
                             />
                         </div>
 
