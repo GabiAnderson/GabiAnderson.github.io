@@ -160,7 +160,7 @@ const Experience = () => {
                         bullets="<p>• Qualified and released software tools for calibrating and qualifying over 10 different machines on a production line with up to 17 stations.</p> 
                         <p>• Aided in development and implementation of the Test Flags system, ensuring machines successfully complete each station by validating memory checks.</p>
                         <p>• Led the creation of a custom refurbishment version of the software, allowing specific configurations and access for internal company use.</p>
-                        <p>• Addressed and resolved bugs to enhance software performance and reliability..</p>
+                        <p>• Addressed and resolved bugs to enhance software performance and reliability.</p>
                         <p>• Contributed to system enhancements and development of new features.</p>"
                         skills={[
                             "C++, Kotlin, Java, C",
