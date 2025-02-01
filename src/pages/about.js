@@ -222,7 +222,8 @@ const about = () => {
 
                     <Education />
 
-                    <OtherLearning />
+                    {/* Commenting out other learning as it is outdated*/}
+                    {/* <OtherLearning /> */}
                 </Layout>
             </main>
         </>

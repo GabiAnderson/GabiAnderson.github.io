@@ -156,12 +156,14 @@ const Experience = () => {
                         companyColor="#00c08b"
                         time="Apr 2024 - Present"
                         address="South Jordan, UT"
-                        description="Focused on qualifying software releases for machine calibration and qualification on the production line, including testing, writing bugs, and creating automation scripts. Transitioned to developing software solutions, such as UI updates, bug fixes, and complex systems like Test Flags, which ensure machines pass each production line station."
-                        bullets="<p>• Qualified and released software tools for calibrating and qualifying over 10 different machines on a production line with up to 17 stations.</p> 
-                        <p>• Aided in development and implementation of the Test Flags system, ensuring machines successfully complete each station by validating memory checks.</p>
-                        <p>• Led the creation of a custom refurbishment version of the software, allowing specific configurations and access for internal company use.</p>
-                        <p>• Addressed and resolved bugs to enhance software performance and reliability.</p>
-                        <p>• Contributed to system enhancements and development of new features.</p>"
+                        description="Focused on qualifying software releases for machine calibration and qualification on the production line, including writing test plans, executing tests, identifying and documenting bugs, and creating automation scripts. Contributed to the development of software solutions, including UI updates, bug fixes, and complex system enhancements such as Test Flags, which ensure machines pass each production line station efficiently. Led efforts to implement fast-fail functionality and automated calibration processes, improving line efficiency and machine precision."
+                        bullets="<p>● Worked as Lead Test Engineer and Software Developer on the Test Development Engineering team to help qualify and develop
+                        the calibration and qualification software used on the manufacturing lines.</p>
+                        <p>● Created detailed test plans for 10+ calibration and qualification stations, ensuring reliability and accuracy before SW release.</p>
+                        <p>● Added fast-fail functionality to 2 stations, reducing qualification times from 4+ minutes to as little as 20 seconds on the line.</p>
+                        <p>● Automated a calibration process using image analysis, eliminating human selection and increasing machine precision by 20%.</p>
+                        <p>● Fixed critical bugs across calibration and qualification stations, preventing skipped stations and unauthorized access.</p>
+                        <p>● Act as the Lead Software QA Engineer and project co-owner of new manufacturing line calibration and qualification software.</p>"
                         skills={[
                             "C++, Kotlin, Java, C",
                             "GitHub, Android Studio, Gradle",
@@ -176,12 +178,11 @@ const Experience = () => {
                         companyColor="#00c08b"
                         time="Mar 2023 - Apr 2024"
                         address="South Jordan, UT"
-                        description="Performed comprehensive testing of firmware functionalities, identifying defects, performance issues, and potential areas for improvement. Developed and maintained automation test frameworks and scripts, streamlining the testing process and enhancing efficiency. Designed, developed, and executed detailed test plans, test cases, and test scripts for firmware applications and features."
-                        bullets="<p>• Conducted thorough testing of firmware functionalities, identifying defects and performance issues to improve product quality.</p>
-                        <p>• Developed and maintained automation test frameworks and scripts, achieving a 75% reduction in testing time.</p>
-                        <p>• Designed and implemented Bluetooth and USB event loggers for Windows and Mac platforms, enhancing system monitoring and troubleshooting capabilities by 30%.</p>
-                        <p>• Created detailed test plans, test cases, and test scripts for a wide range of firmware applications.</p>
-                        <p>• Collaborated cross-functionally to troubleshoot and resolve firmware issues, improving product reliability and customer satisfaction.</p>"
+                        description="Performed comprehensive testing of firmware functionalities, identifying defects, performance issues, and potential areas for improvement. Developed and maintained automation test frameworks and scripts, streamlining the testing process and significantly improving efficiency. Designed, developed, and executed detailed test plans, test cases, and test scripts for firmware applications, driving faster issue identification and resolution."
+                        bullets="<p>● Developed an automated bootloader testing system, reducing testing time from 4+ days to less than 2 days.</p>
+                        <p>● Engineered USB and Bluetooth logging apps specifically for Cricut machines, saving $40 million by identifying chip defects.</p>
+                        <p>● Automated Bluetooth testing, reducing testing time by 90%, and constructed a custom tool for testing 5+ machines at once.</p>
+                        <p>● Reduced firmware issue resolution time from 5 days to 3 or less by collaborating cross-functionally using streamlined flows.</p>"
                         skills={[
                             "Test Automation",
                             "Quality Assurance",
@@ -197,10 +198,11 @@ const Experience = () => {
                         companyColor="#00c08b"
                         time="Aug 2022 - Mar 2023"
                         address="South Jordan, UT"
-                        description="Conducted comprehensive testing of both software and firmware to identify defects, usability issues, and performance bottlenecks. Developed and executed detailed test plans and scripts to validate functionality, ensuring stability and reliability after code changes through rigorous regression testing."
-                        bullets="<p>• Performed thorough testing of software and firmware applications, identifying defects, usability issues, and performance bottlenecks.</p>
-                        <p>• Developed and executed detailed test plans, test cases, and test scripts to validate the functionality of software and firmware.</p>
-                        <p>• Conducted regression testing to ensure that new code changes did not adversely affect existing features and maintain overall system stability.</p>"
+                        description="Executed a variety of test plans, including bootloader and firmware testing, across 7+ different machines to ensure optimal functionality. Created a standardized bug documentation template to streamline communication and facilitate faster resolution. Collaborated with the Firmware team to develop a consolidated Firmware Testing Automation tool, merging 15 automated testing tools into one cohesive system. Addressed a critical Windows auto-update issue impacting over 4 million users, which has since been integrated into Cricut’s application and FAQ page."
+                        bullets="<p>● Executed a variety of test plans ranging from bootloader testing to firmware testing on 7+ different machines.</p>
+                        <p>● Created a bug documentation template to streamline communication and facilitate replication, understanding, and resolution.</p>
+                        <p>● Collaborated with the Firmware team to construct a Firmware Testing Automation tool to consolidate 15 automated testing tools.</p>
+                        <p>● Mitigated critical Windows auto-update issue affecting over 4 million users, now integrated into Cricut’s application and FAQ page.</p>"
                         skills={[
                             "Software Testing",
                             "Firmware Testing",
@@ -217,11 +219,14 @@ const Experience = () => {
                         time="Aug 2022 - Apr 2023"
                         address="Remote"
                         description="Led a team of 7 engineers to develop <i>Natural Disaster: A Butterfly's Guide to Mass Destruction</i>, a game published on Steam. Oversaw daily operations, managed task and bug lists, and ensured seamless integration of game systems and assets. Conceptualized and refined over 10 innovative features, designed a Machinima pipeline, and played a key role in project success through close collaboration with design, art, and sound departments."
-                        bullets="<p>• Conceptualized, prototyped, and polished over 10 innovative game systems and features, enhancing gameplay and integrating design ideas.</p>
-                        <p>• Led a team of 7 engineers, managing daily operations, task lists, bug tracking, and representing the engineering department in meetings.</p>
-                        <p>• Designed and implemented a robust Machinima pipeline, hand-selecting and managing a specialized strike team to ensure project success.</p>
-                        <p>• Collaborated closely with design, art, and sound departments to ensure seamless integration of 100+ game assets.</p>
-                        <p>• Successfully published <i>Natural Disaster: A Butterfly's Guide to Mass Destruction</i> on Steam, leveraging Steamworks integration with Unreal Engine 5, managing the build process, and acting as the first playtester to ensure stability and functionality.</p>"
+                        bullets="<p>● Conceptualized, prototyped, and refined over 10 innovative game systems and features, blending design ideas and original
+                        concepts for a feature-rich gameplay experience.</p>
+                        <p>● Managed a team of 7 engineers, overseeing task and bug lists, daily operations, and representing the engineering department in
+                        meetings.</p>
+                        <p>● Designed a robust Machinima pipeline, selected and managed a strike team, and acted as both lead animator and feature owner.</p>
+                        <p>● Collaborated with design, art, and sound leads to ensure seamless integration of various game components and 100+ assets.</p>
+                        <p>● Successfully published Natural Disaster on Steam under Burning Real Studios, managing Steamworks integration with Unreal
+                        Engine 5 and serving as the primary playtester for stability and functionality.</p>"
                         skills={[
                             "Game Development",
                             "Feature Conceptualization and Prototyping",
